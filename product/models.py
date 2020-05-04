@@ -1,5 +1,5 @@
 from django.db import models
-''' Endilega finna fleiri attributes'''
+''' Endilega finna fleiri attributess'''
 class Category(models.Model):
     name = models.CharField(max_length=255)
 
