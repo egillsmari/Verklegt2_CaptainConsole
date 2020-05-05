@@ -83,7 +83,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'szpdoaaj',
         'USER': 'szpdoaaj',
-        'PASSWORD': 'wWINSnrZUM34e7oFH-tCNo_ULnjlWVzE',
+        'PASSWORD': 'CwLnWrCKvLX0amxEILxgvmJxnOHt0fcr',
         'HOST': 'kandula.db.elephantsql.com',
         'PORT': '5432'
     }
@@ -127,3 +127,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static')
+]
