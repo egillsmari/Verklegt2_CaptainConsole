@@ -1,22 +1,43 @@
 <div class="header">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">Captain Console</a>
+      <a class="navbar-brand" href="{% url 'homepage-index' %}">Captain Console</a>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto center">
-          <li class="nav-item">
+          <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Consoles
+                Consoles
             </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="{% url 'consoles-index' %}">Nintendo</a>
+                <a class="dropdown-item" href="{% url 'consoles-index' %}">Gameboy</a>
+                <a class="dropdown-item" href="{% url 'consoles-index' %}">SEGA</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="{% url 'consoles-index' %}">See all</a>
+            </div>
           </li>
-          <li class="nav-item">
+            <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Games
+                Games
             </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="{% url 'games-index' %}">Nintendo</a>
+                <a class="dropdown-item" href="{% url 'games-index' %}">Gameboy</a>
+                <a class="dropdown-item" href="{% url 'games-index' %}">SEGA</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="{% url 'games-index' %}">See all</a>
+            </div>
           </li>
-            <li class="nav-item">
+            <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Accessories
+                Accessories
             </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="{% url 'accessories-index' %}">Controllers</a>
+                <a class="dropdown-item" href="{% url 'accessories-index' %}">Cords</a>
+                <a class="dropdown-item" href="{% url 'accessories-index' %}">Adapters</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="{% url 'accessories-index' %}">See all</a>
+            </div>
           </li>
             <form class="form-inline my-2 my-lg-0">
               <input class="form-control mr-sm-2 fpSearch" type="search" placeholder="Search" aria-label="Search">
@@ -24,10 +45,16 @@
             </form>
         </ul>
           <ul class="navbar-nav right">
-          <li class="nav-item">
+          <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Account
+                Account
             </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="{% url 'myAccount-index' %}">Account</a>
+                <a class="dropdown-item" href="{% url 'myAccount-index' %}">Purchase history</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="{% url 'myAccount-index' %}">Log out</a>
+            </div>
           </li>
             <li class="nav-item">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
