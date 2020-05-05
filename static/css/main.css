@@ -3,9 +3,14 @@ h2{
 }
 
 .fpSearch{
-    size: 500px;
+    width: 600px !important;
 }
 
-.header{
+.center{
     margin: 0 auto;
+}
+
+.right{
+    width: 145px;
+    margin-right: 10px;
 }
