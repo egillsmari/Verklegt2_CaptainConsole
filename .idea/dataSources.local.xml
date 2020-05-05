@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="CaptainConsoleDb" uuid="504aad02-2ff4-4d7d-8fde-96ea351bf70f">
+    <data-source name="CaptainConsole" uuid="5aa4b16b-07b2-45c4-88d9-3badee15e58d">
       <database-info product="PostgreSQL" version="11.6 (Ubuntu 11.6-1.pgdg18.04+1)" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.2.5" dbms="POSTGRES" exact-version="11.6" exact-driver-version="42.2">
         <identifier-quote-string>&quot;</identifier-quote-string>
       </database-info>
