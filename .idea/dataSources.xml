@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+<<<<<<< HEAD
     <data-source source="LOCAL" name="szpdoaaj@kandula.db.elephantsql.com" uuid="1c22fb39-2739-4e30-baaf-5f9f59f97633">
+=======
+    <data-source source="LOCAL" name="CaptainConsole" uuid="5aa4b16b-07b2-45c4-88d9-3badee15e58d">
+>>>>>>> b0441575665276aa4c972de4e01d6b079f2c0399
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>

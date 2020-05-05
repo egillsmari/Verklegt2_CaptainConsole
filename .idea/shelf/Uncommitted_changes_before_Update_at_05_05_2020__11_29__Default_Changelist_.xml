@@ -1,0 +1,14 @@
+<changelist name="Uncommitted_changes_before_Update_at_05_05_2020,_11_29_[Default_Changelist]" date="1588678180555" recycled="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_05_2020,_11_29_[Default_Changelist]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Update at 05/05/2020, 11:29 [Default Changelist]" />
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="venv/django_app/lib/python3.8/site-packages/psycopg2/_psycopg.cpython-38-darwin.so" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_05_2020,_11_29_[Default_Changelist]/_psycopg.cpython-38-darwin.so" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value=".idea/dataSources/504aad02-2ff4-4d7d-8fde-96ea351bf70f/storage_v2/_src_/database/szpdoaaj.lkazpA/schema/public.abK9xQ.zip" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_05_2020,_11_29_[Default_Changelist]/public.abK9xQ.zip" />
+  </binary>
+</changelist>
