@@ -37,6 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'accessories.apps.AccessoriesConfig',
+    'checkout.apps.CheckoutConfig',
+    'product.apps.ProductConfig',
+    'myAccount.apps.MyaccountConfig'
 ]
 
 MIDDLEWARE = [
@@ -76,8 +80,12 @@ WSGI_APPLICATION = 'Verklegt2_AHE.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'szpdoaaj',
+        'USER': 'szpdoaaj',
+        'PASSWORD': 'wWINSnrZUM34e7oFH-tCNo_ULnjlWVzE',
+        'HOST': 'kandula.db.elephantsql.com',
+        'PORT': '5432'
     }
 }
 
@@ -119,6 +127,3 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static')
-]
