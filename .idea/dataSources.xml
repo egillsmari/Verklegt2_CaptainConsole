@@ -7,5 +7,13 @@
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://kandula.db.elephantsql.com:5432/szpdoaaj</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="Django default" uuid="204e1cb5-6bd3-4aa9-ae21-441bbefea3f5">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/Verklegt2_AHE/settings.py</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://kandula.db.elephantsql.com:5432/szpdoaaj</jdbc-url>
+    </data-source>
   </component>
 </project>
