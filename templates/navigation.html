@@ -8,11 +8,13 @@
                 Consoles
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="{% url 'consoles-index' %}">Nintendo</a>
-                <a class="dropdown-item" href="{% url 'consoles-index' %}">Gameboy</a>
-                <a class="dropdown-item" href="{% url 'consoles-index' %}">SEGA</a>
+                {% for product in products %}
+                    {% if product.category_id == 2 %}
+                        <a class="dropdown-item" href="{% url 'consoles-index' product.platform_id %}">{{ product.platform }}</a>
+                    {% endif %}
+                {% endfor %}
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="{% url 'consoles-index' %}">See all</a>
+                <a class="dropdown-item" href="{% url 'consoles-index' 'all'%}">See all</a>
             </div>
           </li>
             <li class="nav-item dropdown">
@@ -20,11 +22,13 @@
                 Games
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="{% url 'games-index' %}">Nintendo</a>
-                <a class="dropdown-item" href="{% url 'games-index' %}">Gameboy</a>
-                <a class="dropdown-item" href="{% url 'games-index' %}">SEGA</a>
+                {% for product in products %}
+                    {% if product.category_id == 2 %}
+                        <a class="dropdown-item" href="{% url 'games-index' product.platform %}">{{ product.platform }}</a>
+                    {% endif %}
+                {% endfor %}
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="{% url 'games-index' %}">See all</a>
+                <a class="dropdown-item" href="{% url 'games-index' 'all' %}">See all</a>
             </div>
           </li>
             <li class="nav-item dropdown">
@@ -32,11 +36,13 @@
                 Accessories
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="{% url 'accessories-index' %}">Controllers</a>
-                <a class="dropdown-item" href="{% url 'accessories-index' %}">Cords</a>
-                <a class="dropdown-item" href="{% url 'accessories-index' %}">Adapters</a>
+                {% for product in products %}
+                    {% if product.category_id == 2 %}
+                        <a class="dropdown-item" href="{% url 'accessories-index' product.platform %}">{{ product.platform }}</a>
+                    {% endif %}
+                {% endfor %}
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="{% url 'accessories-index' %}">See all</a>
+                <a class="dropdown-item" href="{% url 'accessories-index' 'all' %}">See all</a>
             </div>
           </li>
             <form class="form-inline my-2 my-lg-0">
