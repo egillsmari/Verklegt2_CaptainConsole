@@ -1,4 +1,9 @@
 {% extends 'base.html' %}
 {% block content %}
-    <h2>myAccount</h2>
+    <h2>Sing Up now</h2>
+    <form method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Sign up">
+    </form>
 {% endblock %}
