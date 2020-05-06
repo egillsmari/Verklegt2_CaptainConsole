@@ -8,8 +8,8 @@
                 Consoles
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                {% for platform in platforms %}
-                    <a class="dropdown-item" href="{% url 'consoles-index' platform.id %}">{{ platform.name }}</a>
+                {% for manufacturer in manufacturers %}
+                    <a class="dropdown-item" href="{% url 'consoles-index' manufacturer.id %}">{{ manufacturer.name }}</a>
                 {% endfor %}
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="{% url 'consoles-index' 0 %}">See all</a>
@@ -20,8 +20,8 @@
                 Games
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                {% for platform in platforms %}
-                    <a class="dropdown-item" href="{% url 'games-index' platform.id %}">{{ platform.name }}</a>
+                {% for manufacturer in manufacturers %}
+                    <a class="dropdown-item" href="{% url 'games-index' manufacturer.id %}">{{ manufacturer.name }}</a>
                 {% endfor %}
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="{% url 'games-index' 0 %}">See all</a>
@@ -32,8 +32,8 @@
                 Accessories
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                {% for platform in platforms %}
-                    <a class="dropdown-item" href="{% url 'accessories-index' platform.id %}">{{ platform.name }}</a>
+                {% for manufacturer in manufacturers %}
+                    <a class="dropdown-item" href="{% url 'accessories-index' manufacturer.id %}">{{ manufacturer.name }}</a>
                 {% endfor %}
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="{% url 'accessories-index' 0 %}">See all</a>

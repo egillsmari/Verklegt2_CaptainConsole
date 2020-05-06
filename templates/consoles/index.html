@@ -1,4 +1,12 @@
 {% extends 'base.html' %}
+{% include 'productToolbar.html' %}
 {% block content %}
-    <h2>Consoles</h2>
+     <div class="content">
+        {% for console in consoles %}
+            <div class="card">
+                <h4>{{ console.name }}</h4>
+                <img src="{{ console.image }}" alt="{{ console.name }}">
+            </div>
+        {% endfor %}
+    </div>
 {% endblock %}
