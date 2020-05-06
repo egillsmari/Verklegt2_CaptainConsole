@@ -1,7 +1,16 @@
-
+nav{
+    background-color: #232F3E;
+}
+body{
+    background-color: #D7D7D7 !important;
+}
+a{
+    color: #D7D7D7 !important;
+}
 
 .fpSearch{
     width: 600px !important;
+
 }
 
 .center{
@@ -24,6 +33,13 @@
 .card{
     margin: 15px;
 }
+.row{
+    margin-right:-300px !important;
+    margin-left:-30px !important;
+}
+.container-fluid{
+    padding-left: 55px !important;
+}
 
 img{
     width: 200px;
@@ -31,8 +47,11 @@ img{
 }
 
 footer{
-    background-color: #f8f9fa;
+    background-color: #232F3E;
+    color: #D7D7D7 !important;
+
 }
+
 
 
 
