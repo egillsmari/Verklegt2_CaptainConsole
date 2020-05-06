@@ -15,7 +15,7 @@
     <h2 class="fpCategory">Games</h2>
     <div class="content">
         {% for product in products %}
-            {% if product.category_id == 3 %}
+            {% if product.category_id == 1 %}
                 <div class="card">
                     <h4>{{ product.name }}</h4>
                     <img src="{{ product.image }}" alt="{{ product.name }}">
@@ -26,7 +26,7 @@
     <h2 class="fpCategory">Accessories</h2>
     <div class="content">
         {% for product in products %}
-            {% if product.category_id == 4 %}
+            {% if product.category_id == 3 %}
                 <div class="card">
                     <h4>{{ product.name }}</h4>
                     <img src="{{ product.image }}" alt="{{ product.name }}">
