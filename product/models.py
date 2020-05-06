@@ -3,6 +3,9 @@ from django.db import models
 class Category(models.Model):
     name = models.CharField(max_length=255)
 
+class Platform(models.Model):
+    name = models.CharField(max_length=30)
+
 class Product(models.Model):
     name = models.CharField(max_length=255)
     releaseDate = models.DateTimeField()
@@ -10,9 +13,15 @@ class Product(models.Model):
     manufacturer = models.CharField(max_length=255)
     description = models.TextField()
     price = models.FloatField()
-    platform = models.CharField(max_length=255)
+    platform = models.ForeignKey(Platform, on_delete=models.CASCADE)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     image = models.CharField(max_length=255)
+
+
+
+
+
+
 
 
 
