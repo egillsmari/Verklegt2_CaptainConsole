@@ -6,11 +6,14 @@ class Category(models.Model):
 class Platform(models.Model):
     name = models.CharField(max_length=30)
 
+class Manufacturer(models.Model):
+    name = models.CharField(max_length=255)
+
 class Product(models.Model):
     name = models.CharField(max_length=255)
     releaseDate = models.DateTimeField()
     type = models.CharField(max_length=255)
-    manufacturer = models.CharField(max_length=255)
+    manufacturer = models.ForeignKey(Manufacturer, on_delete=models.CASCADE)
     description = models.TextField()
     price = models.FloatField()
     platform = models.ForeignKey(Platform, on_delete=models.CASCADE)
