@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+    {% include 'productToolbar.html' %}
+     <div class="content">
+        {% for product in products %}
+            <div class="card">
+                <h4>{{ product.name }}</h4>
+                <img src="{{ product.image }}" alt="{{ product.name }}">
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

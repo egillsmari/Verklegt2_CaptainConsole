@@ -11,6 +11,4 @@ def index(request, manufacturer):
         context['consoles'] = Product.objects.filter(category_id=2, manufacturer_id=manufacturer).order_by('name')
     return render(request, 'consoles/index.html', context)
 
-def productView(request, platform):
-    pass
 

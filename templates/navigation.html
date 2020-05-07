@@ -9,10 +9,10 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 {% for manufacturer in manufacturers %}
-                    <a class="dropdown-item" href="{% url 'consoles-index' manufacturer.id %}">{{ manufacturer.name }}</a>
+                    <a class="dropdown-item" href="{% url 'product-index' 2 manufacturer.id %}">{{ manufacturer.name }}</a>
                 {% endfor %}
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="{% url 'consoles-index' 0 %}">See all</a>
+                <a class="dropdown-item" href="{% url 'product-index' 2 0 %}">See all</a>
             </div>
           </li>
             <li class="nav-item dropdown">
@@ -21,10 +21,10 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 {% for manufacturer in manufacturers %}
-                    <a class="dropdown-item" href="{% url 'games-index' manufacturer.id %}">{{ manufacturer.name }}</a>
+                    <a class="dropdown-item" href="{% url 'product-index' 1 manufacturer.id %}">{{ manufacturer.name }}</a>
                 {% endfor %}
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="{% url 'games-index' 0 %}">See all</a>
+                <a class="dropdown-item" href="{% url 'product-index' 1 0 %}">See all</a>
             </div>
           </li>
             <li class="nav-item dropdown">
@@ -33,10 +33,10 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 {% for manufacturer in manufacturers %}
-                    <a class="dropdown-item" href="{% url 'accessories-index' manufacturer.id %}">{{ manufacturer.name }}</a>
+                    <a class="dropdown-item" href="{% url 'product-index' 3 manufacturer.id %}">{{ manufacturer.name }}</a>
                 {% endfor %}
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="{% url 'accessories-index' 0 %}">See all</a>
+                <a class="dropdown-item" href="{% url 'product-index' 3 0 %}">See all</a>
             </div>
           </li>
             <form class="form-inline my-2 my-lg-0">
