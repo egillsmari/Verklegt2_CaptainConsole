@@ -1,14 +1,34 @@
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
-from django.contrib import messages
-from .forms import UserRegisterForm
+from myAccount.forms.userForm import AccountForm
+from myAccount.models import Account
+from myAccount.forms.forms import UserCreationForm
+
+
 
 # Create your views here.
 def register(request):
     if request.method == 'POST':
-        form = UserRegisterForm(request.POST)
+        form = UserCreationForm(data=request.POST)
         if form.is_valid():
             form.save()
             return redirect('login')
-    else:
-        form = UserRegisterForm()
-    return render(request, 'myAccount/index.html', {'form': form})
+    return render(request, 'myAccount/register.html', {'form': UserCreationForm})
+
+@login_required
+def seePurchasehistory(request):
+    return render(request, 'myAccount/pruchaseHistory.html')
+
+@login_required
+def accountInfo(request):
+    account = Account.objects.filter(user=request.username).first()
+    if request.method == 'POST':
+        form = AccountForm(instance=AccountForm, data=request.POST)
+        if form.is_valid():
+            account = form.save(commit=False)
+            account.user = request.user
+            account.save()
+            return redirect('homepage-index')
+    return render(request, 'myAccount/accountInfo.html', {
+        'form': AccountForm(instance=account)
+    })
