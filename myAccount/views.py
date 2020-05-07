@@ -21,12 +21,12 @@ def seePurchasehistory(request):
 
 @login_required
 def accountInfo(request):
-    account = Account.objects.filter(user=request.username).first()
+    account = Account.objects.filter(user=request.user).first()
     if request.method == 'POST':
         form = AccountForm(instance=AccountForm, data=request.POST)
         if form.is_valid():
             account = form.save(commit=False)
-            account.user = request.user
+            account.username = request.user
             account.save()
             return redirect('homepage-index')
     return render(request, 'myAccount/accountInfo.html', {
