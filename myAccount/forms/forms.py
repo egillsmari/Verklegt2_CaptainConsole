@@ -10,5 +10,5 @@ class UserRegisterForm(UserCreationForm):
 
     class Meta:
         model = User
-        execlude = ['id', 'user', ]
+        execlude = ['id', 'user',]
         fields = ['username', 'email', 'password1', 'password2']
