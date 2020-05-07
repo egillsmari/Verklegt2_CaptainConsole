@@ -1,5 +1,6 @@
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
+from myAccount.forms.userForm import AccountForm
 from myAccount.models import Account
 from myAccount.forms.forms import UserCreationForm
 
@@ -20,9 +21,14 @@ def seePurchasehistory(request):
 
 @login_required
 def accountInfo(request):
-    account = Account.objects.filter(user=request.user).first()
+    account = Account.objects.filter(user=request.username).first()
     if request.method == 'POST':
-        print(1)
+        form = AccountForm(instance=AccountForm, data=request.POST)
+        if form.is_valid():
+            account = form.save(commit=False)
+            account.user = request.user
+            account.save()
+            return redirect('homepage-index')
     return render(request, 'myAccount/accountInfo.html', {
-        'form': UserCreationForm
+        'form': AccountForm(instance=account)
     })
