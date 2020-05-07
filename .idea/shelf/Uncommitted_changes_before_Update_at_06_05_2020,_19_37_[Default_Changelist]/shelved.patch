@@ -1,0 +1,105 @@
+Index: myAccount/models.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>from django.db import models\nfrom django.conf import settings\n# Create your models here.\nclass Zip(models.Model):\n    zip = models.CharField(max_length=255)\n    country = models.CharField(max_length=255)\n    city = models.CharField(max_length=255)\n\nclass PaymentInfo(models.Model):\n    accountId = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)\n    nameOnCard = models.CharField(max_length=255)\n    cardNumber = models.CharField(max_length=255)\n    CVV = models.FloatField()\n\n\nclass SearchHistory(models.Model):\n    accountId = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)\n    searchedItem = models.CharField(max_length=255)\n\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- myAccount/models.py	(revision 7b93d933b76e6f8124a2b6eec002de69fe13d2bb)
++++ myAccount/models.py	(date 1588792271275)
+@@ -1,19 +1,25 @@
+ from django.db import models
+ from django.conf import settings
++
+ # Create your models here.
++
++class PaymentInfo(models.Model):
++    accountId = models.ForeignKey(settings.AUTH_USER_MODEL,on_delete=models.CASCADE,)
++    nameOnCard = models.CharField(max_length=30)
++    cardNumber = models.CharField(max_length=50)
++    CVV = models.FloatField()
++
+ class Zip(models.Model):
+     zip = models.CharField(max_length=255)
+     country = models.CharField(max_length=255)
+     city = models.CharField(max_length=255)
+ 
+-class PaymentInfo(models.Model):
+-    accountId = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+-    nameOnCard = models.CharField(max_length=255)
+-    cardNumber = models.CharField(max_length=255)
+-    CVV = models.FloatField()
+-
+-
+ class SearchHistory(models.Model):
+-    accountId = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
++    accountId = models.ForeignKey(settings.AUTH_USER_MODEL,on_delete=models.CASCADE,)
+     searchedItem = models.CharField(max_length=255)
+ 
++
++
++
++
++
+Index: .idea/dataSources/6f61704b-fee4-407c-9085-28199ae8d0e6/storage_v2/_src_/database/szpdoaaj.lkazpA/schema/public.abK9xQ.meta
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>#n:public\n!<md> [9461841, 0, null, null, -2147483648, -2147483648]\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/dataSources/6f61704b-fee4-407c-9085-28199ae8d0e6/storage_v2/_src_/database/szpdoaaj.lkazpA/schema/public.abK9xQ.meta	(revision 7b93d933b76e6f8124a2b6eec002de69fe13d2bb)
++++ .idea/dataSources/6f61704b-fee4-407c-9085-28199ae8d0e6/storage_v2/_src_/database/szpdoaaj.lkazpA/schema/public.abK9xQ.meta	(date 1588790859194)
+@@ -1,2 +1,2 @@
+ #n:public
+-!<md> [9461841, 0, null, null, -2147483648, -2147483648]
++!<md> [9462192, 0, null, null, -2147483648, -2147483648]
+Index: .idea/dataSources.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"DataSourceManagerImpl\" format=\"xml\" multifile-model=\"true\">\n    <data-source source=\"LOCAL\" name=\"CaptainConsole\" uuid=\"6f61704b-fee4-407c-9085-28199ae8d0e6\">\n      <driver-ref>postgresql</driver-ref>\n      <synchronize>true</synchronize>\n      <jdbc-driver>org.postgresql.Driver</jdbc-driver>\n      <jdbc-url>jdbc:postgresql://kandula.db.elephantsql.com:5432/szpdoaaj</jdbc-url>\n    </data-source>\n    <data-source source=\"LOCAL\" name=\"Django default\" uuid=\"204e1cb5-6bd3-4aa9-ae21-441bbefea3f5\">\n      <driver-ref>postgresql</driver-ref>\n      <synchronize>true</synchronize>\n      <imported>true</imported>\n      <remarks>$PROJECT_DIR$/Verklegt2_AHE/settings.py</remarks>\n      <jdbc-driver>org.postgresql.Driver</jdbc-driver>\n      <jdbc-url>jdbc:postgresql://kandula.db.elephantsql.com:5432/szpdoaaj</jdbc-url>\n    </data-source>\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/dataSources.xml	(revision 7b93d933b76e6f8124a2b6eec002de69fe13d2bb)
++++ .idea/dataSources.xml	(date 1588790399922)
+@@ -7,13 +7,5 @@
+       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+       <jdbc-url>jdbc:postgresql://kandula.db.elephantsql.com:5432/szpdoaaj</jdbc-url>
+     </data-source>
+-    <data-source source="LOCAL" name="Django default" uuid="204e1cb5-6bd3-4aa9-ae21-441bbefea3f5">
+-      <driver-ref>postgresql</driver-ref>
+-      <synchronize>true</synchronize>
+-      <imported>true</imported>
+-      <remarks>$PROJECT_DIR$/Verklegt2_AHE/settings.py</remarks>
+-      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+-      <jdbc-url>jdbc:postgresql://kandula.db.elephantsql.com:5432/szpdoaaj</jdbc-url>
+-    </data-source>
+   </component>
+ </project>
+\ No newline at end of file
+Index: .idea/dataSources.local.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"dataSourceStorageLocal\">\n    <data-source name=\"CaptainConsole\" uuid=\"6f61704b-fee4-407c-9085-28199ae8d0e6\">\n      <database-info product=\"\" version=\"\" jdbc-version=\"\" driver-name=\"\" driver-version=\"\" dbms=\"POSTGRES\" exact-version=\"0\" />\n      <schema-mapping />\n    </data-source>\n    <data-source name=\"Django default\" uuid=\"204e1cb5-6bd3-4aa9-ae21-441bbefea3f5\">\n      <database-info product=\"PostgreSQL\" version=\"11.6 (Ubuntu 11.6-1.pgdg18.04+1)\" jdbc-version=\"4.2\" driver-name=\"PostgreSQL JDBC Driver\" driver-version=\"42.2.5\" dbms=\"POSTGRES\" exact-version=\"11.6\" exact-driver-version=\"42.2\">\n        <identifier-quote-string>&quot;</identifier-quote-string>\n      </database-info>\n      <case-sensitivity plain-identifiers=\"lower\" quoted-identifiers=\"exact\" />\n      <user-name>szpdoaaj</user-name>\n      <schema-mapping>\n        <introspection-scope>\n          <node kind=\"database\" qname=\"@\">\n            <node kind=\"schema\" qname=\"@\" />\n          </node>\n        </introspection-scope>\n      </schema-mapping>\n    </data-source>\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/dataSources.local.xml	(revision 7b93d933b76e6f8124a2b6eec002de69fe13d2bb)
++++ .idea/dataSources.local.xml	(date 1588790888933)
+@@ -2,14 +2,11 @@
+ <project version="4">
+   <component name="dataSourceStorageLocal">
+     <data-source name="CaptainConsole" uuid="6f61704b-fee4-407c-9085-28199ae8d0e6">
+-      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" exact-version="0" />
+-      <schema-mapping />
+-    </data-source>
+-    <data-source name="Django default" uuid="204e1cb5-6bd3-4aa9-ae21-441bbefea3f5">
+       <database-info product="PostgreSQL" version="11.6 (Ubuntu 11.6-1.pgdg18.04+1)" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.2.5" dbms="POSTGRES" exact-version="11.6" exact-driver-version="42.2">
+         <identifier-quote-string>&quot;</identifier-quote-string>
+       </database-info>
+       <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
++      <secret-storage>master_key</secret-storage>
+       <user-name>szpdoaaj</user-name>
+       <schema-mapping>
+         <introspection-scope>

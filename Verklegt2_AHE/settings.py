@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'accessories.apps.AccessoriesConfig',
     'checkout.apps.CheckoutConfig',
     'product.apps.ProductConfig',
-    'myAccount.apps.MyaccountConfig'
+    'myAccount.apps.MyaccountConfig',
+    'searchBar.apps.SearchbarConfig'
 ]
 
 MIDDLEWARE = [
