@@ -12,6 +12,5 @@ def index(request, manufacturer):
     return render(request, 'consoles/index.html', context)
 
 def productView(request, platform):
-    context = platformsContext()
-    if
+    pass
 
