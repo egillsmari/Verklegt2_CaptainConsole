@@ -5,7 +5,7 @@ from django.contrib.auth.forms import UserCreationForm
 
 class UserRegisterForm(UserCreationForm):
     email = forms.EmailField(required=True)
-    country = 's'
+
 
 
     class Meta:
