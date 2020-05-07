@@ -1,9 +1,21 @@
 {% extends 'base.html' %}
 {% block content %}
-    <h2>Sing Up now</h2>
-    <form method="post">
-    {% csrf_token %}
-    {{ form }}
-    <input type="submit" value="Sign up">
-    </form>
-{% endblock %}
+
+    <div class="content-section">
+        <form method="POST">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend >Join Today</legend>
+                {{ form }}
+            </fieldset>
+            <div class="form-group">
+                <button  type="submit">Sign Up</button>
+            </div>
+        </form>
+        <div class="border-top pt-3">
+            <small class="text-muted">
+                Already Have An Account? <a class="ml-2" href="#">Sign In</a>
+            </small>
+        </div>
+    </div>
+{% endblock content %}
