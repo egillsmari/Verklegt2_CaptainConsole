@@ -3,6 +3,8 @@ from product.models import Platform
 from product.models import Manufacturer
 from product.models import Product
 
+def platformsContext():
+    return {'platforms': Platform.objects.all()}
 def manufacturerContext():
     return {'manufacturers': Manufacturer.objects.all()}
 
