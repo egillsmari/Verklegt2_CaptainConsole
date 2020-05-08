@@ -1,4 +1,6 @@
-from django.http import JsonResponse
+
+from django.http import JsonResponse, HttpResponse
+from django.shortcuts import render
 from product.models import Product
 
 
@@ -6,13 +8,7 @@ from product.models import Product
 
 # Create your views here.
 def index(request):
-    if 'searchFilter' in request.GET:
-        searchFilter = request.GET['searchFilter']
-        products = [{
-            'id': x.id,
-            'name': x.name,
-            'description': x.description,
-            'image': x.image
-        }for x in Product.objects.filter(name__icontains=searchFilter)]
-        #  products = list(Product.objects.filter(name__icontains=searchFilter).values())
-        return JsonResponse({'data': products})
+    query = request.GET.get('q')
+    object_list = {'products': Product.objects.filter(name__icontains=query)}
+    return render(request, 'searchBar/index.html', object_list)
+
