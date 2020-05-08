@@ -1,19 +1,13 @@
 from product.models import Category
 from product.models import Platform
 from product.models import Manufacturer
-
-def categoriesContext():
-    context = {'categories': Category.objects.all().order_by('name')}
-    return context
-
-def platformsContext():
-    context = {'platforms': Platform.objects.all()}
-    return context
+from product.models import Product
 
 def manufacturerContext():
-    context = {'manufacturers': Manufacturer.objects.all()}
-    return context
+    return {'manufacturers': Manufacturer.objects.all()}
 
-def navContext():
-    context = {'categories': Category.objects.all(), 'platforms': Platform.objects.all()}
-    return context
+def allContext(category, manufacturer):
+    return {'cat': category, 'man': manufacturer, 'manufacturers': Manufacturer.objects.all(), 'platforms': Platform.objects.all()}
+
+def narrowContext(category, manufacturer):
+    return {'cat': category, 'man': manufacturer, 'manufacturers': Manufacturer.objects.all(), 'platforms': Platform.objects.filter(manufacturer_id=manufacturer).order_by('name')}

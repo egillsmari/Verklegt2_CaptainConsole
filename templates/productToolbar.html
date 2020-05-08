@@ -1,14 +1,21 @@
 <div class="bar">
-    <h2 class="fpCategory">Consoles</h2>
+    {% if cat == 1 %}
+        <h2 class="fpCategory">Consoles</h2>
+    {% elif cat == 2 %}
+        <h2 class="fpCategory">Games</h2>
+    {% else %}
+        <h2 class="fpCategory">Accessories</h2>
+    {% endif %}
     <div class="buttons">
         <div class="dropdown buttonFilter">
           <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Filter
           </button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
+            <a class="dropdown-item" href="#">Pricerange</a>
+            {% for platform in platforms %}
+                <a class="dropdown-item" href="{% url 'product-productFilter' cat man platform.id %}">{{ platform.name }}</a>
+            {% endfor %}
           </div>
         </div>
         <div class="dropdown buttonFilter">
@@ -16,9 +23,10 @@
             Sort
           </button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
+            <a class="dropdown-item" href="{% url 'product-productSort' cat man 0 %}">Price: Ascending</a>
+            <a class="dropdown-item" href="{% url 'product-productSort' cat man 1 %}">Price: Descending</a>
+            <a class="dropdown-item" href="{% url 'product-productSort' cat man 2 %}">Popularity</a>
+              <a class="dropdown-item" href="{% url 'product-productSort' cat man 3 %}">Release date</a>
           </div>
         </div>
     </div>

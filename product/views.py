@@ -1,20 +1,37 @@
 from django.shortcuts import render
 from product.models import Product
-from context.contextBuilder import platformsContext, manufacturerContext
+from product.models import Platform
+from context.contextBuilder import allContext, narrowContext
 
 # Create your views here.
 def index(request, category, manufacturer):
-    context = platformsContext()
     if manufacturer == 0:
-        context['product'] = Product.objects.filter(category_id=category).order_by('name')
+        context = allContext(category, manufacturer)
+        context['products'] = Product.objects.filter(category_id=category).order_by('name')
     else:
-        context['product'] = Product.objects.filter(category_id=category, manufacturer_id=manufacturer).order_by('name')
+        plat = Platform.objects.filter(manufacturer_id=manufacturer).values_list('id', flat=True)
+        context = narrowContext(category, manufacturer)
+        context['products'] = Product.objects.filter(category_id=category, platform_id__in=plat).order_by('name')
     return render(request, 'product/index.html', context)
 
-def productSort():
-    pass
+def productSort(request, category, manufacturer, sort):
+    context = narrowContext(category, manufacturer)
+    if sort == 0:
+        context['products'] = Product.objects.filter(category_id=category, manufacturer_id=manufacturer).order_by('price')
+    elif sort == 1:
+        context['products'] = Product.objects.filter(category_id=category, manufacturer_id=manufacturer).order_by('-price')
+    elif sort == 2:
+        pass
+    elif sort == 3:
+        context['products'] = Product.objects.filter(category_id=category, manufacturer_id=manufacturer).order_by('releaseDate')
+    return render(request, 'product/index.html', context)
 
-def productFilter():
+def productFilter(request, category, manufacturer, platform):
+    context = narrowContext(category, manufacturer)
+    context['products'] = Product.objects.filter(category_id=category, manufacturer_id=manufacturer, platform_id=platform).order_by('name')
+    return render(request, 'product/index.html', context)
+
+def productPlatform():
     pass
 
 def productRange():

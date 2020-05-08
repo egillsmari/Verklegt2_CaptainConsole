@@ -20,10 +20,11 @@ from myAccount import views as user_views
 urlpatterns = [
     path('', include('homepage.urls')),
     path('admin/', admin.site.urls),
-    path('consoles', include('consoles.urls')),
-    path('games', include('games.urls')),
-    path('accessories', include('accessories.urls')),
+    #path('consoles', include('consoles.urls')),
+    #path('games', include('games.urls')),
+    #path('accessories', include('accessories.urls')),
     path('checkout', include('checkout.urls')),
     path('contact', include('checkout.urls')),
-    path('myAccount',  include('myAccount.urls'))
+    path('myAccount',  include('myAccount.urls')),
+    path('product', include('product.urls'))
 ]
