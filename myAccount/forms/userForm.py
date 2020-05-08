@@ -6,4 +6,6 @@ class AccountForm(ModelForm):
     class Meta:
         model = Account
         exclude = ['id', 'user']
-        widgets = {'profile_image': widgets.TextInput()}
+        widgets = {'profile_image': widgets.TimeInput(attrs={'class':'form-control'}),
+
+                   }
