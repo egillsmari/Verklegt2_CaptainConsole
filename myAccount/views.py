@@ -1,19 +1,34 @@
+from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from myAccount.forms.userForm import AccountForm
 from myAccount.models import Account
-from myAccount.forms.forms import UserCreationForm
+from myAccount.forms.forms import SignUpForm
+from myAccount.models import Zip
 
 
-
-# Create your views here.
 def register(request):
+    form = SignUpForm(data=request.POST)
     if request.method == 'POST':
-        form = UserCreationForm(data=request.POST)
         if form.is_valid():
-            form.save()
-            return redirect('login')
-    return render(request, 'myAccount/register.html', {'form': UserCreationForm})
+            user = form.save()
+            account = user.account
+            address = form.cleaned_data.get('address')
+            addressNumber = form.cleaned_data.get('addressNumber')
+            accountImage = form.cleaned_data.get('accountImage')
+            accountZipTemp = form.cleaned_data.get('zipForm')
+            accountZip = Zip.objects.get(id=accountZipTemp)
+            account.zip = accountZip
+            account.addressNumber = addressNumber
+            account.address = address
+            account.accountImage = accountImage
+            account.save()
+            username = form.cleaned_data.get('username')
+            password = form.cleaned_data.get('password1')
+            user = authenticate(username=username, password=password)
+            login(request, user)
+            return redirect('homepage-index')
+    return render(request, 'myAccount/register.html', {'form': form})
 
 @login_required
 def seePurchasehistory(request):
@@ -26,7 +41,7 @@ def accountInfo(request):
         form = AccountForm(instance=AccountForm, data=request.POST)
         if form.is_valid():
             account = form.save(commit=False)
-            account.username = request.user
+            account.user = request.user
             account.save()
             return redirect('homepage-index')
     return render(request, 'myAccount/accountInfo.html', {

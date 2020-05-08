@@ -1,3 +1,5 @@
+
+
 nav{
     background-color: #232F3E;
 }
@@ -67,6 +69,54 @@ footer{
 }
 
 
+#line1 {
+    position: absolute;
+    margin-top: 60px;
+    width: 377px;
+    height: 0px;
+    border: 7px solid #8ED7B0;
+    transform: rotate(180deg);
+
+}
+/* Line 12 */
+#line2 {
+    margin-top: 68px;
+    margin-bottom: 60px;
+    position: absolute;
+    width: 755px;
+    height: 0px;
+    border: 3px solid #8ED7B0;
+    transform: rotate(180deg);
+}
+#line4 {
+    position: absolute;
+    width: 755px;
+    height: 0px;
+    border: 3px solid #8ED7B0;
+    transform: rotate(180deg);
+}
+/* Line 13 */
+#line3 {
+    position: absolute;
+    width: 377px;
+    height: 0px;
+    border: 7px solid #8ED7B0;
+    transform: rotate(180deg);
+}
+/* Line 14 */
 
 
+#signupContainer{
+    margin-top: 40px;
+    margin-left: 180px;
+    height: 80px;
+}
 
+#signupForm{
+    width: 60% !important;
+    margin-left: 200px;
+}
+
+#signup{
+
+}
