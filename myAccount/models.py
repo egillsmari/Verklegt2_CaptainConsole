@@ -21,7 +21,7 @@ class PaymentInfo(models.Model):
     accountId = models.ForeignKey(settings.AUTH_USER_MODEL,on_delete=models.CASCADE)
     nameOnCard = models.CharField(max_length=255)
     cardNumber = models.CharField(max_length=255)
-    expirationDate = models.DateTimeField()
+    expirationDate = models.CharField(max_length=25)
     CVV = models.FloatField()
 
 

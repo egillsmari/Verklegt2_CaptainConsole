@@ -13,6 +13,10 @@ class Platform(models.Model):
 class Product(models.Model):
     name = models.CharField(max_length=255)
     releaseDate = models.DateTimeField()
+<<<<<<< HEAD
+=======
+    manufacturer = models.ForeignKey(Manufacturer, on_delete=models.CASCADE)
+>>>>>>> 4cd8a7132e48ec955c5cb6c12052d73669559af0
     description = models.TextField()
     price = models.FloatField()
     platform = models.ForeignKey(Platform, on_delete=models.CASCADE)
