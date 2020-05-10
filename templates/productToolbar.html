@@ -12,7 +12,11 @@
             Filter
           </button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#">Pricerange</a>
+             <form class="form-inline my-2 my-lg-0" action="{% url 'product-productRange' cat man %}" method="get">
+              <input class="form-control mr-sm-2 prodSearch" name="from" id="search-box" type="search" placeholder="Price from.." aria-label="Search">
+                 <input class="form-control mr-sm-2 prodSearch" name="to" id="search-box" type="search" placeholder="Price to.." aria-label="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0"  id="search-btn" type="submit">Filter</button>
+            </form>
             {% for platform in platforms %}
                 <a class="dropdown-item" href="{% url 'product-productFilter' cat man platform.id %}">{{ platform.name }}</a>
             {% endfor %}
