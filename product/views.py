@@ -32,8 +32,10 @@ def productSort(request, category, manufacturer, sort):
         context['products'] = Product.objects.filter(category_id=category, platform_id__in=plat).order_by('releaseDate')
     return render(request, 'product/index.html', context)
 
-def productPlatform():
-    pass
-
-def productRange():
-    pass
+def productRange(request, category, manufacturer):
+    context = narrowContext(category, manufacturer)
+    plat = Platform.objects.filter(manufacturer_id=manufacturer).values_list('id', flat=True)
+    fromRange = request.GET.get('from')
+    toRange = request.GET.get('to')
+    context['products'] = Product.objects.filter(category_id=category, platform_id__in=plat, price__gte=fromRange, price__lte=toRange).order_by('name')
+    return render(request, 'product/index.html', context)
