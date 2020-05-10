@@ -1,18 +1,22 @@
-from django.http import JsonResponse
+from django.shortcuts import render
 from product.models import Product
+from myAccount.models import SearchHistory
+from context.contextBuilder import manufacturerContext
 
 
 
 
 # Create your views here.
 def index(request):
-    if 'searchFilter' in request.GET:
-        searchFilter = request.GET['searchFilter']
-        products = [{
-            'id': x.id,
-            'name': x.name,
-            'description': x.description,
-            'image': x.image
-        }for x in Product.objects.filter(name__icontains=searchFilter)]
-        #  products = list(Product.objects.filter(name__icontains=searchFilter).values())
-        return JsonResponse({'data': products})
+    context = manufacturerContext()
+    query = request.GET.get('q')
+    context['products'] = Product.objects.filter(name__icontains=query)
+    if request.user.is_authenticated:
+        current_user = request.user.id
+        history = SearchHistory(searchedItem=query, accountId_id=current_user)
+        history.save()
+
+
+
+    return render(request, 'searchBar/index.html', context)
+
