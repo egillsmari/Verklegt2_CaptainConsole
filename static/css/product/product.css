@@ -1,0 +1,21 @@
+.content{
+    display: flex;
+}
+
+.card{
+    margin: 15px;
+}
+
+.prodSearch{
+    width: 70px !important;
+}
+
+.formFilter{
+    display: flex;
+    width: 50px !important;
+}
+
+img{
+    width: 200px;
+    height: 200px;
+}

@@ -1,0 +1,21 @@
+
+nav{
+    background-color: #232F3E;
+}
+
+.center{
+    margin: 0 auto;
+}
+
+.right{
+    width: 145px;
+    margin-right: 10px;
+}
+
+.fpDrop{
+    color: #D7D7D7 !important;
+}
+
+.dropElem{
+    color: #232F3E !important;
+}

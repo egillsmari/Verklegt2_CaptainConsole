@@ -1,10 +1,10 @@
 <div class="bar">
     {% if cat == 1 %}
-        <h2 class="fpCategory">Consoles</h2>
+        <h2>Consoles</h2>
     {% elif cat == 2 %}
-        <h2 class="fpCategory">Games</h2>
+        <h2>Games</h2>
     {% else %}
-        <h2 class="fpCategory">Accessories</h2>
+        <h2>Accessories</h2>
     {% endif %}
     <div class="buttons">
         <div class="dropdown buttonFilter">
@@ -12,7 +12,19 @@
             Filter
           </button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#">Pricerange</a>
+            {% if filter is None %}
+             <form class="my-2 my-lg-0 formFilter" action="{% url 'product-productRange' cat man 0 %}" method="get">
+              <input class="form-control mr-sm-2 prodSearch" name="from" id="search-box" type="search" placeholder="Price from.." aria-label="Search">
+                 <input class="form-control mr-sm-2 prodSearch" name="to" id="search-box" type="search" placeholder="Price to.." aria-label="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0"  id="search-btn" type="submit">Filter</button>
+            </form>
+            {% else %}
+                <form class="my-2 my-lg-0 formFilter" action="{% url 'product-productRange' cat man filter %}" method="get">
+                  <input class="form-control mr-sm-2 prodSearch" name="from" id="search-box" type="search" placeholder="Price from.." aria-label="Search">
+                     <input class="form-control mr-sm-2 prodSearch" name="to" id="search-box" type="search" placeholder="Price to.." aria-label="Search">
+                  <button class="btn btn-outline-success my-2 my-sm-0"  id="search-btn" type="submit">Filter</button>
+                </form>
+            {% endif %}
             {% for platform in platforms %}
                 <a class="dropdown-item" href="{% url 'product-productFilter' cat man platform.id %}">{{ platform.name }}</a>
             {% endfor %}
@@ -23,10 +35,17 @@
             Sort
           </button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="{% url 'product-productSort' cat man 0 %}">Price: Ascending</a>
-            <a class="dropdown-item" href="{% url 'product-productSort' cat man 1 %}">Price: Descending</a>
-            <a class="dropdown-item" href="{% url 'product-productSort' cat man 2 %}">Popularity</a>
-              <a class="dropdown-item" href="{% url 'product-productSort' cat man 3 %}">Release date</a>
+              {% if filter is None %}
+                  <a class="dropdown-item" href="{% url 'product-productSort' cat man 0 0 %}">Price: Ascending</a>
+                  <a class="dropdown-item" href="{% url 'product-productSort' cat man 0 1 %}">Price: Descending</a>
+                  <a class="dropdown-item" href="{% url 'product-productSort' cat man 0 2 %}">Popularity</a>
+                  <a class="dropdown-item" href="{% url 'product-productSort' cat man 0 3 %}">Release date</a>
+              {% else %}
+                  <a class="dropdown-item" href="{% url 'product-productSort' cat man filter 0 %}">Price: Ascending</a>
+                  <a class="dropdown-item" href="{% url 'product-productSort' cat man filter 1 %}">Price: Descending</a>
+                  <a class="dropdown-item" href="{% url 'product-productSort' cat man filter 2 %}">Popularity</a>
+                  <a class="dropdown-item" href="{% url 'product-productSort' cat man filter 3 %}">Release date</a>
+              {% endif %}
           </div>
         </div>
     </div>
