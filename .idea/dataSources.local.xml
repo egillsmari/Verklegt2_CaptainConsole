@@ -8,9 +8,6 @@
       <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
       <secret-storage>master_key</secret-storage>
       <user-name>szpdoaaj</user-name>
-<<<<<<< HEAD
-      <introspection-schemas>@:@</introspection-schemas>
-=======
       <schema-mapping>
         <introspection-scope>
           <node kind="database" qname="@">
@@ -18,7 +15,6 @@
           </node>
         </introspection-scope>
       </schema-mapping>
->>>>>>> 4cd8a7132e48ec955c5cb6c12052d73669559af0
     </data-source>
   </component>
 </project>

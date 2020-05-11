@@ -1,20 +1,42 @@
 from django import forms
-from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 from django.contrib.auth.models import User
+from django_countries.data import COUNTRIES
 from myAccount.models import Zip
 
 
-zipList = []
-for zip in Zip.objects.all():
-    zipList.append((zip.id, zip.id))
+
+class locationForm(forms.Form):
+    zip = forms.IntegerField()
+    country = forms.ChoiceField(choices = sorted(COUNTRIES.items()))
+    city = forms.CharField(max_length=255)
+    class Meta:
+        model = Zip
+        fields = ('zip', 'country', 'city')
 
 
 class SignUpForm(UserCreationForm):
-    zipForm = forms.ChoiceField(choices=zipList)
     address = forms.CharField(max_length=255)
     addressNumber = forms.CharField(max_length=255)
     image = forms.CharField(max_length=255)
+
     class Meta:
         model = User
         fields = ('username', 'first_name', 'last_name', 'email',
-                  'password1', 'password2', 'address', 'addressNumber', 'image', 'zipForm' )
+                  'password1', 'password2', 'address', 'addressNumber', 'image')
+
+class PaymentForm(forms.Form):
+    nameOnCard = forms.CharField(max_length=255)
+    cardNumber = forms.CharField(max_length=255)
+    expirationDate = forms.CharField(max_length=255)
+    CVV = forms.CharField(max_length=255)
+    class Meta:
+        model = User
+        fields = ('nameOnCard', 'cardNumber', 'expirationDate', 'CVV')
+
+class AccountUpdate(UserChangeForm):
+    class Meta:
+        model = User
+        fields = ('first_name', 'last_name', 'email')
+
+
