@@ -6,7 +6,7 @@
 @import './myAccount/myAccount.css';
 
 body{
-    background-color: #D7D7D7;
+    background-color: #D7D7D7 !important;
 }
 
 
