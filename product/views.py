@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from product.models import Product
 from product.models import Platform
-from context.contextBuilder import allContext, narrowContext
+from context.contextBuilder import allContext, narrowContext, manufacturerContext
 
 import logging
 logger = logging.getLogger(__name__)
@@ -17,26 +17,21 @@ def index(request, category, manufacturer):
         context['products'] = Product.objects.filter(category_id=category, platform_id__in=plat).order_by('name')
     return render(request, 'product/index.html', context)
 
-<<<<<<< HEAD
 
-=======
->>>>>>> d385277f65752b1a7bc2c0585a9409d237c91f19
 def productFilter(request, category, manufacturer, platform):
     context = narrowContext(category, manufacturer)
     context['products'] = Product.objects.filter(category_id=category, platform_id=platform).order_by('name')
     return render(request, 'product/index.html', context)
 
-<<<<<<< HEAD
 
 def productSort(request, category, manufacturer, sort):
     context = narrowContext(category, manufacturer)
     plat = Platform.objects.filter(manufacturer_id=manufacturer).values_list('id', flat=True)
 
-=======
 def productSort(request, category, manufacturer, sort):
     context = narrowContext(category, manufacturer)
     plat = Platform.objects.filter(manufacturer_id=manufacturer).values_list('id', flat=True)
->>>>>>> d385277f65752b1a7bc2c0585a9409d237c91f19
+
     if sort == 0:
         context['products'] = Product.objects.filter(category_id=category, platform_id__in=plat).order_by('price')
     elif sort == 1:
@@ -47,7 +42,7 @@ def productSort(request, category, manufacturer, sort):
         context['products'] = Product.objects.filter(category_id=category, platform_id__in=plat).order_by('releaseDate')
     return render(request, 'product/index.html', context)
 
-<<<<<<< HEAD
+
 
 def productPlatform():
     pass
@@ -55,7 +50,7 @@ def productPlatform():
 
 def productRange():
     pass
-=======
+
 def productRange(request, category, manufacturer):
     context = narrowContext(category, manufacturer)
     plat = Platform.objects.filter(manufacturer_id=manufacturer).values_list('id', flat=True)
@@ -63,4 +58,9 @@ def productRange(request, category, manufacturer):
     toRange = request.GET.get('to')
     context['products'] = Product.objects.filter(category_id=category, platform_id__in=plat, price__gte=fromRange, price__lte=toRange).order_by('name')
     return render(request, 'product/index.html', context)
->>>>>>> d385277f65752b1a7bc2c0585a9409d237c91f19
+
+def productInfo(request, productid):
+    context = manufacturerContext()
+    context['products'] = Product.objects.filter(id=productid)
+    return render(request, 'productInfo/index.html', context)
+
