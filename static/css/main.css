@@ -1,122 +1,15 @@
 
+@import './product/product.css';
+@import './homepage/homepage.css';
+@import './header/nav.css';
+@import './footer/footer.css';
+@import './myAccount/myAccount.css';
 
-nav{
-    background-color: #232F3E;
-}
 body{
-    background-color: #D7D7D7 !important;
-}
-a{
-    color: #D7D7D7 !important;
-}
-
-.fpSearch{
-    width: 600px !important;
-
-}
-
-.center{
-    margin: 0 auto;
-}
-
-.right{
-    width: 145px;
-    margin-right: 10px;
-}
-
-.fpCategory{
-    border-bottom: 2px solid #8ED7B0;
-}
-
-.content{
-    display: flex;
-}
-
-.card{
-    margin: 15px;
-}
-.row{
-    margin-right:-300px !important;
-    margin-left:-30px !important;
-}
-.container-fluid{
-    padding-left: 55px !important;
-}
-
-img{
-    width: 200px;
-    height: 200px;
-}
-
-footer{
-    background-color: #232F3E;
-    color: #D7D7D7 !important;
-}
-
-.bar{
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-    border-bottom: 2px solid #8ED7B0;;
-}
-
-.buttons{
-    display: flex;
-}
-
-.buttonFilter{
-    margin-right: 10px;
+    background-color: #D7D7D7;
 }
 
 
-#line1 {
-    position: absolute;
-    margin-top: 60px;
-    width: 377px;
-    height: 0px;
-    border: 7px solid #8ED7B0;
-    transform: rotate(180deg);
-
-}
-/* Line 12 */
-#line2 {
-    margin-top: 68px;
-    margin-bottom: 60px;
-    position: absolute;
-    width: 755px;
-    height: 0px;
-    border: 3px solid #8ED7B0;
-    transform: rotate(180deg);
-}
-#line4 {
-    position: absolute;
-    width: 755px;
-    height: 0px;
-    border: 3px solid #8ED7B0;
-    transform: rotate(180deg);
-}
-/* Line 13 */
-#line3 {
-    position: absolute;
-    width: 377px;
-    height: 0px;
-    border: 7px solid #8ED7B0;
-    transform: rotate(180deg);
-}
-/* Line 14 */
 
 
-#signupContainer{
-    margin-top: 40px;
-    margin-left: 180px;
-    height: 80px;
-}
 
-#signupForm{
-    width: 60% !important;
-    margin-left: 200px;
-}
-
-#signup{
-
-}

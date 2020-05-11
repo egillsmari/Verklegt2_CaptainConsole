@@ -1,10 +1,10 @@
 <div class="bar">
     {% if cat == 1 %}
-        <h2 class="fpCategory">Consoles</h2>
+        <h2>Consoles</h2>
     {% elif cat == 2 %}
-        <h2 class="fpCategory">Games</h2>
+        <h2>Games</h2>
     {% else %}
-        <h2 class="fpCategory">Accessories</h2>
+        <h2>Accessories</h2>
     {% endif %}
     <div class="buttons">
         <div class="dropdown buttonFilter">
@@ -13,13 +13,13 @@
           </button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
             {% if filter is None %}
-             <form class="form-inline my-2 my-lg-0" action="{% url 'product-productRange' cat man 0%}" method="get">
+             <form class="my-2 my-lg-0 formFilter" action="{% url 'product-productRange' cat man 0 %}" method="get">
               <input class="form-control mr-sm-2 prodSearch" name="from" id="search-box" type="search" placeholder="Price from.." aria-label="Search">
                  <input class="form-control mr-sm-2 prodSearch" name="to" id="search-box" type="search" placeholder="Price to.." aria-label="Search">
               <button class="btn btn-outline-success my-2 my-sm-0"  id="search-btn" type="submit">Filter</button>
             </form>
             {% else %}
-                <form class="form-inline my-2 my-lg-0" action="{% url 'product-productRange' cat man filter%}" method="get">
+                <form class="my-2 my-lg-0 formFilter" action="{% url 'product-productRange' cat man filter %}" method="get">
                   <input class="form-control mr-sm-2 prodSearch" name="from" id="search-box" type="search" placeholder="Price from.." aria-label="Search">
                      <input class="form-control mr-sm-2 prodSearch" name="to" id="search-box" type="search" placeholder="Price to.." aria-label="Search">
                   <button class="btn btn-outline-success my-2 my-sm-0"  id="search-btn" type="submit">Filter</button>

@@ -4,39 +4,39 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto center">
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle fpDrop" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Consoles
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 {% for manufacturer in manufacturers %}
-                    <a class="dropdown-item" href="{% url 'product-index' 1 manufacturer.id %}">{{ manufacturer.name }}</a>
+                    <a class="dropdown-item dropElem" href="{% url 'product-index' 1 manufacturer.id %}">{{ manufacturer.name }}</a>
                 {% endfor %}
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="{% url 'product-index' 1 0 %}">See all</a>
+                <a class="dropdown-item dropElem" href="{% url 'product-index' 1 0 %}">See all</a>
             </div>
           </li>
             <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle fpDrop" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Games
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 {% for manufacturer in manufacturers %}
-                    <a class="dropdown-item" href="{% url 'product-index' 2 manufacturer.id %}">{{ manufacturer.name }}</a>
+                    <a class="dropdown-item dropElem" href="{% url 'product-index' 2 manufacturer.id %}">{{ manufacturer.name }}</a>
                 {% endfor %}
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="{% url 'product-index' 2 0 %}">See all</a>
+                <a class="dropdown-item dropElem" href="{% url 'product-index' 2 0 %}">See all</a>
             </div>
           </li>
             <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle fpDrop" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Accessories
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 {% for manufacturer in manufacturers %}
-                    <a class="dropdown-item" href="{% url 'product-index' 3 manufacturer.id %}">{{ manufacturer.name }}</a>
+                    <a class="dropdown-item dropElem" href="{% url 'product-index' 3 manufacturer.id %}">{{ manufacturer.name }}</a>
                 {% endfor %}
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="{% url 'product-index' 3 0 %}">See all</a>
+                <a class="dropdown-item dropElem" href="{% url 'product-index' 3 0 %}">See all</a>
             </div>
           </li>
             <form class="form-inline my-2 my-lg-0" action="{% url 'searchBar-index' %}" method="get">

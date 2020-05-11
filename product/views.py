@@ -19,7 +19,6 @@ def index(request, category, manufacturer):
 
 def productFilter(request, category, manufacturer, platform):
     if manufacturer == 0:
-        #manu = Platform.objects.values_list('manufacturer_id', flat=True).get(id=platform)
         context = allContext(category, manufacturer)
         context['filter'] = platform
 
