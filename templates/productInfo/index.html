@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+
+    {% for product in products %}
+        <h2 class="fpCategory">{{ product.name }}</h2>
+            <div class="infoImg">
+                <img class="productCard" src="{{ product.image }}" alt="{{ product.name }}">
+            </div>
+            <div class="description"><p>{{ product.description }}</p></div>
+    {% endfor %}
+    <button type="button" id="addTo" class="btn btn-secondary">Add to cart</button>
+
+
+
+{% endblock %}

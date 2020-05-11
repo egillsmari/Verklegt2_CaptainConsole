@@ -1,9 +1,9 @@
 /*$(document).ready(function () {
-    $('#search-btn').on('click', function (e) {
+    $('#cart-drop').on('click', function (e) {
         e.preventDefault();
         var searchText = $('#search-box').val();
         $.ajax({
-            url: '/search?searchFilter='+searchText,
+            url: '/',
             type: 'GET',
             success: function (resp) {
                 var newHtml = resp.data.map(d =>{
@@ -27,5 +27,4 @@
         })
     });
 });
-
- */
+*/

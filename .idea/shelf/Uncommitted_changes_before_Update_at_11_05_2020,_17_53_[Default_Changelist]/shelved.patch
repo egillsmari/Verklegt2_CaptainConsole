@@ -1,0 +1,1746 @@
+Index: myAccount/forms/zips.csv
+===================================================================
+--- myAccount/forms/zips.csv	(revision 448c198d87290460cce4ed9f95f2b6225cd05902)
++++ myAccount/forms/zips.csv	(revision 448c198d87290460cce4ed9f95f2b6225cd05902)
+@@ -1,194 +0,0 @@
+-Póstnúmer;Staður;Tegund;Svæði;Heimilisfang;Eldra póstnúmer
+-101;Reykjavík;Þéttbýli;Höfuðborgarsvæðið; ;
+-102;Reykjavík;Þéttbýli;Höfuðborgarsvæðið; ;101
+-103;Reykjavík;Þéttbýli;Höfuðborgarsvæðið; ;
+-104;Reykjavík;Þéttbýli;Höfuðborgarsvæðið; ;
+-105;Reykjavík;Þéttbýli;Höfuðborgarsvæðið; ;
+-107;Reykjavík;Þéttbýli;Höfuðborgarsvæðið; ;
+-108;Reykjavík;Þéttbýli;Höfuðborgarsvæðið; ;
+-109;Reykjavík;Þéttbýli;Höfuðborgarsvæðið; ;
+-110;Reykjavík;Þéttbýli;Höfuðborgarsvæðið; ;
+-111;Reykjavík;Þéttbýli;Höfuðborgarsvæðið; ;
+-112;Reykjavík;Þéttbýli;Höfuðborgarsvæðið; ;
+-113;Reykjavík;Þéttbýli;Höfuðborgarsvæðið; ;
+-116;Reykjavík;Þéttbýli;Höfuðborgarsvæðið; ;
+-121;Reykjavík;Pósthólf;Höfuðborgarsvæðið; ;
+-123;Reykjavík;Pósthólf;Höfuðborgarsvæðið; ;
+-124;Reykjavík;Pósthólf;Höfuðborgarsvæðið; ;
+-125;Reykjavík;Pósthólf;Höfuðborgarsvæðið; ;
+-127;Reykjavík;Pósthólf;Höfuðborgarsvæðið; ;
+-128;Reykjavík;Pósthólf;Höfuðborgarsvæðið; ;
+-129;Reykjavík;Pósthólf;Höfuðborgarsvæðið; ;
+-130;Reykjavík;Pósthólf;Höfuðborgarsvæðið; ;
+-132;Reykjavík;Pósthólf;Höfuðborgarsvæðið; ;
+-161;Reykjavík;Dreifbýli;Höfuðborgarsvæðið; ;110
+-162;Reykjavík - Dreifbýli;Dreifbýli;Höfuðborgarsvæðið; ;116
+-170;Seltjarnarnesi;Þéttbýli;Höfuðborgarsvæðið; ;
+-172;Seltjarnarnesi;Pósthólf;Höfuðborgarsvæðið; ;
+-190;Vogum;Þéttbýli;Suðurland og Reykjanes; ;
+-191;Vogum;Dreifbýli;Suðurland og Reykjanes; ;190
+-200;Kópavogi;Þéttbýli;Höfuðborgarsvæðið; ;
+-201;Kópavogi;Þéttbýli;Höfuðborgarsvæðið; ;
+-202;Kópavogi;Pósthólf;Höfuðborgarsvæðið; ;
+-203;Kópavogi;Þéttbýli;Höfuðborgarsvæðið; ;
+-206;Kópavogi;Dreifbýli;; ;
+-210;Garðabæ;Þéttbýli;Höfuðborgarsvæðið; ;
+-212;Garðabæ;Pósthólf;Höfuðborgarsvæðið; ;
+-220;Hafnarfirði;Þéttbýli;Höfuðborgarsvæðið; ;
+-221;Hafnarfirði;Þéttbýli;Höfuðborgarsvæðið; ;
+-222;Hafnarfirði;Pósthólf;Höfuðborgarsvæðið; ;
+-225;Garðabæ;Þéttbýli;Höfuðborgarsvæðið; ;
+-230;Reykjanesbæ;Þéttbýli;Suðurland og Reykjanes; ;
+-232;Reykjanesbæ;Pósthólf;Suðurland og Reykjanes; ;
+-233;Reykjanesbæ;Dreifbýli;Suðurland og Reykjanes; ;
+-235;Keflavíkurflugvelli;Þéttbýli;Suðurland og Reykjanes; ;
+-240;Grindavík;Þéttbýli;Suðurland og Reykjanes; ;
+-241;Grindavík;Dreifbýli;Suðurland og Reykjanes; ;240
+-245;Suðurnesjabæ;Þéttbýli;Suðurland og Reykjanes; ;
+-246;Suðurnesjabæ;Dreifbýli;Suðurland og Reykjanes; ;245
+-250;Suðurnesjabæ;Þéttbýli;Suðurland og Reykjanes; ;
+-251;Suðurnesjabæ;Dreifbýli;Suðurland og Reykjanes; ;250
+-260;Reykjanesbæ;Þéttbýli;Suðurland og Reykjanes; ;
+-262;Reykjanesbæ;Þéttbýli;Suðurland og Reykjanes; ;235
+-270;Mosfellsbæ;Þéttbýli;Höfuðborgarsvæðið; ;
+-271;Mosfellsbæ;Dreifbýli;Höfuðborgarsvæðið; ;
+-276;Mosfellsbæ;Dreifbýli;Höfuðborgarsvæðið; ;
+-300;Akranesi;Þéttbýli;Vesturland og Vestfirðir; ;
+-301;Akranesi;Dreifbýli;Vesturland og Vestfirðir; ;
+-302;Akranesi;Pósthólf;Vesturland og Vestfirðir; ;
+-310;Borgarnesi;Þéttbýli;Vesturland og Vestfirðir; ;
+-311;Borgarnesi;Dreifbýli;Vesturland og Vestfirðir; ;
+-320;Reykholti í Borgarfirði;Dreifbýli;Vesturland og Vestfirðir; ;
+-340;Stykkishólmi;Þéttbýli;Vesturland og Vestfirðir; ;
+-341;Stykkishólmi;Dreifbýli;Vesturland og Vestfirðir; ;340
+-342;Stykkishólmi;Dreifbýli;Vesturland og Vestfirðir; ;311
+-345;Flatey á Breiðafirði;Dreifbýli;Vesturland og Vestfirðir; ;
+-350;Grundarfirði;Þéttbýli;Vesturland og Vestfirðir; ;
+-351;Grundarfirði;Dreifbýli;Vesturland og Vestfirðir; ;350
+-355;Ólafsvík;Þéttbýli;Vesturland og Vestfirðir; ;
+-356;Snæfellsbæ;Dreifbýli;Vesturland og Vestfirðir; ;
+-360;Hellissandi;Þéttbýli;Vesturland og Vestfirðir; ;
+-370;Búðardal;Þéttbýli;Vesturland og Vestfirðir; ;
+-371;Búðardal;Dreifbýli;Vesturland og Vestfirðir; ;
+-380;Reykhólahreppi;Þéttbýli;Vesturland og Vestfirðir; ;
+-381;Reykhólahreppi;Dreifbýli;Vesturland og Vestfirðir; ;380
+-400;Ísafirði;Þéttbýli;Vesturland og Vestfirðir; ;
+-401;Ísafirði;Dreifbýli;Vesturland og Vestfirðir; ;
+-410;Hnífsdal;Þéttbýli;Vesturland og Vestfirðir; ;
+-415;Bolungarvík;Þéttbýli;Vesturland og Vestfirðir; ;
+-416;Bolungarvík;Dreifbýli;Vesturland og Vestfirðir; ;415
+-420;Súðavík;Þéttbýli;Vesturland og Vestfirðir; ;
+-421;Súðavík;Dreifbýli;Vesturland og Vestfirðir; ;420
+-425;Flateyri;Þéttbýli;Vesturland og Vestfirðir; ;
+-426;Flateyri;Dreifbýli;Vesturland og Vestfirðir; ;425
+-430;Suðureyri;Þéttbýli;Vesturland og Vestfirðir; ;
+-431;Suðureyri;Dreifbýli;Vesturland og Vestfirðir; ;430
+-450;Patreksfirði;Þéttbýli;Vesturland og Vestfirðir; ;
+-451;Patreksfirði;Dreifbýli;Vesturland og Vestfirðir; ;
+-460;Tálknafirði;Þéttbýli;Vesturland og Vestfirðir; ;
+-461;Tálknafirði;Dreifbýli;Vesturland og Vestfirðir; ;460
+-465;Bíldudal;Þéttbýli;Vesturland og Vestfirðir; ;
+-466;Bíldudal;Dreifbýli;Vesturland og Vestfirðir; ;465
+-470;Þingeyri;Þéttbýli;Vesturland og Vestfirðir; ;
+-471;Þingeyri;Dreifbýli;Vesturland og Vestfirðir; ;
+-500;Stað;Dreifbýli;Vesturland og Vestfirðir; ;
+-510;Hólmavík;Þéttbýli;Vesturland og Vestfirðir; ;
+-511;Hólmavík;Dreifbýli;Vesturland og Vestfirðir; ;510
+-512;Hólmavík;Dreifbýli;Vesturland og Vestfirðir; ;
+-520;Drangsnesi;Þéttbýli;Vesturland og Vestfirðir; ;
+-524;Árneshreppi;Dreifbýli;Vesturland og Vestfirðir; ;
+-530;Hvammstanga;Þéttbýli;Norðurland; ;
+-531;Hvammstanga;Dreifbýli;Norðurland; ;
+-540;Blönduósi;Þéttbýli;Norðurland; ;
+-541;Blönduósi;Dreifbýli;Norðurland; ;
+-545;Skagaströnd;Þéttbýli;Norðurland; ;
+-546;Skagaströnd;Dreifbýli;Norðurland; ;545
+-550;Sauðárkróki;Þéttbýli;Norðurland; ;
+-551;Sauðárkróki;Dreifbýli;Norðurland; ;
+-560;Varmahlíð;Þéttbýli;Norðurland; ;
+-561;Varmahlíð;Dreifbýli;Norðurland; ;560
+-565;Hofsósi;Þéttbýli;Norðurland; ;
+-566;Hofsósi;Dreifbýli;Norðurland; ;
+-570;Fljótum;Dreifbýli;Norðurland; ;
+-580;Siglufirði;Þéttbýli;Norðurland; ;
+-581;Siglufirði;Dreifbýli;Norðurland; ;580
+-600;Akureyri;Þéttbýli;Norðurland; ;
+-601;Akureyri;Dreifbýli;Norðurland; ;
+-602;Akureyri;Pósthólf;Norðurland; ;
+-603;Akureyri;Þéttbýli;Norðurland; ;
+-604;Akureyri;Dreifbýli;Norðurland; ;601
+-605;Akureyri;Dreifbýli;Norðurland; ;601
+-606;Akureyri;Dreifbýli;Norðurland; ;601
+-607;Akureyri;Dreifbýli;Norðurland; ;601
+-610;Grenivík;Þéttbýli;Norðurland; ;
+-611;Grímsey;Þéttbýli;Norðurland; ;
+-616;Grenivík;Dreifbýli;Norðurland; ;610
+-620;Dalvík;Þéttbýli;Norðurland; ;
+-621;Dalvík;Dreifbýli;Norðurland; ;
+-625;Ólafsfirði;Þéttbýli;Norðurland; ;
+-626;Ólafsfirði;Dreifbýli;Norðurland; ;625
+-630;Hrísey;Þéttbýli;Norðurland; ;
+-640;Húsavík;Þéttbýli;Norðurland; ;
+-641;Húsavík;Dreifbýli;Norðurland; ;
+-645;Fosshóli;Dreifbýli;Norðurland; ;
+-650;Laugum;Þéttbýli;Norðurland; ;
+-660;Mývatni;Dreifbýli;Norðurland; ;
+-670;Kópaskeri;Þéttbýli;Norðurland; ;
+-671;Kópaskeri;Dreifbýli;Norðurland; ;
+-675;Raufarhöfn;Þéttbýli;Norðurland; ;
+-676;Raufarhöfn;Dreifbýli;Norðurland; ;675
+-680;Þórshöfn;Þéttbýli;Norðurland; ;
+-681;Þórshöfn;Dreifbýli;Norðurland; ;
+-685;Bakkafirði;Þéttbýli;Norðurland; ;
+-686;Bakkafirði;Dreifbýli;Norðurland; ;
+-690;Vopnafirði;Þéttbýli;Norðurland; ;
+-691;Vopnafirði;Dreifbýli;Norðurland; ;690
+-700;Egilsstöðum;Þéttbýli;Austurland; ;
+-701;Egilsstöðum;Dreifbýli;Austurland; ;
+-710;Seyðisfirði;Þéttbýli;Austurland; ;
+-711;Seyðisfirði;Dreifbýli;Austurland; ;710
+-715;Mjóafirði;Dreifbýli;Austurland; ;
+-720;Borgarfirði (eystri);Dreifbýli;Austurland; ;
+-721;Borgarfirði (eystri);Dreifbýli;Austurland; ;720
+-730;Reyðarfirði;Þéttbýli;Austurland; ;
+-731;Reyðarfirði;Dreifbýli;Austurland; ;730
+-735;Eskifirði;Þéttbýli;Austurland; ;
+-736;Eskifirði;Dreifbýli;Austurland; ;735
+-740;Neskaupstað;Þéttbýli;Austurland; ;
+-741;Neskaupstað;Dreifbýli;Austurland; ;740
+-750;Fáskrúðsfirði;Þéttbýli;Austurland; ;
+-751;Fáskrúðsfirði;Dreifbýli;Austurland; ;750
+-755;Stöðvarfirði;Þéttbýli;Austurland; ;
+-756;Stöðvarfirði;Dreifbýli;Austurland; ;755
+-760;Breiðdalsvík;Þéttbýli;Austurland; ;
+-761;Breiðdalsvík;Dreifbýli;Austurland; ;760
+-765;Djúpavogi;Þéttbýli;Austurland; ;
+-766;Djúpavogi;Dreifbýli;Austurland; ;765
+-780;Höfn í Hornafirði;Þéttbýli;Austurland; ;
+-781;Höfn í Hornafirði;Dreifbýli;Austurland; ;
+-785;Öræfum;Dreifbýli;Austurland; ;
+-800;Selfossi;Þéttbýli;Suðurland og Reykjanes; ;
+-801;Selfossi;Dreifbýli;Suðurland og Reykjanes; ;
+-802;Selfossi;Pósthólf;Suðurland og Reykjanes; ;
+-803;Selfossi;Dreifbýli;Suðurland og Reykjanes; ;801
+-804;Selfossi;Dreifbýli;Suðurland og Reykjanes; ;801
+-805;Selfossi;Dreifbýli;Suðurland og Reykjanes; ;801
+-806;Selfossi;Dreifbýli;Suðurland og Reykjanes; ;801
+-810;Hveragerði;Þéttbýli;Suðurland og Reykjanes; ;
+-815;Þorlákshöfn;Þéttbýli;Suðurland og Reykjanes; ;
+-816;Ölfus;Dreifbýli;Suðurland og Reykjanes; ;
+-820;Eyrarbakka;Þéttbýli;Suðurland og Reykjanes; ;
+-825;Stokkseyri;Þéttbýli;Suðurland og Reykjanes; ;
+-840;Laugarvatni;Þéttbýli;Suðurland og Reykjanes; ;
+-845;Flúðum;Þéttbýli;Suðurland og Reykjanes; ;
+-846;Flúðum;Dreifbýli;Suðurland og Reykjanes; ;845
+-850;Hellu;Þéttbýli;Suðurland og Reykjanes; ;
+-851;Hellu;Dreifbýli;Suðurland og Reykjanes; ;
+-860;Hvolsvelli;Þéttbýli;Suðurland og Reykjanes; ;
+-861;Hvolsvelli;Dreifbýli;Suðurland og Reykjanes; ;
+-870;Vík;Þéttbýli;Suðurland og Reykjanes; ;
+-871;Vík;Dreifbýli;Suðurland og Reykjanes; ;
+-880;Kirkjubæjarklaustri;Þéttbýli;Suðurland og Reykjanes; ;
+-881;Kirkjubæjarklaustri;Dreifbýli;Suðurland og Reykjanes; ;880
+-900;Vestmannaeyjum;Þéttbýli;Suðurland og Reykjanes; ;
+-902;Vestmannaeyjum;Pósthólf;Suðurland og Reykjanes; ;
+\ No newline at end of file
+Index: myAccount/forms/userForm.py
+===================================================================
+--- myAccount/forms/userForm.py	(revision 448c198d87290460cce4ed9f95f2b6225cd05902)
++++ myAccount/forms/userForm.py	(revision 448c198d87290460cce4ed9f95f2b6225cd05902)
+@@ -1,11 +0,0 @@
+-from django.forms import ModelForm, widgets
+-from django.shortcuts import render, redirect
+-from myAccount.models import Account
+-
+-class AccountForm(ModelForm):
+-    class Meta:
+-        model = Account
+-        exclude = ['id', 'user']
+-        widgets = {'profile_image': widgets.TimeInput(attrs={'class':'form-control'}),
+-
+-                   }
+\ No newline at end of file
+Index: product/migrations/0007_merge_20200508_1854.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- product/migrations/0007_merge_20200508_1854.py	(date 1589219604211)
++++ product/migrations/0007_merge_20200508_1854.py	(date 1589219604211)
+@@ -0,0 +1,14 @@
++# Generated by Django 2.2 on 2020-05-08 18:54
++
++from django.db import migrations
++
++
++class Migration(migrations.Migration):
++
++    dependencies = [
++        ('product', '0006_auto_20200508_1518'),
++        ('product', '0003_product_type'),
++    ]
++
++    operations = [
++    ]
+Index: product/migrations/0008_remove_product_type.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- product/migrations/0008_remove_product_type.py	(date 1589219604211)
++++ product/migrations/0008_remove_product_type.py	(date 1589219604211)
+@@ -0,0 +1,17 @@
++# Generated by Django 2.2 on 2020-05-08 18:54
++
++from django.db import migrations
++
++
++class Migration(migrations.Migration):
++
++    dependencies = [
++        ('product', '0007_merge_20200508_1854'),
++    ]
++
++    operations = [
++        migrations.RemoveField(
++            model_name='product',
++            name='type',
++        ),
++    ]
+Index: myAccount/models.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>from django.db import models\nfrom django.conf import settings\nfrom django.contrib.auth.models import User\nfrom django.db.models.signals import post_save\nfrom django.dispatch import receiver\n\n\nclass Zip(models.Model):\n    zip = models.CharField(max_length=255)\n    country = models.CharField(max_length=255)\n    city = models.CharField(max_length=255)\n\nclass Account(models.Model):\n    user = models.OneToOneField(User, on_delete=models.CASCADE)\n    zip = models.ForeignKey(Zip, on_delete=models.CASCADE, default=101)\n    address = models.CharField(max_length=10, null=True, blank=True)\n    addressNumber = models.CharField(max_length=20, null=True, blank=True)\n    accountImage = models.CharField(max_length=999, null=True, blank=True)\n\n\nclass PaymentInfo(models.Model):\n    accountId = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)\n    nameOnCard = models.CharField(max_length=255)\n    cardNumber = models.CharField(max_length=255)\n    expirationDate = models.CharField(max_length=25)\n    CVV = models.FloatField()\n\n\nclass SearchHistory(models.Model):\n    accountId = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)\n    searchedItem = models.CharField(max_length=255)\n\n\n@receiver(post_save, sender = User)\ndef create_user_profile( sender, instance, created, **kwargs):\n    if created:\n        Account.objects.create(user = instance)\n    instance.account.save()\n\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- myAccount/models.py	(revision 448c198d87290460cce4ed9f95f2b6225cd05902)
++++ myAccount/models.py	(date 1589219604205)
+@@ -3,23 +3,24 @@
+ from django.contrib.auth.models import User
+ from django.db.models.signals import post_save
+ from django.dispatch import receiver
++from django_countries.fields import CountryField
+ 
+ 
+ class Zip(models.Model):
+     zip = models.CharField(max_length=255)
+-    country = models.CharField(max_length=255)
++    country = CountryField()
+     city = models.CharField(max_length=255)
+ 
+ class Account(models.Model):
+-    user = models.OneToOneField(User, on_delete=models.CASCADE)
++    user = models.OneToOneField(User, related_name='account', on_delete=models.CASCADE)
+     zip = models.ForeignKey(Zip, on_delete=models.CASCADE, default=101)
+-    address = models.CharField(max_length=10, null=True, blank=True)
++    address = models.CharField(max_length=255, null=True, blank=True)
+     addressNumber = models.CharField(max_length=20, null=True, blank=True)
+-    accountImage = models.CharField(max_length=999, null=True, blank=True)
++    accountImage = models.ImageField(blank=True, null=True, upload_to='profile_image')
+ 
+ 
+ class PaymentInfo(models.Model):
+-    accountId = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
++    accountId = models.ForeignKey(settings.AUTH_USER_MODEL, primary_key=True, related_name='payment', on_delete=models.CASCADE)
+     nameOnCard = models.CharField(max_length=255)
+     cardNumber = models.CharField(max_length=255)
+     expirationDate = models.CharField(max_length=25)
+@@ -27,7 +28,7 @@
+ 
+ 
+ class SearchHistory(models.Model):
+-    accountId = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
++    accountId = models.ForeignKey(settings.AUTH_USER_MODEL, related_name='search', on_delete=models.CASCADE)
+     searchedItem = models.CharField(max_length=255)
+ 
+ 
+Index: static/css/header/nav.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- static/css/header/nav.css	(date 1589219604219)
++++ static/css/header/nav.css	(date 1589219604219)
+@@ -0,0 +1,21 @@
++
++nav{
++    background-color: #232F3E;
++}
++
++.center{
++    margin: 0 auto;
++}
++
++.right{
++    width: 145px;
++    margin-right: 10px;
++}
++
++.fpDrop{
++    color: #D7D7D7 !important;
++}
++
++.dropElem{
++    color: #232F3E !important;
++}
+\ No newline at end of file
+Index: static/css/homepage/homepage.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- static/css/homepage/homepage.css	(date 1589219604219)
++++ static/css/homepage/homepage.css	(date 1589219604219)
+@@ -0,0 +1,8 @@
++
++.fpCategory{
++    border-bottom: 2px solid #8ED7B0;
++}
++
++.fpSearch{
++    width: 600px !important;
++}
+Index: static/css/myAccount/myAccount.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- static/css/myAccount/myAccount.css	(date 1589219604220)
++++ static/css/myAccount/myAccount.css	(date 1589219604220)
+@@ -0,0 +1,75 @@
++.row{
++    margin-right:-300px !important;
++    margin-left:-30px !important;
++}
++.container-fluid{
++    padding-left: 55px !important;
++}
++
++.bar{
++    display: flex;
++    justify-content: space-between;
++    margin-top: 20px;
++    border-bottom: 2px solid #8ED7B0;;
++}
++
++.buttons{
++    display: flex;
++}
++
++.buttonFilter{
++    margin-right: 10px;
++}
++
++
++#line1 {
++    position: absolute;
++    margin-top: 60px;
++    width: 377px;
++    height: 0px;
++    border: 7px solid #8ED7B0;
++    transform: rotate(180deg);
++
++}
++/* Line 12 */
++#line2 {
++    margin-top: 68px;
++    margin-bottom: 60px;
++    position: absolute;
++    width: 755px;
++    height: 0px;
++    border: 3px solid #8ED7B0;
++    transform: rotate(180deg);
++}
++#line4 {
++    position: absolute;
++    width: 755px;
++    height: 0px;
++    border: 3px solid #8ED7B0;
++    transform: rotate(180deg);
++}
++/* Line 13 */
++#line3 {
++    position: absolute;
++    width: 377px;
++    height: 0px;
++    border: 7px solid #8ED7B0;
++    transform: rotate(180deg);
++}
++/* Line 14 */
++
++
++#signupContainer{
++    margin-top: 40px;
++    margin-left: 180px;
++    height: 80px;
++}
++
++#signupForm{
++    width: 60% !important;
++    margin-left: 200px;
++}
++
++#signup{
++
++}
+\ No newline at end of file
+Index: static/css/product/product.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- static/css/product/product.css	(date 1589219604220)
++++ static/css/product/product.css	(date 1589219604220)
+@@ -0,0 +1,21 @@
++.content{
++    display: flex;
++}
++
++.card{
++    margin: 15px;
++}
++
++.prodSearch{
++    width: 70px !important;
++}
++
++.formFilter{
++    display: flex;
++    width: 50px !important;
++}
++
++img{
++    width: 200px;
++    height: 200px;
++}
+\ No newline at end of file
+Index: static/css/footer/footer.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- static/css/footer/footer.css	(date 1589219604219)
++++ static/css/footer/footer.css	(date 1589219604219)
+@@ -0,0 +1,4 @@
++footer{
++    background-color: #232F3E;
++    color: #D7D7D7 !important;
++}
+\ No newline at end of file
+Index: myAccount/urls.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>from django.urls import path\nfrom . import views\nfrom django.contrib.auth.views import LoginView, LogoutView\n\nurlpatterns = [\n    path('', views.accountInfo, name='accountInfo'),\n    path('/register', views.register, name='register'),\n    path('/seePurchasehistory', views.seePurchasehistory, name='seePurchasehistory'),\n    path('/login', LoginView.as_view(template_name='myAccount/login.html'), name='login'),\n    path('/logout', LogoutView.as_view(next_page='homepage-index'), name='logout'),\n]
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- myAccount/urls.py	(revision 448c198d87290460cce4ed9f95f2b6225cd05902)
++++ myAccount/urls.py	(date 1589219604206)
+@@ -4,8 +4,13 @@
+ 
+ urlpatterns = [
+     path('', views.accountInfo, name='accountInfo'),
+-    path('/register', views.register, name='register'),
+-    path('/seePurchasehistory', views.seePurchasehistory, name='seePurchasehistory'),
+-    path('/login', LoginView.as_view(template_name='myAccount/login.html'), name='login'),
+-    path('/logout', LogoutView.as_view(next_page='homepage-index'), name='logout'),
++    path('registerLocation', views.locationRegister, name='registerLocation'),
++    path('register', views.register, name='myAccount-register'),
++    path('seePurchasehistory', views.seePurchasehistory, name='seePurchasehistory'),
++    path('login', LoginView.as_view(template_name='myAccount/login.html'), name='login'),
++    path('logout', LogoutView.as_view(next_page='homepage-index'), name='logout'),
++    path('paymentRegister', views.paymentRegister, name='myAccount-paymentRegister'),
++    path('paymentInfo', views.paymentInfo, name='myAccount-paymentInfo'),
++    path('purchaseHistory', views.seePurchasehistory, name='myAccount-purchaseHistory'),
++    path('accountEdit', views.updateAccount, name='myAccount-updateAccount')
+ ]
+\ No newline at end of file
+Index: myAccount/views.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>from django.contrib.auth import authenticate, login\nfrom django.contrib.auth.decorators import login_required\nfrom django.shortcuts import render, redirect\nfrom myAccount.forms.userForm import AccountForm\nfrom myAccount.models import Account\nfrom myAccount.forms.forms import SignUpForm\nfrom myAccount.models import Zip\n\n\ndef register(request):\n    form = SignUpForm(data=request.POST)\n    if request.method == 'POST':\n        if form.is_valid():\n            user = form.save()\n            account = user.account\n            address = form.cleaned_data.get('address')\n            addressNumber = form.cleaned_data.get('addressNumber')\n            accountImage = form.cleaned_data.get('accountImage')\n            accountZipTemp = form.cleaned_data.get('zipForm')\n            accountZip = Zip.objects.get(id=accountZipTemp)\n            account.zip = accountZip\n            account.addressNumber = addressNumber\n            account.address = address\n            account.accountImage = accountImage\n            account.save()\n            username = form.cleaned_data.get('username')\n            password = form.cleaned_data.get('password1')\n            user = authenticate(username=username, password=password)\n            login(request, user)\n            return redirect('homepage-index')\n    return render(request, 'myAccount/register.html', {'form': form})\n\n@login_required\ndef seePurchasehistory(request):\n    return render(request, 'myAccount/pruchaseHistory.html')\n\n@login_required\ndef accountInfo(request):\n    account = Account.objects.filter(user=request.user).first()\n    if request.method == 'POST':\n        form = AccountForm(instance=AccountForm, data=request.POST)\n        if form.is_valid():\n            account = form.save(commit=False)\n            account.user = request.user\n            account.save()\n            return redirect('homepage-index')\n    return render(request, 'myAccount/accountInfo.html', {\n        'form': AccountForm(instance=account)\n    })\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- myAccount/views.py	(revision 448c198d87290460cce4ed9f95f2b6225cd05902)
++++ myAccount/views.py	(date 1589219604206)
+@@ -1,10 +1,22 @@
+ from django.contrib.auth import authenticate, login
+ from django.contrib.auth.decorators import login_required
+-from django.shortcuts import render, redirect
+-from myAccount.forms.userForm import AccountForm
+-from myAccount.models import Account
+-from myAccount.forms.forms import SignUpForm
++from django.shortcuts import render, redirect, get_object_or_404
++from myAccount.models import Account, PaymentInfo
++from myAccount.forms.forms import SignUpForm, PaymentForm, locationForm, AccountUpdate
+ from myAccount.models import Zip
++from context.contextBuilder import manufacturerContext
++from django.contrib.auth.models import User
++
++def locationRegister(request):
++    formLocation = locationForm(data=request.POST)
++    if request.method == 'POST':
++        if formLocation.is_valid():
++            userZip = formLocation.cleaned_data.get('zip')
++            userCountry = formLocation.cleaned_data.get('country')
++            userCity = formLocation.cleaned_data.get('city')
++            Zip.objects.create(zip=userZip, country=userCountry, city=userCity)
++            return redirect('myAccount-register')
++    return render(request, 'myAccount/locationInfo.html', {'form': formLocation})
+ 
+ 
+ def register(request):
+@@ -15,9 +27,8 @@
+             account = user.account
+             address = form.cleaned_data.get('address')
+             addressNumber = form.cleaned_data.get('addressNumber')
+-            accountImage = form.cleaned_data.get('accountImage')
+-            accountZipTemp = form.cleaned_data.get('zipForm')
+-            accountZip = Zip.objects.get(id=accountZipTemp)
++            accountImage = form.cleaned_data.get('image')
++            accountZip = Zip.objects.earliest('id')
+             account.zip = accountZip
+             account.addressNumber = addressNumber
+             account.address = address
+@@ -27,8 +38,22 @@
+             password = form.cleaned_data.get('password1')
+             user = authenticate(username=username, password=password)
+             login(request, user)
++            return redirect('myAccount-paymentRegister')
++    return render(request, 'myAccount/register.html', {'form': form})
++
++def paymentRegister(request):
++    form = PaymentForm(data=request.POST)
++    if request.method == 'POST':
++        if form.is_valid():
++            currentUser = request.user.id
++            nameOnCard = form.cleaned_data.get('nameOnCard')
++            cardNumber = form.cleaned_data.get('cardNumber')
++            expirationDate = form.cleaned_data.get('expirationDate')
++            CVV = form.cleaned_data.get('CVV')
++            savePayment = PaymentInfo(currentUser, nameOnCard, cardNumber, expirationDate, CVV)
++            savePayment.save()
+             return redirect('homepage-index')
+-    return render(request, 'myAccount/register.html', {'form': form})
++    return render(request, 'myAccount/paymentRegister.html', {'form': form})
+ 
+ @login_required
+ def seePurchasehistory(request):
+@@ -36,14 +61,31 @@
+ 
+ @login_required
+ def accountInfo(request):
+-    account = Account.objects.filter(user=request.user).first()
++    return render(request, 'myAccount/accountInfo.html')
++
++def paymentInfo(request):
++    context = manufacturerContext()
++    context['users'] = User.objects.all()
++    context['payments'] = PaymentInfo.objects.all()
++    context['onlineUserId'] = request.user.id
++    return render(request, 'myAccount/paymentInfo.html', context)
++
++def getAddress(request):
++    for account in Account.objects.all():
++        if account.user_id == request.user.id:
++            return account.address
++
++def updateAccount(request):
++    newImage = request.GET.get('newImage')
+     if request.method == 'POST':
+-        form = AccountForm(instance=AccountForm, data=request.POST)
++        form = AccountUpdate(data=request.POST, instance=request.user)
++        Account.objects.filter(user_id=request.user.id).update(accountImage=newImage)
+         if form.is_valid():
+-            account = form.save(commit=False)
+-            account.user = request.user
+-            account.save()
+-            return redirect('homepage-index')
+-    return render(request, 'myAccount/accountInfo.html', {
+-        'form': AccountForm(instance=account)
+-    })
++            form.save()
++            return render(request, 'myAccount/accountInfo.html')
++    else:
++        form = AccountUpdate(instance=request.user)
++        args = {'form': form}
++        return render(request, 'myAccount/updateAccount.html', args)
++
++
+Index: .idea/dataSources.local.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"dataSourceStorageLocal\">\n    <data-source name=\"Django default\" uuid=\"204e1cb5-6bd3-4aa9-ae21-441bbefea3f5\">\n      <database-info product=\"PostgreSQL\" version=\"11.6 (Ubuntu 11.6-1.pgdg18.04+1)\" jdbc-version=\"4.2\" driver-name=\"PostgreSQL JDBC Driver\" driver-version=\"42.2.5\" dbms=\"POSTGRES\" exact-version=\"11.6\" exact-driver-version=\"42.2\">\n        <identifier-quote-string>&quot;</identifier-quote-string>\n      </database-info>\n      <case-sensitivity plain-identifiers=\"lower\" quoted-identifiers=\"exact\" />\n      <secret-storage>master_key</secret-storage>\n      <user-name>szpdoaaj</user-name>\n<<<<<<< HEAD\n      <introspection-schemas>@:@</introspection-schemas>\n=======\n      <schema-mapping>\n        <introspection-scope>\n          <node kind=\"database\" qname=\"@\">\n            <node kind=\"schema\" qname=\"@\" />\n          </node>\n        </introspection-scope>\n      </schema-mapping>\n>>>>>>> 4cd8a7132e48ec955c5cb6c12052d73669559af0\n    </data-source>\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/dataSources.local.xml	(revision 448c198d87290460cce4ed9f95f2b6225cd05902)
++++ .idea/dataSources.local.xml	(date 1589219604157)
+@@ -8,9 +8,6 @@
+       <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+       <secret-storage>master_key</secret-storage>
+       <user-name>szpdoaaj</user-name>
+-<<<<<<< HEAD
+-      <introspection-schemas>@:@</introspection-schemas>
+-=======
+       <schema-mapping>
+         <introspection-scope>
+           <node kind="database" qname="@">
+@@ -18,7 +15,6 @@
+           </node>
+         </introspection-scope>
+       </schema-mapping>
+->>>>>>> 4cd8a7132e48ec955c5cb6c12052d73669559af0
+     </data-source>
+   </component>
+ </project>
+\ No newline at end of file
+Index: templates/myAccount/singupHeader.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>\n<div id=\"line1\"></div>\n<div id=\"line2\"></div>\n<div id=\"line3\"></div>\n<div id=\"line4\"></div>\n\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- templates/myAccount/singupHeader.html	(revision 448c198d87290460cce4ed9f95f2b6225cd05902)
++++ templates/myAccount/singupHeader.html	(date 1589219604222)
+@@ -4,3 +4,6 @@
+ <div id="line3"></div>
+ <div id="line4"></div>
+ 
++
++
++
+Index: myAccount/migrations/0011_auto_20200508_1854.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- myAccount/migrations/0011_auto_20200508_1854.py	(date 1589219604178)
++++ myAccount/migrations/0011_auto_20200508_1854.py	(date 1589219604178)
+@@ -0,0 +1,24 @@
++# Generated by Django 2.2 on 2020-05-08 18:54
++
++from django.conf import settings
++from django.db import migrations, models
++import django.db.models.deletion
++
++
++class Migration(migrations.Migration):
++
++    dependencies = [
++        ('myAccount', '0010_auto_20200508_1327'),
++    ]
++
++    operations = [
++        migrations.RemoveField(
++            model_name='paymentinfo',
++            name='id',
++        ),
++        migrations.AlterField(
++            model_name='paymentinfo',
++            name='accountId',
++            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, primary_key=True, serialize=False, to=settings.AUTH_USER_MODEL),
++        ),
++    ]
+Index: myAccount/migrations/0014_auto_20200511_1305.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- myAccount/migrations/0014_auto_20200511_1305.py	(date 1589219604179)
++++ myAccount/migrations/0014_auto_20200511_1305.py	(date 1589219604179)
+@@ -0,0 +1,30 @@
++# Generated by Django 2.2 on 2020-05-11 13:05
++
++from django.conf import settings
++from django.db import migrations, models
++import django.db.models.deletion
++
++
++class Migration(migrations.Migration):
++
++    dependencies = [
++        ('myAccount', '0013_auto_20200510_1647'),
++    ]
++
++    operations = [
++        migrations.AlterField(
++            model_name='account',
++            name='address',
++            field=models.CharField(blank=True, max_length=255, null=True),
++        ),
++        migrations.AlterField(
++            model_name='paymentinfo',
++            name='accountId',
++            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, primary_key=True, related_name='payment', serialize=False, to=settings.AUTH_USER_MODEL),
++        ),
++        migrations.AlterField(
++            model_name='searchhistory',
++            name='accountId',
++            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='search', to=settings.AUTH_USER_MODEL),
++        ),
++    ]
+Index: myAccount/migrations/0017_auto_20200511_1707.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- myAccount/migrations/0017_auto_20200511_1707.py	(date 1589219604180)
++++ myAccount/migrations/0017_auto_20200511_1707.py	(date 1589219604180)
+@@ -0,0 +1,18 @@
++# Generated by Django 2.2 on 2020-05-11 17:07
++
++from django.db import migrations, models
++
++
++class Migration(migrations.Migration):
++
++    dependencies = [
++        ('myAccount', '0016_auto_20200511_1533'),
++    ]
++
++    operations = [
++        migrations.AlterField(
++            model_name='account',
++            name='accountImage',
++            field=models.ImageField(blank=True, null=True, upload_to='profile_image'),
++        ),
++    ]
+Index: myAccount/migrations/0015_auto_20200511_1532.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- myAccount/migrations/0015_auto_20200511_1532.py	(date 1589219604179)
++++ myAccount/migrations/0015_auto_20200511_1532.py	(date 1589219604179)
+@@ -0,0 +1,18 @@
++# Generated by Django 2.2 on 2020-05-11 15:32
++
++from django.db import migrations, models
++
++
++class Migration(migrations.Migration):
++
++    dependencies = [
++        ('myAccount', '0014_auto_20200511_1305'),
++    ]
++
++    operations = [
++        migrations.AlterField(
++            model_name='account',
++            name='accountImage',
++            field=models.ImageField(blank=True, upload_to=''),
++        ),
++    ]
+Index: myAccount/migrations/0012_auto_20200510_1347.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- myAccount/migrations/0012_auto_20200510_1347.py	(date 1589219604179)
++++ myAccount/migrations/0012_auto_20200510_1347.py	(date 1589219604179)
+@@ -0,0 +1,19 @@
++# Generated by Django 2.2 on 2020-05-10 13:47
++
++from django.db import migrations
++import django_countries.fields
++
++
++class Migration(migrations.Migration):
++
++    dependencies = [
++        ('myAccount', '0011_auto_20200508_1854'),
++    ]
++
++    operations = [
++        migrations.AlterField(
++            model_name='zip',
++            name='country',
++            field=django_countries.fields.CountryField(max_length=2),
++        ),
++    ]
+Index: .idea/Verklegt2_AHE.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<module type=\"PYTHON_MODULE\" version=\"4\">\n  <component name=\"FacetManager\">\n    <facet type=\"django\" name=\"Django\">\n      <configuration>\n        <option name=\"rootFolder\" value=\"$MODULE_DIR$\" />\n        <option name=\"settingsModule\" value=\"Verklegt2_AHE/settings.py\" />\n        <option name=\"manageScript\" value=\"$MODULE_DIR$/manage.py\" />\n        <option name=\"environment\" value=\"&lt;map/&gt;\" />\n        <option name=\"doNotUseTestRunner\" value=\"false\" />\n        <option name=\"trackFilePattern\" value=\"migrations\" />\n      </configuration>\n    </facet>\n  </component>\n  <component name=\"NewModuleRootManager\">\n    <content url=\"file://$MODULE_DIR$\">\n      <excludeFolder url=\"file://$MODULE_DIR$/venv/django_app\" />\n    </content>\n    <orderEntry type=\"jdk\" jdkName=\"Python 3.7\" jdkType=\"Python SDK\" />\n    <orderEntry type=\"sourceFolder\" forTests=\"false\" />\n  </component>\n  <component name=\"TemplatesService\">\n    <option name=\"TEMPLATE_CONFIGURATION\" value=\"Django\" />\n    <option name=\"TEMPLATE_FOLDERS\">\n      <list>\n        <option value=\"$MODULE_DIR$/templates\" />\n      </list>\n    </option>\n  </component>\n</module>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/Verklegt2_AHE.iml	(revision 448c198d87290460cce4ed9f95f2b6225cd05902)
++++ .idea/Verklegt2_AHE.iml	(date 1589219604156)
+@@ -16,7 +16,7 @@
+     <content url="file://$MODULE_DIR$">
+       <excludeFolder url="file://$MODULE_DIR$/venv/django_app" />
+     </content>
+-    <orderEntry type="jdk" jdkName="Python 3.7" jdkType="Python SDK" />
++    <orderEntry type="jdk" jdkName="Python 3.8" jdkType="Python SDK" />
+     <orderEntry type="sourceFolder" forTests="false" />
+   </component>
+   <component name="TemplatesService">
+Index: myAccount/migrations/0016_auto_20200511_1533.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- myAccount/migrations/0016_auto_20200511_1533.py	(date 1589219604179)
++++ myAccount/migrations/0016_auto_20200511_1533.py	(date 1589219604179)
+@@ -0,0 +1,18 @@
++# Generated by Django 2.2 on 2020-05-11 15:33
++
++from django.db import migrations, models
++
++
++class Migration(migrations.Migration):
++
++    dependencies = [
++        ('myAccount', '0015_auto_20200511_1532'),
++    ]
++
++    operations = [
++        migrations.AlterField(
++            model_name='account',
++            name='accountImage',
++            field=models.ImageField(blank=True, null=True, upload_to=''),
++        ),
++    ]
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"JavaScriptSettings\">\n    <option name=\"languageLevel\" value=\"ES6\" />\n  </component>\n  <component name=\"ProjectRootManager\" version=\"2\" project-jdk-name=\"Python 3.7\" project-jdk-type=\"Python SDK\" />\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/misc.xml	(revision 448c198d87290460cce4ed9f95f2b6225cd05902)
++++ .idea/misc.xml	(date 1589219604157)
+@@ -3,5 +3,5 @@
+   <component name="JavaScriptSettings">
+     <option name="languageLevel" value="ES6" />
+   </component>
+-  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.7" project-jdk-type="Python SDK" />
++  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.8" project-jdk-type="Python SDK" />
+ </project>
+\ No newline at end of file
+Index: myAccount/migrations/0013_auto_20200510_1647.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- myAccount/migrations/0013_auto_20200510_1647.py	(date 1589219604179)
++++ myAccount/migrations/0013_auto_20200510_1647.py	(date 1589219604179)
+@@ -0,0 +1,20 @@
++# Generated by Django 2.2 on 2020-05-10 16:47
++
++from django.conf import settings
++from django.db import migrations, models
++import django.db.models.deletion
++
++
++class Migration(migrations.Migration):
++
++    dependencies = [
++        ('myAccount', '0012_auto_20200510_1347'),
++    ]
++
++    operations = [
++        migrations.AlterField(
++            model_name='account',
++            name='user',
++            field=models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, related_name='account', to=settings.AUTH_USER_MODEL),
++        ),
++    ]
+Index: templates/myAccount/locationInfo.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- templates/myAccount/locationInfo.html	(date 1589219604221)
++++ templates/myAccount/locationInfo.html	(date 1589219604221)
+@@ -0,0 +1,16 @@
++{% extends 'base.html' %}
++{% block content %}
++    <div id="signupContainer">
++{% include 'myAccount/singupHeader.html' %}
++    <h2 id="signup">Location Info</h2>
++{% load crispy_forms_tags %}
++    </div>
++        <div id="signupForm">
++      <form method="post" novalidate>
++        {% csrf_token %}
++        {{ form|crispy }}
++        <button type="submit" class="btn btn-success">Save Location</button>
++        </form>
++        </div>
++
++{% endblock content %}
+\ No newline at end of file
+Index: templates/myAccount/updateAccount.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- templates/myAccount/updateAccount.html	(date 1589219604222)
++++ templates/myAccount/updateAccount.html	(date 1589219604222)
+@@ -0,0 +1,21 @@
++{% extends 'base.html' %}
++{% block content %}
++    <div id="signupContainer">
++{% include 'myAccount/singupHeader.html' %}
++    <h2 id="signup"> Sign up</h2>
++{% load crispy_forms_tags %}
++    </div>
++        <div id="signupForm">
++      <form method="post" novalidate>
++        {% csrf_token %}
++        {{ form|crispy }}
++        <button type="submit" class="btn btn-success"> Edit person</button>
++        </form>
++        </div>
++        <label for="img">Select image:</label>
++            <input type="file" id="img" accept="image/*">
++            <input type="submit" name="newImage">
++
++
++{% endblock content %}
++
+Index: templates/myAccount/paymentRegister.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- templates/myAccount/paymentRegister.html	(date 1589219604221)
++++ templates/myAccount/paymentRegister.html	(date 1589219604221)
+@@ -0,0 +1,16 @@
++{% extends 'base.html' %}
++{% block content %}
++    <div id="signupContainer">
++{% include 'myAccount/singupHeader.html' %}
++    <h2 id="payment"> Payment Info </h2>
++{% load crispy_forms_tags %}
++    </div>
++        <div id="signupForm">
++      <form method="post" novalidate>
++        {% csrf_token %}
++        {{ form|crispy }}
++        <button type="submit" class="btn btn-success">Save person</button>
++        </form>
++        </div>
++
++{% endblock content %}
+Index: templates/myAccount/paymentInfo.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- templates/myAccount/paymentInfo.html	(date 1589219604221)
++++ templates/myAccount/paymentInfo.html	(date 1589219604221)
+@@ -0,0 +1,46 @@
++{% extends 'base.html' %}
++{% block content %}
++    <div id="accountInfoContainer" style="height: 400px; margin-left: 200px; margin-top: 50px;">
++    <div id="line5" style="position: absolute;
++        margin-top: 60px;
++        margin-left: 241px;
++        width: 251px;
++        height: 0px;
++        border: 7px solid #8ED7B0;
++        transform: rotate(180deg);"></div>
++    <div id="line6" style="margin-top: 68px;
++        margin-bottom: 60px;
++        position: absolute;
++        width: 755px;
++        height: 0px;
++        border: 3px solid #8ED7B0;
++        transform: rotate(180deg);"></div>
++    <div id="line7" style="position: absolute;
++        width: 755px;
++        height: 0px;
++        border: 3px solid #8ED7B0;
++        transform: rotate(180deg);"></div>
++    <div id="line8" style="position: absolute;
++        width: 251px;
++        margin-left: 240px;
++        height: 0px;
++        border: 7px solid #8ED7B0;
++        transform: rotate(180deg);"></div>
++    <h2 id="accountInfo" style="padding-top: 15px; padding-left: 15px">Account Info </h2>
++    <h2 id="accountInfo" style="margin-top: -45px; padding-left: 270px">Payment Info </h2>
++    <h2 id="accountInfo" style="margin-top: -45px; padding-left: 510px">Purchase History </h2>
++    </div>
++    <div id="info" style="margin-top: -300px;margin-left:190px; padding: 25px">
++    {% for card in payments %}
++        {% if onlineUserId == card.accountId_id%}
++            <h5 style="margin-top: 25px">Name on Card: {{ card.nameOnCard }} </h5>
++            <h5 style="margin-top: 25px" >Card Number: {{ card.cardNumber }} </h5>
++            <h5 style="margin-top: 25px">expiration Date: {{ card.expirationDate }} </h5>
++            <h5 style="margin-top: 25px">CVV: {{ card.CVV }}</h5>
++        {% endif %}
++    {% endfor %}
++    </div>
++    <img src="{{ user.account.accountImage }}" style="margin-top: -400px; margin-left: 750px" alt="profile image">
++        <a href="{% url 'myAccount-purchaseHistory' %}" ><button class="button">Next</button></a>
++
++{% endblock content %}
+\ No newline at end of file
+Index: templates/productToolbar.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><div class=\"bar\">\n    {% if cat == 1 %}\n        <h2 class=\"fpCategory\">Consoles</h2>\n    {% elif cat == 2 %}\n        <h2 class=\"fpCategory\">Games</h2>\n    {% else %}\n        <h2 class=\"fpCategory\">Accessories</h2>\n    {% endif %}\n    <div class=\"buttons\">\n        <div class=\"dropdown buttonFilter\">\n          <button class=\"btn btn-secondary dropdown-toggle\" type=\"button\" id=\"dropdownMenuButton\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n            Filter\n          </button>\n          <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\">\n             <form class=\"form-inline my-2 my-lg-0\" action=\"{% url 'product-productRange' cat man %}\" method=\"get\">\n              <input class=\"form-control mr-sm-2 prodSearch\" name=\"from\" id=\"search-box\" type=\"search\" placeholder=\"Price from..\" aria-label=\"Search\">\n                 <input class=\"form-control mr-sm-2 prodSearch\" name=\"to\" id=\"search-box\" type=\"search\" placeholder=\"Price to..\" aria-label=\"Search\">\n              <button class=\"btn btn-outline-success my-2 my-sm-0\"  id=\"search-btn\" type=\"submit\">Filter</button>\n            </form>\n            {% for platform in platforms %}\n                <a class=\"dropdown-item\" href=\"{% url 'product-productFilter' cat man platform.id %}\">{{ platform.name }}</a>\n            {% endfor %}\n          </div>\n        </div>\n        <div class=\"dropdown buttonFilter\">\n          <button class=\"btn btn-secondary dropdown-toggle\" type=\"button\" id=\"dropdownMenuButton\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n            Sort\n          </button>\n          <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\">\n            <a class=\"dropdown-item\" href=\"{% url 'product-productSort' cat man 0 %}\">Price: Ascending</a>\n            <a class=\"dropdown-item\" href=\"{% url 'product-productSort' cat man 1 %}\">Price: Descending</a>\n            <a class=\"dropdown-item\" href=\"{% url 'product-productSort' cat man 2 %}\">Popularity</a>\n              <a class=\"dropdown-item\" href=\"{% url 'product-productSort' cat man 3 %}\">Release date</a>\n          </div>\n        </div>\n    </div>\n</div>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- templates/productToolbar.html	(revision 448c198d87290460cce4ed9f95f2b6225cd05902)
++++ templates/productToolbar.html	(date 1589219604223)
+@@ -1,10 +1,10 @@
+ <div class="bar">
+     {% if cat == 1 %}
+-        <h2 class="fpCategory">Consoles</h2>
++        <h2>Consoles</h2>
+     {% elif cat == 2 %}
+-        <h2 class="fpCategory">Games</h2>
++        <h2>Games</h2>
+     {% else %}
+-        <h2 class="fpCategory">Accessories</h2>
++        <h2>Accessories</h2>
+     {% endif %}
+     <div class="buttons">
+         <div class="dropdown buttonFilter">
+@@ -12,11 +12,19 @@
+             Filter
+           </button>
+           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+-             <form class="form-inline my-2 my-lg-0" action="{% url 'product-productRange' cat man %}" method="get">
++            {% if filter is None %}
++             <form class="my-2 my-lg-0 formFilter" action="{% url 'product-productRange' cat man 0 %}" method="get">
+               <input class="form-control mr-sm-2 prodSearch" name="from" id="search-box" type="search" placeholder="Price from.." aria-label="Search">
+                  <input class="form-control mr-sm-2 prodSearch" name="to" id="search-box" type="search" placeholder="Price to.." aria-label="Search">
+               <button class="btn btn-outline-success my-2 my-sm-0"  id="search-btn" type="submit">Filter</button>
+             </form>
++            {% else %}
++                <form class="my-2 my-lg-0 formFilter" action="{% url 'product-productRange' cat man filter %}" method="get">
++                  <input class="form-control mr-sm-2 prodSearch" name="from" id="search-box" type="search" placeholder="Price from.." aria-label="Search">
++                     <input class="form-control mr-sm-2 prodSearch" name="to" id="search-box" type="search" placeholder="Price to.." aria-label="Search">
++                  <button class="btn btn-outline-success my-2 my-sm-0"  id="search-btn" type="submit">Filter</button>
++                </form>
++            {% endif %}
+             {% for platform in platforms %}
+                 <a class="dropdown-item" href="{% url 'product-productFilter' cat man platform.id %}">{{ platform.name }}</a>
+             {% endfor %}
+@@ -27,10 +35,17 @@
+             Sort
+           </button>
+           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+-            <a class="dropdown-item" href="{% url 'product-productSort' cat man 0 %}">Price: Ascending</a>
+-            <a class="dropdown-item" href="{% url 'product-productSort' cat man 1 %}">Price: Descending</a>
+-            <a class="dropdown-item" href="{% url 'product-productSort' cat man 2 %}">Popularity</a>
+-              <a class="dropdown-item" href="{% url 'product-productSort' cat man 3 %}">Release date</a>
++              {% if filter is None %}
++                  <a class="dropdown-item" href="{% url 'product-productSort' cat man 0 0 %}">Price: Ascending</a>
++                  <a class="dropdown-item" href="{% url 'product-productSort' cat man 0 1 %}">Price: Descending</a>
++                  <a class="dropdown-item" href="{% url 'product-productSort' cat man 0 2 %}">Popularity</a>
++                  <a class="dropdown-item" href="{% url 'product-productSort' cat man 0 3 %}">Release date</a>
++              {% else %}
++                  <a class="dropdown-item" href="{% url 'product-productSort' cat man filter 0 %}">Price: Ascending</a>
++                  <a class="dropdown-item" href="{% url 'product-productSort' cat man filter 1 %}">Price: Descending</a>
++                  <a class="dropdown-item" href="{% url 'product-productSort' cat man filter 2 %}">Popularity</a>
++                  <a class="dropdown-item" href="{% url 'product-productSort' cat man filter 3 %}">Release date</a>
++              {% endif %}
+           </div>
+         </div>
+     </div>
+Index: static/css/main.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>\n\nnav{\n    background-color: #232F3E;\n}\nbody{\n    background-color: #D7D7D7 !important;\n}\na{\n    color: #D7D7D7 !important;\n}\n\n.fpSearch{\n    width: 600px !important;\n\n}\n\n.center{\n    margin: 0 auto;\n}\n\n.right{\n    width: 145px;\n    margin-right: 10px;\n}\n\n.fpCategory{\n    border-bottom: 2px solid #8ED7B0;\n}\n\n.content{\n    display: flex;\n}\n\n.card{\n    margin: 15px;\n}\n.row{\n    margin-right:-300px !important;\n    margin-left:-30px !important;\n}\n.container-fluid{\n    padding-left: 55px !important;\n}\n.container{\n    min-height: 80vh;\n}\n\nimg{\n    width: 200px;\n    height: 200px;\n}\n\nfooter{\n    background-color: #232F3E;\n    color: #D7D7D7 !important;\n    margin-bottom: 0;\n\n}\n\n.bar{\n    display: flex;\n    justify-content: space-between;\n    margin-top: 20px;\n    border-bottom: 2px solid #8ED7B0;;\n}\n\n.buttons{\n    display: flex;\n}\n\n.buttonFilter{\n    margin-right: 10px;\n}\n\n\n#line1 {\n    position: absolute;\n    margin-top: 60px;\n    width: 377px;\n    height: 0px;\n    border: 7px solid #8ED7B0;\n    transform: rotate(180deg);\n\n}\n/* Line 12 */\n#line2 {\n    margin-top: 68px;\n    margin-bottom: 60px;\n    position: absolute;\n    width: 755px;\n    height: 0px;\n    border: 3px solid #8ED7B0;\n    transform: rotate(180deg);\n}\n#line4 {\n    position: absolute;\n    width: 755px;\n    height: 0px;\n    border: 3px solid #8ED7B0;\n    transform: rotate(180deg);\n}\n/* Line 13 */\n#line3 {\n    position: absolute;\n    width: 377px;\n    height: 0px;\n    border: 7px solid #8ED7B0;\n    transform: rotate(180deg);\n}\n/* Line 14 */\n\n\n#signupContainer{\n    margin-top: 40px;\n    margin-left: 180px;\n    height: 80px;\n}\n\n#signupForm{\n    width: 60% !important;\n    margin-left: 200px;\n}\n\n#signup{\n\n}\n\n.productCard{\n    width: 200px;\n    height: 200px;\n}\n\n.infoImg{\n    width: 400px;\n    height: 200px;\n    margin-left: 0;\n    border-style: solid;\n\n}\n\n.description{\n    width: 400px;\n    height: 200px;\n    margin-left: 700px;\n    font-size: large;\n    border-style: solid;\n\n}\n\n#addTo{\n    background-color: #8ED7B0;\n    margin-right: 30%;\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- static/css/main.css	(revision 448c198d87290460cce4ed9f95f2b6225cd05902)
++++ static/css/main.css	(date 1589219604248)
+@@ -1,51 +1,18 @@
+ 
++@import './product/product.css';
++@import './homepage/homepage.css';
++@import './header/nav.css';
++@import './footer/footer.css';
++@import './myAccount/myAccount.css';
+ 
+-nav{
+-    background-color: #232F3E;
+-}
+ body{
+-    background-color: #D7D7D7 !important;
+-}
+-a{
+-    color: #D7D7D7 !important;
+-}
+-
+-.fpSearch{
+-    width: 600px !important;
+-
+-}
+-
+-.center{
+-    margin: 0 auto;
+-}
+-
+-.right{
+-    width: 145px;
+-    margin-right: 10px;
+-}
+-
+-.fpCategory{
+-    border-bottom: 2px solid #8ED7B0;
+-}
+-
+-.content{
+-    display: flex;
+-}
+-
+-.card{
+-    margin: 15px;
+-}
+-.row{
+-    margin-right:-300px !important;
+-    margin-left:-30px !important;
+-}
+-.container-fluid{
+-    padding-left: 55px !important;
++    background-color: #D7D7D7;
+ }
+ .container{
+     min-height: 80vh;
+ }
+ 
++<<<<<<< HEAD
+ img{
+     width: 200px;
+     height: 200px;
+@@ -57,31 +24,45 @@
+     margin-bottom: 0;
+ 
+ }
+-
+-.bar{
+-    display: flex;
+-    justify-content: space-between;
+-    margin-top: 20px;
+-    border-bottom: 2px solid #8ED7B0;;
+-}
+-
+-.buttons{
+-    display: flex;
+-}
+-
+-.buttonFilter{
+-    margin-right: 10px;
+-}
+-
+-
+-#line1 {
++=======
++#accountline1 {
+     position: absolute;
+     margin-top: 60px;
+-    width: 377px;
++    width: 188px;
++    height: 0px;
++    border: 7px solid #8ED7B0;
++    transform: rotate(180deg);
++>>>>>>> 0fd04f7eb0b90ac9662e7978ab271ab596882c29
++
++}
++/* Line 12 */
++#accountline2 {
++    margin-top: 68px;
++    margin-bottom: 60px;
++    position: absolute;
++    width: 755px;
++    height: 0px;
++    border: 3px solid #8ED7B0;
++    transform: rotate(180deg);
++}
++#accountline3 {
++    position: absolute;
++    width: 755px;
++    height: 0px;
++    border: 3px solid #8ED7B0;
++    transform: rotate(180deg);
++}
++/* Line 13 */
++#accountline4 {
++    position: absolute;
++    width: 188px;
+     height: 0px;
+     border: 7px solid #8ED7B0;
+     transform: rotate(180deg);
++}
+ 
++
++<<<<<<< HEAD
+ }
+ /* Line 12 */
+ #line2 {
+@@ -111,19 +92,37 @@
+ /* Line 14 */
+ 
+ 
++
+ #signupContainer{
+     margin-top: 40px;
+     margin-left: 180px;
+     height: 80px;
+ }
+ 
++
++#accountInfoContainer{
++    height: 400px;
++}
++
+ #signupForm{
+-    width: 60% !important;
+-    margin-left: 200px;
++    width: 65% !important;
++    margin-left: 195px;
+ }
+ 
+ #signup{
++    padding-top: 15px;
++    padding-left: 130px;
++}
++
++#payment{
++    padding-top: 25px;
++    padding-left: 230px;
++}
++=======
+ 
++>>>>>>> 35803aad72cb61d75f4e468eecff610faa15532e
++
++<<<<<<< HEAD
+ }
+ 
+ .productCard{
+@@ -151,4 +150,6 @@
+ #addTo{
+     background-color: #8ED7B0;
+     margin-right: 30%;
+-}
+\ No newline at end of file
++}
++=======
++>>>>>>> 0fd04f7eb0b90ac9662e7978ab271ab596882c29
+Index: Verklegt2_AHE/settings.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>\"\"\"\nDjango settings for Verklegt2_AHE project.\n\nGenerated by 'django-admin startproject' using Django 3.0.6.\n\nFor more information on this file, see\nhttps://docs.djangoproject.com/en/3.0/topics/settings/\n\nFor the full list of settings and their values, see\nhttps://docs.djangoproject.com/en/3.0/ref/settings/\n\"\"\"\n\nimport os\n\n# Build paths inside the project like this: os.path.join(BASE_DIR, ...)\nBASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))\n\n\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/\n\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = 'jt4r3#a7*su(er2qpfih0&tm&08p92&@do+xl)a_5+5&b#=o(d'\n\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\n\nALLOWED_HOSTS = []\n\n\n# Application definition\nAUTH_PROFILE_MODULE = 'myAccount.Account'\nINSTALLED_APPS = [\n    'crispy_forms',\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'accessories.apps.AccessoriesConfig',\n    'checkout.apps.CheckoutConfig',\n    'product.apps.ProductConfig',\n    'myAccount.apps.MyaccountConfig',\n    'searchBar.apps.SearchbarConfig'\n]\nCRISPY_TEMPLATE_PACK = 'bootstrap4'\n\nMIDDLEWARE = [\n    'django.middleware.security.SecurityMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',\n    'django.middleware.clickjacking.XFrameOptionsMiddleware',\n]\n\nROOT_URLCONF = 'Verklegt2_AHE.urls'\n\nTEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [os.path.join(BASE_DIR, 'templates')]\n\n        ,\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.debug',\n                'django.template.context_processors.request',\n                'django.contrib.auth.context_processors.auth',\n                'django.contrib.messages.context_processors.messages',\n            ],\n        },\n    },\n]\n\nWSGI_APPLICATION = 'Verklegt2_AHE.wsgi.application'\n\n\n# Database\n# https://docs.djangoproject.com/en/3.0/ref/settings/#databases\n\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.postgresql',\n        'NAME': 'szpdoaaj',\n        'USER': 'szpdoaaj',\n        'PASSWORD': 'CwLnWrCKvLX0amxEILxgvmJxnOHt0fcr',\n        'HOST': 'kandula.db.elephantsql.com',\n        'PORT': '5432'\n    }\n}\n\n\n# Password validation\n# https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators\n\nAUTH_PASSWORD_VALIDATORS = [\n    {\n        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',\n    },\n]\n\n\n# Internationalization\n# https://docs.djangoproject.com/en/3.0/topics/i18n/\n\nLANGUAGE_CODE = 'en-us'\n\nTIME_ZONE = 'UTC'\n\nUSE_I18N = True\n\nUSE_L10N = True\n\nUSE_TZ = True\n\n\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.0/howto/static-files/\n\nSTATIC_URL = '/static/'\nSTATICFILES_DIRS = [\n    os.path.join(BASE_DIR, 'static')\n]\n\nLOGIN_REDIRECT_URL = 'homepage-index'\nLOGIN_URL = 'login'\n\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Verklegt2_AHE/settings.py	(revision 448c198d87290460cce4ed9f95f2b6225cd05902)
++++ Verklegt2_AHE/settings.py	(date 1589219604163)
+@@ -31,6 +31,7 @@
+ # Application definition
+ AUTH_PROFILE_MODULE = 'myAccount.Account'
+ INSTALLED_APPS = [
++    'django_countries',
+     'crispy_forms',
+     'django.contrib.admin',
+     'django.contrib.auth',
+@@ -131,6 +132,10 @@
+ # https://docs.djangoproject.com/en/3.0/howto/static-files/
+ 
+ STATIC_URL = '/static/'
++
++MEDIA_URL = '/media/'
++MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
++
+ STATICFILES_DIRS = [
+     os.path.join(BASE_DIR, 'static')
+ ]
+Index: Verklegt2_AHE/urls.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>\"\"\"Verklegt2_AHE URL Configuration\n\nThe `urlpatterns` list routes URLs to views. For more information please see:\n    https://docs.djangoproject.com/en/3.0/topics/http/urls/\nExamples:\nFunction views\n    1. Add an import:  from my_app import views\n    2. Add a URL to urlpatterns:  path('', views.home, name='home')\nClass-based views\n    1. Add an import:  from other_app.views import Home\n    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')\nIncluding another URLconf\n    1. Import the include() function: from django.urls import include, path\n    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))\n\"\"\"\nfrom django.contrib import admin\nfrom django.urls import path, include\nfrom myAccount import views as user_views\n\nurlpatterns = [\n    path('', include('homepage.urls')),\n    path('admin/', admin.site.urls),\n    path('consoles', include('consoles.urls')),\n    path('games', include('games.urls')),\n    path('accessories', include('accessories.urls')),\n    path('checkout', include('checkout.urls')),\n    path('myAccount',  include('myAccount.urls')),\n    path('search', include('searchBar.urls')),\n    path('product', include('product.urls')),\n    path('info', include('product.urls'))\n\n]\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Verklegt2_AHE/urls.py	(revision 448c198d87290460cce4ed9f95f2b6225cd05902)
++++ Verklegt2_AHE/urls.py	(date 1589219604261)
+@@ -16,6 +16,8 @@
+ from django.contrib import admin
+ from django.urls import path, include
+ from myAccount import views as user_views
++from django.conf import settings
++from django.conf.urls.static import static
+ 
+ urlpatterns = [
+     path('', include('homepage.urls')),
+@@ -29,4 +31,4 @@
+     path('product', include('product.urls')),
+     path('info', include('product.urls'))
+ 
+-]
++] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+Index: product/urls.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>from django.contrib.auth.views import LoginView\nfrom django.urls import path\nfrom . import views\n\nurlpatterns = [\n    path('<int:category>/<int:manufacturer>', views.index, name='product-index'),\n    path('<int:category>/<int:manufacturer>/<int:platform>', views.productFilter, name='product-productFilter'),\n    path('<int:category>/<int:manufacturer>/<int:sort>', views.productSort, name='product-productSort'),\n    path('<int:category>/<int:manufacturer>/<int:range>', views.productRange, name='product-productRange'),\n    path('<int:category>/<int:manufacturer>/filter/<int:platform>', views.productFilter, name='product-productFilter'),\n    path('<int:category>/<int:manufacturer>/sort/<int:sort>', views.productSort, name='product-productSort'),\n    path('<int:category>/<int:manufacturer>/range', views.productRange, name='product-productRange'),\n    path('<int:productid>', views.productInfo, name='productInfo-index')\n\n]\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- product/urls.py	(revision 448c198d87290460cce4ed9f95f2b6225cd05902)
++++ product/urls.py	(date 1589219604252)
+@@ -4,6 +4,7 @@
+ 
+ urlpatterns = [
+     path('<int:category>/<int:manufacturer>', views.index, name='product-index'),
++<<<<<<< HEAD
+     path('<int:category>/<int:manufacturer>/<int:platform>', views.productFilter, name='product-productFilter'),
+     path('<int:category>/<int:manufacturer>/<int:sort>', views.productSort, name='product-productSort'),
+     path('<int:category>/<int:manufacturer>/<int:range>', views.productRange, name='product-productRange'),
+@@ -12,4 +13,10 @@
+     path('<int:category>/<int:manufacturer>/range', views.productRange, name='product-productRange'),
+     path('<int:productid>', views.productInfo, name='productInfo-index')
+ 
++=======
++    path('<int:category>/<int:manufacturer>/filter/<int:platform>', views.productFilter, name='product-productFilter'),
++    path('<int:category>/<int:manufacturer>/sort/<int:filter>/<int:sort>', views.productSort, name='product-productSort'),
++    path('<int:category>/<int:manufacturer>/range/<int:filter>', views.productRange, name='product-productRange')
++>>>>>>> 0fd04f7eb0b90ac9662e7978ab271ab596882c29
+ ]
++
+Index: product/views.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>from django.shortcuts import render\nfrom product.models import Product\nfrom product.models import Platform\nfrom context.contextBuilder import allContext, narrowContext, manufacturerContext\n\nimport logging\nlogger = logging.getLogger(__name__)\n\n# Create your views here.\ndef index(request, category, manufacturer):\n    if manufacturer == 0:\n        context = allContext(category, manufacturer)\n        context['products'] = Product.objects.filter(category_id=category).order_by('name')\n    else:\n        plat = Platform.objects.filter(manufacturer_id=manufacturer).values_list('id', flat=True)\n        context = narrowContext(category, manufacturer)\n        context['products'] = Product.objects.filter(category_id=category, platform_id__in=plat).order_by('name')\n    return render(request, 'product/index.html', context)\n\n\ndef productFilter(request, category, manufacturer, platform):\n    context = narrowContext(category, manufacturer)\n    context['products'] = Product.objects.filter(category_id=category, platform_id=platform).order_by('name')\n    return render(request, 'product/index.html', context)\n\n\ndef productSort(request, category, manufacturer, sort):\n    context = narrowContext(category, manufacturer)\n    plat = Platform.objects.filter(manufacturer_id=manufacturer).values_list('id', flat=True)\n\ndef productSort(request, category, manufacturer, sort):\n    context = narrowContext(category, manufacturer)\n    plat = Platform.objects.filter(manufacturer_id=manufacturer).values_list('id', flat=True)\n\n    if sort == 0:\n        context['products'] = Product.objects.filter(category_id=category, platform_id__in=plat).order_by('price')\n    elif sort == 1:\n        context['products'] = Product.objects.filter(category_id=category, platform_id__in=plat).order_by('-price')\n    elif sort == 2:\n        pass\n    elif sort == 3:\n        context['products'] = Product.objects.filter(category_id=category, platform_id__in=plat).order_by('releaseDate')\n    return render(request, 'product/index.html', context)\n\n\n\ndef productPlatform():\n    pass\n\n\ndef productRange():\n    pass\n\ndef productRange(request, category, manufacturer):\n    context = narrowContext(category, manufacturer)\n    plat = Platform.objects.filter(manufacturer_id=manufacturer).values_list('id', flat=True)\n    fromRange = request.GET.get('from')\n    toRange = request.GET.get('to')\n    context['products'] = Product.objects.filter(category_id=category, platform_id__in=plat, price__gte=fromRange, price__lte=toRange).order_by('name')\n    return render(request, 'product/index.html', context)\n\ndef productInfo(request, productid):\n    context = manufacturerContext()\n    context['products'] = Product.objects.filter(id=productid)\n    return render(request, 'productInfo/index.html', context)\n\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- product/views.py	(revision 448c198d87290460cce4ed9f95f2b6225cd05902)
++++ product/views.py	(date 1589219604250)
+@@ -17,12 +17,21 @@
+         context['products'] = Product.objects.filter(category_id=category, platform_id__in=plat).order_by('name')
+     return render(request, 'product/index.html', context)
+ 
++<<<<<<< HEAD
+ 
++=======
++>>>>>>> 0fd04f7eb0b90ac9662e7978ab271ab596882c29
+ def productFilter(request, category, manufacturer, platform):
+-    context = narrowContext(category, manufacturer)
++    if manufacturer == 0:
++        context = allContext(category, manufacturer)
++        context['filter'] = platform
++
++    else:
++        context = narrowContext(category, manufacturer)
+     context['products'] = Product.objects.filter(category_id=category, platform_id=platform).order_by('name')
+     return render(request, 'product/index.html', context)
+ 
++<<<<<<< HEAD
+ 
+ def productSort(request, category, manufacturer, sort):
+     context = narrowContext(category, manufacturer)
+@@ -54,13 +63,66 @@
+ def productRange(request, category, manufacturer):
+     context = narrowContext(category, manufacturer)
+     plat = Platform.objects.filter(manufacturer_id=manufacturer).values_list('id', flat=True)
++=======
++def productSort(request, category, manufacturer, filter, sort):
++    if manufacturer == 0:
++        context = allContext(category, manufacturer)
++        if filter != 0:
++            context['filter'] = filter
++            if sort == 0:
++                context['products'] = Product.objects.filter(category_id=category, platform_id=filter).order_by('price')
++            elif sort == 1:
++                context['products'] = Product.objects.filter(category_id=category, platform_id=filter).order_by('-price')
++            elif sort == 2:
++                pass
++            elif sort == 3:
++                context['products'] = Product.objects.filter(category_id=category, platform_id=filter).order_by('releaseDate')
++        else:
++            if sort == 0:
++                context['products'] = Product.objects.filter(category_id=category).order_by('price')
++            elif sort == 1:
++                context['products'] = Product.objects.filter(category_id=category).order_by('-price')
++            elif sort == 2:
++                pass
++            elif sort == 3:
++                context['products'] = Product.objects.filter(category_id=category).order_by('releaseDate')
++    else:
++        context = narrowContext(category, manufacturer)
++        plat = Platform.objects.filter(manufacturer_id=manufacturer).values_list('id', flat=True)
++        if sort == 0:
++            context['products'] = Product.objects.filter(category_id=category, platform_id__in=plat).order_by('price')
++        elif sort == 1:
++            context['products'] = Product.objects.filter(category_id=category, platform_id__in=plat).order_by('-price')
++        elif sort == 2:
++            pass
++        elif sort == 3:
++            context['products'] = Product.objects.filter(category_id=category, platform_id__in=plat).order_by('releaseDate')
++    return render(request, 'product/index.html', context)
++
++
++def productRange(request, category, manufacturer, filter):
++>>>>>>> 0fd04f7eb0b90ac9662e7978ab271ab596882c29
+     fromRange = request.GET.get('from')
+     toRange = request.GET.get('to')
+-    context['products'] = Product.objects.filter(category_id=category, platform_id__in=plat, price__gte=fromRange, price__lte=toRange).order_by('name')
++    if manufacturer == 0:
++        context = allContext(category, manufacturer)
++        if filter != 0:
++            context['filter'] = filter
++            context['products'] = Product.objects.filter(category_id=category, platform_id=filter, price__gte=fromRange, price__lte=toRange)
++        else:
++            context['products'] = Product.objects.filter(category_id=category, price__gte=fromRange, price__lte=toRange).order_by('name')
++    else:
++        context = narrowContext(category, manufacturer)
++        plat = Platform.objects.filter(manufacturer_id=manufacturer).values_list('id', flat=True)
++        context['products'] = Product.objects.filter(category_id=category, platform_id__in=plat, price__gte=fromRange,
++                                                     price__lte=toRange).order_by('name')
+     return render(request, 'product/index.html', context)
++<<<<<<< HEAD
+ 
+ def productInfo(request, productid):
+     context = manufacturerContext()
+     context['products'] = Product.objects.filter(id=productid)
+     return render(request, 'productInfo/index.html', context)
+ 
++=======
++>>>>>>> 0fd04f7eb0b90ac9662e7978ab271ab596882c29
+Index: templates/myAccount/pruchaseHistory.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>{% extends 'base.html' %}\n{% block content %}\n\n    <div class=\"content-section\">\n    <h2>history</h2>\n    </div>\n{% endblock content %}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- templates/myAccount/pruchaseHistory.html	(revision 448c198d87290460cce4ed9f95f2b6225cd05902)
++++ templates/myAccount/pruchaseHistory.html	(date 1589219604222)
+@@ -1,7 +1,49 @@
+ {% extends 'base.html' %}
+ {% block content %}
+-
+-    <div class="content-section">
+-    <h2>history</h2>
++    <div id="accountInfoContainer" style="height: 400px; margin-left: 200px; margin-top: 50px;">
++    <div id="line5" style="position: absolute;
++        margin-top: 60px;
++        margin-left: 500px;
++        width: 251px;
++        height: 0px;
++        border: 7px solid #8ED7B0;
++        transform: rotate(180deg);"></div>
++    <div id="line6" style="margin-top: 68px;
++        margin-bottom: 60px;
++        position: absolute;
++        width: 755px;
++        height: 0px;
++        border: 3px solid #8ED7B0;
++        transform: rotate(180deg);"></div>
++    <div id="line7" style="position: absolute;
++        width: 755px;
++        height: 0px;
++        border: 3px solid #8ED7B0;
++        transform: rotate(180deg);"></div>
++    <div id="line8" style="position: absolute;
++        width: 251px;
++        margin-left: 500px;
++        height: 0px;
++        border: 7px solid #8ED7B0;
++        transform: rotate(180deg);"></div>
++    <h2 id="accountInfo" style="padding-top: 15px; padding-left: 15px">Account Info </h2>
++    <h2 id="accountInfo" style="margin-top: -45px; padding-left: 270px">Payment Info </h2>
++    <h2 id="accountInfo" style="margin-top: -45px; padding-left: 510px">Purchase History </h2>
+     </div>
++    <div id="info" style="margin-top: -300px;margin-left:190px; padding: 25px">
++        <h5>Full Name: {{ user.get_full_name }} </h5>
++        <h5 style="margin-top: 25px">history: {{ user.username }} </h5>
++        <h5 style="margin-top: 25px" >Email: {{ user.email }} </h5>
++        <h5 style="margin-top: 25px">Address: {{ user.account.address }} {{ account.addressNumber }} </h5>
++        <h5 style="margin-top: 25px">Zip: {{ user.account.zip.zip }}</h5>
++        <h5 style="margin-top: 25px">Country: {{ user.account.zip.country }}</h5>
++        <h5 style="margin-top: 25px">City: {{ user.account.zip.city }}</h5>
++    </div>
++    <img src="{{ user.account.accountImage }}" style="margin-top: -400px; margin-left: 750px" alt="profile image">
++        <a href="{% url 'myAccount-paymentInfo' %}" ><button class="button">Next</button></a>
++
++
++
++
++
+ {% endblock content %}
+\ No newline at end of file
+Index: templates/myAccount/accountInfo.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>{% extends 'base.html' %}\n{% block content %}\n\n    <div class=\"content-section\">\n    <h2>account info</h2>\n    <form method=\"post\">\n        {% csrf_token %}\n        {{ form }}\n        <input type=\"submit\" value=\"update\"/>\n    </form>\n    </div>\n{% endblock content %}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- templates/myAccount/accountInfo.html	(revision 448c198d87290460cce4ed9f95f2b6225cd05902)
++++ templates/myAccount/accountInfo.html	(date 1589219604221)
+@@ -1,12 +1,45 @@
+ {% extends 'base.html' %}
+ {% block content %}
+-
+-    <div class="content-section">
+-    <h2>account info</h2>
+-    <form method="post">
+-        {% csrf_token %}
+-        {{ form }}
+-        <input type="submit" value="update"/>
+-    </form>
++    <div id="accountInfoContainer" style="height: 400px; margin-left: 200px; margin-top: 50px;">
++    <div id="line5" style="position: absolute;
++        margin-top: 60px;
++        margin-left: 0px;
++        width: 251px;
++        height: 0px;
++        border: 7px solid #8ED7B0;
++        transform: rotate(180deg);"></div>
++    <div id="line6" style="margin-top: 68px;
++        margin-bottom: 60px;
++        position: absolute;
++        width: 755px;
++        height: 0px;
++        border: 3px solid #8ED7B0;
++        transform: rotate(180deg);"></div>
++    <div id="line7" style="position: absolute;
++        width: 755px;
++        height: 0px;
++        border: 3px solid #8ED7B0;
++        transform: rotate(180deg);"></div>
++    <div id="line8" style="position: absolute;
++        width: 251px;
++        margin-left: 0px;
++        height: 0px;
++        border: 7px solid #8ED7B0;
++        transform: rotate(180deg);"></div>
++    <h2 id="accountInfo" style="padding-top: 15px; padding-left: 15px">Account Info </h2>
++    <h2 id="accountInfo" style="margin-top: -45px; padding-left: 270px">Payment Info </h2>
++    <h2 id="accountInfo" style="margin-top: -45px; padding-left: 510px">Purchase History </h2>
+     </div>
++    <div id="info" style="margin-top: -300px;margin-left:190px; padding: 25px">
++        <h5>Full Name: {{ user.get_full_name }} </h5>
++        <h5 style="margin-top: 25px">Username: {{ user.username }} </h5>
++        <h5 style="margin-top: 25px" >Email: {{ user.email }} </h5>
++        <h5 style="margin-top: 25px">Address: {{ user.account.address }} {{ account.addressNumber }} </h5>
++        <h5 style="margin-top: 25px">Zip: {{ user.account.zip.zip }}</h5>
++        <h5 style="margin-top: 25px">Country: {{ user.account.zip.country }}</h5>
++        <h5 style="margin-top: 25px">City: {{ user.account.zip.city }}</h5>
++    </div>
++    <img src="{{ user.account.accountImage }}" style="margin-top: -400px; margin-left: 750px" alt="profile image">
++    <a href="{% url 'myAccount-updateAccount' %}" ><button class="button">Edit</button></a>
++    <a href="{% url 'myAccount-paymentInfo' %}" ><button class="button">Next</button></a>
+ {% endblock content %}
+\ No newline at end of file
+Index: templates/product/index.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>{% extends 'base.html' %}\n{% block content %}\n    {% include 'productToolbar.html' %}\n     <div class=\"content\">\n        {% for product in products %}\n            <div class=\"card\">\n                <h4>{{ product.name }}</h4>\n                <img src=\"{{ product.image }}\" alt=\"{{ product.name }}\">\n                <h4>${{ product.price }}</h4>\n            </div>\n        {% endfor %}\n    </div>\n{% endblock %}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- templates/product/index.html	(revision 448c198d87290460cce4ed9f95f2b6225cd05902)
++++ templates/product/index.html	(date 1589219604223)
+@@ -3,11 +3,13 @@
+     {% include 'productToolbar.html' %}
+      <div class="content">
+         {% for product in products %}
++            <a class="cardLink" href="#">
+             <div class="card">
+                 <h4>{{ product.name }}</h4>
+                 <img src="{{ product.image }}" alt="{{ product.name }}">
+                 <h4>${{ product.price }}</h4>
+             </div>
++            </a>
+         {% endfor %}
+     </div>
+ {% endblock %}
+\ No newline at end of file
+Index: templates/navigation.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><div class=\"header\">\n    <nav class=\"navbar navbar-expand-lg navbar-light\">\n      <a class=\"navbar-brand\" href=\"{% url 'homepage-index' %}\">Captain Console</a>\n      <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n        <ul class=\"navbar-nav mr-auto center\">\n          <li class=\"nav-item dropdown\">\n            <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n                Consoles\n            </a>\n            <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\n                {% for manufacturer in manufacturers %}\n                    <a class=\"dropdown-item\" href=\"{% url 'product-index' 1 manufacturer.id %}\">{{ manufacturer.name }}</a>\n                {% endfor %}\n                <div class=\"dropdown-divider\"></div>\n                <a class=\"dropdown-item\" href=\"{% url 'product-index' 1 0 %}\">See all</a>\n            </div>\n          </li>\n            <li class=\"nav-item dropdown\">\n            <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n                Games\n            </a>\n            <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\n                {% for manufacturer in manufacturers %}\n                    <a class=\"dropdown-item\" href=\"{% url 'product-index' 2 manufacturer.id %}\">{{ manufacturer.name }}</a>\n                {% endfor %}\n                <div class=\"dropdown-divider\"></div>\n                <a class=\"dropdown-item\" href=\"{% url 'product-index' 2 0 %}\">See all</a>\n            </div>\n          </li>\n            <li class=\"nav-item dropdown\">\n            <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n                Accessories\n            </a>\n            <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\n                {% for manufacturer in manufacturers %}\n                    <a class=\"dropdown-item\" href=\"{% url 'product-index' 3 manufacturer.id %}\">{{ manufacturer.name }}</a>\n                {% endfor %}\n                <div class=\"dropdown-divider\"></div>\n                <a class=\"dropdown-item\" href=\"{% url 'product-index' 3 0 %}\">See all</a>\n            </div>\n          </li>\n            <form class=\"form-inline my-2 my-lg-0\" action=\"{% url 'searchBar-index' %}\" method=\"get\">\n              <input class=\"form-control mr-sm-2 fpSearch\" name=\"q\" id=\"search-box\" type=\"search\" placeholder=\"Search\" aria-label=\"Search\">\n              <button class=\"btn btn-outline-success my-2 my-sm-0\"  id=\"search-btn\" type=\"submit\">Search</button>\n            </form>\n        </ul>\n          <ul class=\"navbar-nav right\">\n          <li class=\"nav-item dropdown\">\n            <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n                Account\n            </a>\n              {% if user.is_authenticated %}\n                  <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\n                <a class=\"dropdown-item\" href=\"{% url 'accountInfo' %}\">Account</a>\n                <a class=\"dropdown-item\" href=\"{% url 'seePurchasehistory' %}\">Purchase history</a>\n                <div class=\"dropdown-divider\"></div>\n                <a class=\"dropdown-item\" href=\"{% url 'logout' %}\">Log out</a>\n                    </div>\n              {% else %}\n                    <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\n                <a class=\"dropdown-item\" href=\"{% url 'login' %}\">Login</a>\n                <a class=\"dropdown-item\" href=\"{% url 'register' %}\">Sign up!</a>\n                <div class=\"dropdown-divider\"></div>\n                    </div>\n              {% endif %}\n\n          </li>\n            <li class=\"nav-item\">\n            <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n              Cart\n            </a>\n                <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\n                    {% for x in '01234' %}\n                        <a class=\"dropdown-item\" >Product</a>\n                    {% endfor %}\n                    <div class=\"dropdown-divider\"></div>\n                    <a class=\"dropdown-item\" role=\"button\" id=\"cart-btn\" href=\"{% url 'checkout-index' %}\">Checkout</a>\n            </div>\n          </li>\n              </ul>\n      </div>\n    </nav>\n</div>\n\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- templates/navigation.html	(revision 448c198d87290460cce4ed9f95f2b6225cd05902)
++++ templates/navigation.html	(date 1589219604247)
+@@ -4,39 +4,39 @@
+       <div class="collapse navbar-collapse" id="navbarSupportedContent">
+         <ul class="navbar-nav mr-auto center">
+           <li class="nav-item dropdown">
+-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
++            <a class="nav-link dropdown-toggle fpDrop" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                 Consoles
+             </a>
+             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                 {% for manufacturer in manufacturers %}
+-                    <a class="dropdown-item" href="{% url 'product-index' 1 manufacturer.id %}">{{ manufacturer.name }}</a>
++                    <a class="dropdown-item dropElem" href="{% url 'product-index' 1 manufacturer.id %}">{{ manufacturer.name }}</a>
+                 {% endfor %}
+                 <div class="dropdown-divider"></div>
+-                <a class="dropdown-item" href="{% url 'product-index' 1 0 %}">See all</a>
++                <a class="dropdown-item dropElem" href="{% url 'product-index' 1 0 %}">See all</a>
+             </div>
+           </li>
+             <li class="nav-item dropdown">
+-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
++            <a class="nav-link dropdown-toggle fpDrop" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                 Games
+             </a>
+             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                 {% for manufacturer in manufacturers %}
+-                    <a class="dropdown-item" href="{% url 'product-index' 2 manufacturer.id %}">{{ manufacturer.name }}</a>
++                    <a class="dropdown-item dropElem" href="{% url 'product-index' 2 manufacturer.id %}">{{ manufacturer.name }}</a>
+                 {% endfor %}
+                 <div class="dropdown-divider"></div>
+-                <a class="dropdown-item" href="{% url 'product-index' 2 0 %}">See all</a>
++                <a class="dropdown-item dropElem" href="{% url 'product-index' 2 0 %}">See all</a>
+             </div>
+           </li>
+             <li class="nav-item dropdown">
+-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
++            <a class="nav-link dropdown-toggle fpDrop" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                 Accessories
+             </a>
+             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                 {% for manufacturer in manufacturers %}
+-                    <a class="dropdown-item" href="{% url 'product-index' 3 manufacturer.id %}">{{ manufacturer.name }}</a>
++                    <a class="dropdown-item dropElem" href="{% url 'product-index' 3 manufacturer.id %}">{{ manufacturer.name }}</a>
+                 {% endfor %}
+                 <div class="dropdown-divider"></div>
+-                <a class="dropdown-item" href="{% url 'product-index' 3 0 %}">See all</a>
++                <a class="dropdown-item dropElem" href="{% url 'product-index' 3 0 %}">See all</a>
+             </div>
+           </li>
+             <form class="form-inline my-2 my-lg-0" action="{% url 'searchBar-index' %}" method="get">
+@@ -59,7 +59,7 @@
+               {% else %}
+                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                 <a class="dropdown-item" href="{% url 'login' %}">Login</a>
+-                <a class="dropdown-item" href="{% url 'register' %}">Sign up!</a>
++                <a class="dropdown-item" href="{% url 'registerLocation' %}">Sign up!</a>
+                 <div class="dropdown-divider"></div>
+                     </div>
+               {% endif %}
+Index: myAccount/forms/forms.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>from django import forms\nfrom django.contrib.auth.forms import UserCreationForm\nfrom django.contrib.auth.models import User\nfrom myAccount.models import Zip\n\n\nzipList = []\nfor zip in Zip.objects.all():\n    zipList.append((zip.id, zip.id))\n\n\nclass SignUpForm(UserCreationForm):\n    zipForm = forms.ChoiceField(choices=zipList)\n    address = forms.CharField(max_length=255)\n    addressNumber = forms.CharField(max_length=255)\n    image = forms.CharField(max_length=255)\n    class Meta:\n        model = User\n        fields = ('username', 'first_name', 'last_name', 'email',\n                  'password1', 'password2', 'address', 'addressNumber', 'image', 'zipForm' )
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- myAccount/forms/forms.py	(revision 448c198d87290460cce4ed9f95f2b6225cd05902)
++++ myAccount/forms/forms.py	(date 1589219604178)
+@@ -1,20 +1,42 @@
+ from django import forms
+-from django.contrib.auth.forms import UserCreationForm
++from django.contrib.auth.forms import UserCreationForm, UserChangeForm
+ from django.contrib.auth.models import User
++from django_countries.data import COUNTRIES
+ from myAccount.models import Zip
+ 
+ 
+-zipList = []
+-for zip in Zip.objects.all():
+-    zipList.append((zip.id, zip.id))
++
++class locationForm(forms.Form):
++    zip = forms.IntegerField()
++    country = forms.ChoiceField(choices = sorted(COUNTRIES.items()))
++    city = forms.CharField(max_length=255)
++    class Meta:
++        model = Zip
++        fields = ('zip', 'country', 'city')
+ 
+ 
+ class SignUpForm(UserCreationForm):
+-    zipForm = forms.ChoiceField(choices=zipList)
+     address = forms.CharField(max_length=255)
+     addressNumber = forms.CharField(max_length=255)
+     image = forms.CharField(max_length=255)
++
+     class Meta:
+         model = User
+         fields = ('username', 'first_name', 'last_name', 'email',
+-                  'password1', 'password2', 'address', 'addressNumber', 'image', 'zipForm' )
+\ No newline at end of file
++                  'password1', 'password2', 'address', 'addressNumber', 'image')
++
++class PaymentForm(forms.Form):
++    nameOnCard = forms.CharField(max_length=255)
++    cardNumber = forms.CharField(max_length=255)
++    expirationDate = forms.CharField(max_length=255)
++    CVV = forms.CharField(max_length=255)
++    class Meta:
++        model = User
++        fields = ('nameOnCard', 'cardNumber', 'expirationDate', 'CVV')
++
++class AccountUpdate(UserChangeForm):
++    class Meta:
++        model = User
++        fields = ('first_name', 'last_name', 'email')
++
++
