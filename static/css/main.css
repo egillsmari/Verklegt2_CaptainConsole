@@ -12,23 +12,9 @@ body{
 h2{
     color: #232F3E !important;
 }
-<<<<<<< HEAD
-=======
+
 .container{
     min-height: 80vh;
-}
-
-
-img{
-    width: 200px;
-    height: 200px;
-}
-
-footer{
-    background-color: #232F3E;
-    color: #D7D7D7 !important;
-    margin-bottom: 0;
-
 }
 
 #accountline1 {
@@ -155,4 +141,3 @@ footer{
     margin-right: 30%;
 }
 
->>>>>>> 8a15bd09136da96a3cc86742d25e1213529e6925

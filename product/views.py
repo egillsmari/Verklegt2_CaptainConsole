@@ -28,39 +28,6 @@ def productFilter(request, category, manufacturer, platform):
     context['products'] = Product.objects.filter(category_id=category, platform_id=platform).order_by('name')
     return render(request, 'product/index.html', context)
 
-
-
-def productSort(request, category, manufacturer, sort):
-    context = narrowContext(category, manufacturer)
-    plat = Platform.objects.filter(manufacturer_id=manufacturer).values_list('id', flat=True)
-
-def productSort(request, category, manufacturer, sort):
-    context = narrowContext(category, manufacturer)
-    plat = Platform.objects.filter(manufacturer_id=manufacturer).values_list('id', flat=True)
-
-    if sort == 0:
-        context['products'] = Product.objects.filter(category_id=category, platform_id__in=plat).order_by('price')
-    elif sort == 1:
-        context['products'] = Product.objects.filter(category_id=category, platform_id__in=plat).order_by('-price')
-    elif sort == 2:
-        pass
-    elif sort == 3:
-        context['products'] = Product.objects.filter(category_id=category, platform_id__in=plat).order_by('releaseDate')
-    return render(request, 'product/index.html', context)
-
-
-
-def productPlatform():
-    pass
-
-
-def productRange():
-    pass
-
-def productRange(request, category, manufacturer):
-    context = narrowContext(category, manufacturer)
-    plat = Platform.objects.filter(manufacturer_id=manufacturer).values_list('id', flat=True)
-
 def productSort(request, category, manufacturer, filter, sort):
     if manufacturer == 0:
         context = allContext(category, manufacturer)
@@ -98,7 +65,6 @@ def productSort(request, category, manufacturer, filter, sort):
 
 
 def productRange(request, category, manufacturer, filter):
-
     fromRange = request.GET.get('from')
     toRange = request.GET.get('to')
     if manufacturer == 0:
