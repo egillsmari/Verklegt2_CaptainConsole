@@ -9,6 +9,10 @@ body{
     background-color: #D7D7D7 !important;
 }
 
+h2{
+    color: #232F3E !important;
+}
+
 #accountline1 {
     position: absolute;
     margin-top: 60px;
@@ -101,7 +105,5 @@ body{
     padding-top: 25px;
     padding-left: 230px;
 }
-=======
 
->>>>>>> 35803aad72cb61d75f4e468eecff610faa15532e
 

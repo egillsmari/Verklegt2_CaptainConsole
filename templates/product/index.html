@@ -3,7 +3,7 @@
     {% include 'productToolbar.html' %}
      <div class="content">
         {% for product in products %}
-            <a class="cardLink" href="#">
+            <a class="cardLink dropElem" href="#">
             <div class="card">
                 <h4>{{ product.name }}</h4>
                 <img src="{{ product.image }}" alt="{{ product.name }}">

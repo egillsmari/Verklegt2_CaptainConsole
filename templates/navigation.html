@@ -51,15 +51,15 @@
             </a>
               {% if user.is_authenticated %}
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="{% url 'accountInfo' %}">Account</a>
-                <a class="dropdown-item" href="{% url 'seePurchasehistory' %}">Purchase history</a>
+                <a class="dropdown-item dropElem" href="{% url 'accountInfo' %}">Account</a>
+                <a class="dropdown-item dropElem" href="{% url 'seePurchasehistory' %}">Purchase history</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="{% url 'logout' %}">Log out</a>
+                <a class="dropdown-item dropElem" href="{% url 'logout' %}">Log out</a>
                     </div>
               {% else %}
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="{% url 'login' %}">Login</a>
-                <a class="dropdown-item" href="{% url 'registerLocation' %}">Sign up!</a>
+                <a class="dropdown-item dropElem" href="{% url 'login' %}">Login</a>
+                <a class="dropdown-item dropElem" href="{% url 'registerLocation' %}">Sign up!</a>
                 <div class="dropdown-divider"></div>
                     </div>
               {% endif %}
