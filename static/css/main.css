@@ -8,8 +8,6 @@
 body{
     background-color: #D7D7D7;
 }
-<<<<<<< HEAD
-=======
 .container{
     min-height: 80vh;
 }
@@ -65,7 +63,6 @@ footer{
 
 
 
-}
 /* Line 12 */
 #line2 {
     margin-top: 68px;
@@ -123,32 +120,3 @@ footer{
 
 
 
-
-.productCard{
-    width: 200px;
-    height: 200px;
-}
-
-.infoImg{
-    width: 400px;
-    height: 200px;
-    margin-left: 0;
-    border-style: solid;
-
-}
-
-.description{
-    width: 400px;
-    height: 200px;
-    margin-left: 700px;
-    font-size: large;
-    border-style: solid;
-
-}
-
-#addTo{
-    background-color: #8ED7B0;
-    margin-right: 30%;
-}
-
->>>>>>> 8a15bd09136da96a3cc86742d25e1213529e6925
