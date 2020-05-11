@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div id="signupContainer">
+{% include 'myAccount/singupHeader.html' %}
+    <h2 id="signup">Location Info</h2>
+{% load crispy_forms_tags %}
+    </div>
+        <div id="signupForm">
+      <form method="post" novalidate>
+        {% csrf_token %}
+        {{ form|crispy }}
+        <button type="submit" class="btn btn-success">Save Location</button>
+        </form>
+        </div>
+
+{% endblock content %}

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div id="signupContainer">
+{% include 'myAccount/singupHeader.html' %}
+    <h2 id="signup"> Sign up</h2>
+{% load crispy_forms_tags %}
+    </div>
+        <div id="signupForm">
+      <form method="post" novalidate>
+        {% csrf_token %}
+        {{ form|crispy }}
+        <button type="submit" class="btn btn-success"> Edit person</button>
+        </form>
+        </div>
+        <label for="img">Select image:</label>
+            <input type="file" id="img" accept="image/*">
+            <input type="submit" name="newImage">
+
+
+{% endblock content %}
+
