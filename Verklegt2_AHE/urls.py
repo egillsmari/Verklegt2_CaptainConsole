@@ -26,9 +26,9 @@ urlpatterns = [
     path('games', include('games.urls')),
     path('accessories', include('accessories.urls')),
     path('checkout', include('checkout.urls')),
-    path('contact', include('checkout.urls')),
     path('myAccount',  include('myAccount.urls')),
     path('search', include('searchBar.urls')),
-    path('product', include('product.urls'))
+    path('product', include('product.urls')),
+    path('info', include('product.urls'))
 
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

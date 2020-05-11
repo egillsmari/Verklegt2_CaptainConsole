@@ -20,7 +20,7 @@ class Account(models.Model):
 
 
 class PaymentInfo(models.Model):
-    accountId = models.ForeignKey(settings.AUTH_USER_MODEL, primary_key=True, related_name='payment', on_delete=models.CASCADE)
+    accountId = models.OneToOneField(settings.AUTH_USER_MODEL, primary_key=True, related_name='payment', on_delete=models.CASCADE)
     nameOnCard = models.CharField(max_length=255)
     cardNumber = models.CharField(max_length=255)
     expirationDate = models.CharField(max_length=25)

@@ -12,6 +12,24 @@ body{
 h2{
     color: #232F3E !important;
 }
+<<<<<<< HEAD
+=======
+.container{
+    min-height: 80vh;
+}
+
+
+img{
+    width: 200px;
+    height: 200px;
+}
+
+footer{
+    background-color: #232F3E;
+    color: #D7D7D7 !important;
+    margin-bottom: 0;
+
+}
 
 #accountline1 {
     position: absolute;
@@ -20,6 +38,7 @@ h2{
     height: 0px;
     border: 7px solid #8ED7B0;
     transform: rotate(180deg);
+
 
 }
 /* Line 12 */
@@ -49,7 +68,7 @@ h2{
 }
 
 
-<<<<<<< HEAD
+
 }
 /* Line 12 */
 #line2 {
@@ -107,3 +126,33 @@ h2{
 }
 
 
+
+
+.productCard{
+    width: 200px;
+    height: 200px;
+}
+
+.infoImg{
+    width: 400px;
+    height: 200px;
+    margin-left: 0;
+    border-style: solid;
+
+}
+
+.description{
+    width: 400px;
+    height: 200px;
+    margin-left: 700px;
+    font-size: large;
+    border-style: solid;
+
+}
+
+#addTo{
+    background-color: #8ED7B0;
+    margin-right: 30%;
+}
+
+>>>>>>> 8a15bd09136da96a3cc86742d25e1213529e6925
