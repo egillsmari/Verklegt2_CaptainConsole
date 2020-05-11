@@ -27,7 +27,7 @@ def register(request):
             account = user.account
             address = form.cleaned_data.get('address')
             addressNumber = form.cleaned_data.get('addressNumber')
-            accountImage = form.ImageField('image')
+            accountImage = form.cleaned_data.get('image')
             accountZip = Zip.objects.earliest('id')
             account.zip = accountZip
             account.addressNumber = addressNumber
