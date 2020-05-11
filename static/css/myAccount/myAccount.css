@@ -22,15 +22,44 @@
 }
 
 
-#line1 {
+#accountline1 {
     position: absolute;
     margin-top: 60px;
-    width: 377px;
+    width: 188px;
     height: 0px;
     border: 7px solid #8ED7B0;
     transform: rotate(180deg);
 
 }
+/* Line 12 */
+#accountline2 {
+    margin-top: 68px;
+    margin-bottom: 60px;
+    position: absolute;
+    width: 755px;
+    height: 0px;
+    border: 3px solid #8ED7B0;
+    transform: rotate(180deg);
+}
+#accountline3 {
+    position: absolute;
+    width: 755px;
+    height: 0px;
+    border: 3px solid #8ED7B0;
+    transform: rotate(180deg);
+}
+/* Line 13 */
+#accountline4 {
+    position: absolute;
+    width: 188px;
+    height: 0px;
+    border: 7px solid #8ED7B0;
+    transform: rotate(180deg);
+}
+
+
+
+
 /* Line 12 */
 #line2 {
     margin-top: 68px;
@@ -59,17 +88,30 @@
 /* Line 14 */
 
 
+
 #signupContainer{
     margin-top: 40px;
     margin-left: 180px;
     height: 80px;
 }
 
+
+#accountInfoContainer{
+    height: 400px;
+}
+
 #signupForm{
-    width: 60% !important;
-    margin-left: 200px;
+    width: 65% !important;
+    margin-left: 195px;
 }
 
 #signup{
-
+    padding-top: 15px;
+    padding-left: 130px;
 }
+
+#payment{
+    padding-top: 25px;
+    padding-left: 230px;
+}
+
