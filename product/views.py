@@ -3,6 +3,9 @@ from product.models import Product
 from product.models import Platform
 from context.contextBuilder import allContext, narrowContext
 
+import logging
+logger = logging.getLogger(__name__)
+
 # Create your views here.
 def index(request, category, manufacturer):
     if manufacturer == 0:
@@ -59,6 +62,7 @@ def productSort(request, category, manufacturer, filter, sort):
         elif sort == 3:
             context['products'] = Product.objects.filter(category_id=category, platform_id__in=plat).order_by('releaseDate')
     return render(request, 'product/index.html', context)
+
 
 def productRange(request, category, manufacturer, filter):
     fromRange = request.GET.get('from')

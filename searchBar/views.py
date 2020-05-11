@@ -11,12 +11,12 @@ def index(request):
     context = manufacturerContext()
     query = request.GET.get('q')
     context['products'] = Product.objects.filter(name__icontains=query)
-    if request.user.is_authenticated:
-        current_user = request.user.id
-        history = SearchHistory(searchedItem=query, accountId_id=current_user)
-        history.save()
-
-
-
-    return render(request, 'searchBar/index.html', context)
+    if context['products'].exists():
+        if request.user.is_authenticated:
+            current_user = request.user.id
+            history = SearchHistory(searchedItem=query, accountId_id=current_user)
+            history.save()
+        return render(request, 'searchBar/index.html', context)
+    else:
+        return render(request, 'searchBar/noItem.html')
 

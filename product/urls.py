@@ -8,3 +8,4 @@ urlpatterns = [
     path('<int:category>/<int:manufacturer>/sort/<int:filter>/<int:sort>', views.productSort, name='product-productSort'),
     path('<int:category>/<int:manufacturer>/range/<int:filter>', views.productRange, name='product-productRange')
 ]
+
