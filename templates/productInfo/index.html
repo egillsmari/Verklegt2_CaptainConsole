@@ -1,11 +1,12 @@
 {% extends 'base.html' %}
 {% block content %}
-
-    {% for product in products %}
-        <h2 class="fpCategory">{{ product.name }}</h2>
+{% for product in products %}
+    <h2 class="fpCategory">{{ product.name }}</h2>
+        <div class="info">
             <div class="infoImg">
                 <img class="productCard" src="{{ product.image }}" alt="{{ product.name }}">
             </div>
+        </div>
             <div class="description"><p>{{ product.description }}</p></div>
             <a  href="{% url 'product-addToCart' product.id %}" id="addCart"><button type="button" id="addTo" class="btn btn-secondary">Add to cart</button></a>
             <h3 id="price">${{ product.price }}</h3>
