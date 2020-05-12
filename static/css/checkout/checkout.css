@@ -1,0 +1,41 @@
+.cartContainer{
+    width: 1200px;
+    margin-bottom: 100px;
+}
+
+.item{
+    float: left;
+    margin-left: 150px;
+    margin-top: 40px;
+    width: 755px;
+    height: 100px;
+    border-bottom: 4px solid #8ED7B0;
+    display: inline-block;
+
+}
+.productImg{
+    width: 80px;
+    height: 80px;
+    margin-left: 650px;
+    margin-top: -200px;
+}
+
+.price{
+    position: relative;
+    margin-left: 300px;
+    bottom: 65px;
+}
+
+.image{
+    position: relative;
+    margin-left: 660px;
+    bottom: 130px;
+}
+
+#checkout{
+    position: relative;
+    left: 820px;
+    bottom: 30px;
+    width: 80px;
+}
+

@@ -4,6 +4,7 @@
 @import './header/nav.css';
 @import './footer/footer.css';
 @import './myAccount/myAccount.css';
+@import './checkout/checkout.css';
 
 body{
 

@@ -1,43 +1,22 @@
 {% extends 'base.html' %}
 {% block content %}
-    <div id="accountInfoContainer" style="height: 400px; margin-left: 200px; margin-top: 50px;">
-    <div id="line5" style="position: absolute;
-        margin-top: 60px;
-        margin-left: 0px;
-        width: 251px;
-        height: 0px;
-        border: 7px solid #8ED7B0;
-        transform: rotate(180deg);"></div>
-    <div id="line6" style="margin-top: 68px;
-        margin-bottom: 60px;
-        position: absolute;
-        width: 755px;
-        height: 0px;
-        border: 3px solid #8ED7B0;
-        transform: rotate(180deg);"></div>
-    <div id="line7" style="position: absolute;
-        width: 755px;
-        height: 0px;
-        border: 3px solid #8ED7B0;
-        transform: rotate(180deg);"></div>
-    <div id="line8" style="position: absolute;
-        width: 251px;
-        margin-left: 0px;
-        height: 0px;
-        border: 7px solid #8ED7B0;
-        transform: rotate(180deg);"></div>
-    <h2 id="accountInfo" style="padding-top: 15px; padding-left: 15px">Account Info </h2>
-    <h2 id="accountInfo" style="margin-top: -45px; padding-left: 270px">Payment Info </h2>
-    <h2 id="accountInfo" style="margin-top: -45px; padding-left: 510px">Purchase History </h2>
+    <div id="accountInfoContainer">
+    <div id="line5"></div>
+    <div id="line6"></div>
+    <div id="line7"></div>
+    <div id="line8"></div>
+    <h2 id="accountInfo1">Account Info </h2>
+    <h2 id="accountInfo2">Payment Info </h2>
+    <h2 id="accountInfo3">Purchase History </h2>
     </div>
-    <div id="info" style="margin-top: -300px;margin-left:190px; padding: 25px">
+    <div id="info">
         <h5>Full Name: {{ user.get_full_name }} </h5>
-        <h5 style="margin-top: 25px">Username: {{ user.username }} </h5>
-        <h5 style="margin-top: 25px" >Email: {{ user.email }} </h5>
-        <h5 style="margin-top: 25px">Address: {{ user.account.address }} {{ account.addressNumber }} </h5>
-        <h5 style="margin-top: 25px">Zip: {{ user.account.zip.zip }}</h5>
-        <h5 style="margin-top: 25px">Country: {{ user.account.zip.country }}</h5>
-        <h5 style="margin-top: 25px">City: {{ user.account.zip.city }}</h5>
+        <h5 class="userInfo">Username: {{ user.username }} </h5>
+        <h5 class="userInfo">Email: {{ user.email }} </h5>
+        <h5 class="userInfo">Address: {{ user.account.address }} {{ account.addressNumber }} </h5>
+        <h5 class="userInfo">Zip: {{ user.account.zip.zip }}</h5>
+        <h5 class="userInfo">Country: {{ user.account.zip.country }}</h5>
+        <h5 class="userInfo">City: {{ user.account.zip.city }}</h5>
     </div>
     <img src="{{ user.account.accountImage }}" style="margin-top: -400px; margin-left: 750px" alt="profile image">
     <a href="{% url 'myAccount-updateAccount' %}" ><button class="button">Edit</button></a>
