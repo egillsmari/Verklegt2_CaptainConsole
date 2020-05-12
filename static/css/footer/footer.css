@@ -2,3 +2,7 @@ footer{
     background-color: #232F3E;
     color: #D7D7D7 !important;
 }
+
+.row{
+    max-width: 95vW !important;
+}

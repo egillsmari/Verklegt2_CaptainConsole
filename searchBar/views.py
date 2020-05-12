@@ -3,9 +3,6 @@ from product.models import Product
 from myAccount.models import SearchHistory
 from context.contextBuilder import manufacturerContext
 
-
-
-
 # Create your views here.
 def index(request):
     context = manufacturerContext(request)
