@@ -13,10 +13,14 @@
           </button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
             {% if filter is None %}
-             <form class="my-2 my-lg-0 formFilter" action="{% url 'product-productRange' cat man 0 %}" method="get">
-              <input class="form-control mr-sm-2 prodSearch" name="from" id="search-box" type="search" placeholder="Price from.." aria-label="Search">
-                 <input class="form-control mr-sm-2 prodSearch" name="to" id="search-box" type="search" placeholder="Price to.." aria-label="Search">
-              <button class="btn btn-outline-success my-2 my-sm-0"  id="search-btn" type="submit">Filter</button>
+             <form class="my-2 my-lg-0" action="{% url 'product-productRange' cat man 0 %}" method="get">
+                <div class="formFilter">
+                    <input class="form-control mr-sm-2 prodSearch" name="from" id="search-box" type="search" placeholder="$" aria-label="Search">
+                    <input class="form-control mr-sm-2 prodSearch" name="to" id="search-box" type="search" placeholder="$$$" aria-label="Search">
+                </div>
+                 <div class="formFilter">
+                    <button class="btn btn-outline-success my-2 my-sm-0"  id="search-btn" type="submit">Filter</button>
+                 </div>
             </form>
             {% else %}
                 <form class="my-2 my-lg-0 formFilter" action="{% url 'product-productRange' cat man filter %}" method="get">
@@ -26,7 +30,9 @@
                 </form>
             {% endif %}
             {% for platform in platforms %}
-                <a class="dropdown-item" href="{% url 'product-productFilter' cat man platform.id %}">{{ platform.name }}</a>
+                {% if platform.name != 'All' %}
+                    <a class="dropdown-item" href="{% url 'product-productFilter' cat man platform.id %}">{{ platform.name }}</a>
+                {% endif %}
             {% endfor %}
           </div>
         </div>
