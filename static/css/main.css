@@ -9,6 +9,7 @@ body{
 
     background-color: #D7D7D7 !important;
 }
+
 .baseContainer{
     min-height: 80vh;
     width: 85vw !important;
@@ -19,6 +20,3 @@ body{
 h2{
     color: #232F3E !important;
 }
-
-
-
