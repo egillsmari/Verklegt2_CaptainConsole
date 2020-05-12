@@ -21,97 +21,106 @@
     margin-right: 10px;
 }
 
-
-#accountline1 {
+#line1{
     position: absolute;
     margin-top: 60px;
-    width: 188px;
+    margin-left: 241px;
+    width: 251px;
+    height: 0px;
+    border: 7px solid #8ED7B0;
+    transform: rotate(180deg)
+
+}
+
+#line2{
+    position: absolute;
+    width: 251px;
+    margin-left: 240px;
+    height: 0px;
+    border: 7px solid #8ED7B0;
+    transform: rotate(180deg)
+}
+
+#line3{
+
+}
+
+#line4{
+
+}
+
+#line5{
+    position: absolute;
+    margin-top: 60px;
+    margin-left: 0px;
+    width: 251px;
     height: 0px;
     border: 7px solid #8ED7B0;
     transform: rotate(180deg);
 
 }
-/* Line 12 */
-#accountline2 {
+
+#line6{
     margin-top: 68px;
     margin-bottom: 60px;
     position: absolute;
     width: 755px;
     height: 0px;
     border: 3px solid #8ED7B0;
-    transform: rotate(180deg);
+    transform: rotate(180deg)
+
 }
-#accountline3 {
+
+#line7{
     position: absolute;
     width: 755px;
     height: 0px;
     border: 3px solid #8ED7B0;
-    transform: rotate(180deg);
+    transform: rotate(180deg)
+
 }
-/* Line 13 */
-#accountline4 {
+
+#line8{
     position: absolute;
-    width: 188px;
+    width: 251px;
+    margin-left: 0px;
     height: 0px;
     border: 7px solid #8ED7B0;
-    transform: rotate(180deg);
+    transform: rotate(180deg)
+
 }
 
-
-
-
-/* Line 12 */
-#line2 {
-    margin-top: 68px;
-    margin-bottom: 60px;
-    position: absolute;
-    width: 755px;
-    height: 0px;
-    border: 3px solid #8ED7B0;
-    transform: rotate(180deg);
+#info{
+    margin-top: -300px;
+    margin-left:190px;
+    padding: 25px
 }
-#line4 {
-    position: absolute;
-    width: 755px;
-    height: 0px;
-    border: 3px solid #8ED7B0;
-    transform: rotate(180deg);
-}
-/* Line 13 */
-#line3 {
-    position: absolute;
-    width: 377px;
-    height: 0px;
-    border: 7px solid #8ED7B0;
-    transform: rotate(180deg);
-}
-/* Line 14 */
-
-
-
-#signupContainer{
-    margin-top: 40px;
-    margin-left: 180px;
-    height: 80px;
-}
-
 
 #accountInfoContainer{
     height: 400px;
+    margin-left: 200px;
+    margin-top: 50px
 }
 
-#signupForm{
-    width: 65% !important;
-    margin-left: 195px;
-}
-
-#signup{
+#accountInfo1{
     padding-top: 15px;
-    padding-left: 130px;
+    padding-left: 15px
 }
 
-#payment{
-    padding-top: 25px;
-    padding-left: 230px;
+#accountInfo2{
+    margin-top: -45px;
+    padding-left: 270px
 }
+
+#accountInfo3{
+    margin-top: -45px;
+    padding-left: 510px
+}
+
+.userInfo{
+    margin-top: 25px
+}
+
+
+
 
