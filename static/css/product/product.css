@@ -1,10 +1,13 @@
 .content{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .card{
     margin: 15px;
-    background-color: #D7D7D7 !important;
+    background-color: #ebebeb !important;
+    box-shadow: 3px 3px 1px #acacac;
 }
 
 .prodSearch{
@@ -55,16 +58,14 @@ img{
 }
 
 .productCard{
-    width: 200px;
-    height: 200px;
+    width: 400px;
+    height: 400px;
 }
 
 .infoImg{
     width: 400px;
     height: 200px;
     margin-left: 0;
-    border-style: solid;
-
 }
 
 .description{
@@ -72,8 +73,10 @@ img{
     height: 200px;
     margin-left: 700px;
     font-size: large;
-    border-style: solid;
+}
 
+.info{
+    display: flex;
 }
 
 #addTo{

@@ -1,44 +1,53 @@
 {% extends 'base.html' %}
 {% block content %}
-
+<div class="sliderContainer">
     <h2 class="fpCategory">Consoles</h2>
-    <div class="content">
+    <div class="productContainer">
         {% for product in products %}
             {% if product.category_id == 1 %}
-                <a class="cardLink dropElem" href="{% url 'product-productInfo' product.id %}">
-                    <div class="card">
+                  <div class="carousel-cell">
+                      <a class="cardLink dropElem" href="{% url 'product-productInfo' product.id %}">
+                        <div class="card">
                         <h4>{{ product.name }}</h4>
                         <img src="{{ product.image }}" alt="{{ product.name }}">
-                    </div>
-                </a>
+                            <h4>${{ product.price }}</h4>
+                        </div>
+                    </a>
+                  </div>
             {% endif %}
         {% endfor %}
     </div>
     <h2 class="fpCategory">Games</h2>
-    <div class="content">
+    <div class="productContainer">
         {% for product in products %}
             {% if product.category_id == 2 %}
-                <a class="cardLink dropElem" href="{% url 'product-productInfo' product.id %}">
-                <div class="card">
+                <div class="carousel-cell">
+                  <a class="cardLink dropElem" href="{% url 'product-productInfo' product.id %}">
+                    <div class="card">
                     <h4>{{ product.name }}</h4>
                     <img src="{{ product.image }}" alt="{{ product.name }}">
-                </div>
+                        <h4>${{ product.price }}</h4>
+                    </div>
                 </a>
+              </div>
             {% endif %}
         {% endfor %}
     </div>
     <h2 class="fpCategory">Accessories</h2>
-    <div class="content">
+    <div class="productContainer">
         {% for product in products %}
             {% if product.category_id == 3 %}
-                <a class="cardLink dropElem" href="{% url 'product-productInfo' product.id %}">
-                <div class="card">
+                <div class="carousel-cell">
+                  <a class="cardLink dropElem" href="{% url 'product-productInfo' product.id %}">
+                    <div class="card">
                     <h4>{{ product.name }}</h4>
                     <img src="{{ product.image }}" alt="{{ product.name }}">
-                </div>
+                        <h4>${{ product.price }}</h4>
+                    </div>
                 </a>
+              </div>
             {% endif %}
         {% endfor %}
     </div>
-
+</div>
 {% endblock %}
