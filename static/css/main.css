@@ -9,10 +9,8 @@ body{
 
     background-color: #D7D7D7 !important;
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> 5864243d7e291df290e5f352728b0049b8279d3a
+
 .container{
     min-height: 80vh;
 
@@ -24,109 +22,12 @@ h2{
     color: #232F3E !important;
 }
 
-<<<<<<< HEAD
+
 .container{
     min-height: 80vh;
 }
 
-<<<<<<< HEAD
-=======
-#accountline1 {
-    position: absolute;
-    margin-top: 60px;
-    width: 188px;
-    height: 0px;
-    border: 7px solid #8ED7B0;
-    transform: rotate(180deg);
 
-
-}
-/* Line 12 */
-#accountline2 {
-    margin-top: 68px;
-    margin-bottom: 60px;
-    position: absolute;
-    width: 755px;
-    height: 0px;
-    border: 3px solid #8ED7B0;
-    transform: rotate(180deg);
-}
-#accountline3 {
-    position: absolute;
-    width: 755px;
-    height: 0px;
-    border: 3px solid #8ED7B0;
-    transform: rotate(180deg);
-}
-/* Line 13 */
-#accountline4 {
-    position: absolute;
-    width: 188px;
-    height: 0px;
-    border: 7px solid #8ED7B0;
-    transform: rotate(180deg);
-}
-
-
-
-/* Line 12 */
-#line2 {
-    margin-top: 68px;
-    margin-bottom: 60px;
-    position: absolute;
-    width: 755px;
-    height: 0px;
-    border: 3px solid #8ED7B0;
-    transform: rotate(180deg);
-}
-#line4 {
-    position: absolute;
-    width: 755px;
-    height: 0px;
-    border: 3px solid #8ED7B0;
-    transform: rotate(180deg);
-}
-/* Line 13 */
-#line3 {
-    position: absolute;
-    width: 377px;
-    height: 0px;
-    border: 7px solid #8ED7B0;
-    transform: rotate(180deg);
-}
-/* Line 14 */
-
-
-
-#signupContainer{
-    margin-top: 40px;
-    margin-left: 180px;
-    height: 80px;
-}
-
-
-#accountInfoContainer{
-    height: 400px;
-}
-
-#signupForm{
-    width: 65% !important;
-    margin-left: 195px;
-}
-
-#signup{
-    padding-top: 15px;
-    padding-left: 130px;
-}
-
-#payment{
-    padding-top: 25px;
-    padding-left: 230px;
-}
-
-
-
->>>>>>> 5864243d7e291df290e5f352728b0049b8279d3a
 
 .productCard{
     width: 200px;
@@ -154,11 +55,4 @@ h2{
     background-color: #8ED7B0;
     margin-right: 30%;
 }
-=======
->>>>>>> ba0f5fc26a0fae61a0aeedf405cd050550620a8a
 
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 5864243d7e291df290e5f352728b0049b8279d3a

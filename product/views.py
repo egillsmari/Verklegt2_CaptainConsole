@@ -98,6 +98,7 @@ def addToCart(request, productid):
     return redirect('homepage-index')
 
 def emptyCart(request):
+    request.session.flush()
     for key, val in request.session.items():
         if val == 'item':
             del request.session[key]

@@ -3,8 +3,6 @@ from django.shortcuts import render
 from product.models import Product
 from context.contextBuilder import manufacturerContext
 
-
-
 # Create your views here.
 
 def index(request):
