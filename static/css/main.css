@@ -9,6 +9,8 @@ body{
 
     background-color: #D7D7D7 !important;
 }
+
+
 .container{
     min-height: 80vh;
 
@@ -23,129 +25,6 @@ h2{
 
 .container{
     min-height: 80vh;
-}
-
-#accountline1 {
-    position: absolute;
-    margin-top: 60px;
-    width: 188px;
-    height: 0px;
-    border: 7px solid #8ED7B0;
-    transform: rotate(180deg);
-
-
-}
-/* Line 12 */
-#accountline2 {
-    margin-top: 68px;
-    margin-bottom: 60px;
-    position: absolute;
-    width: 755px;
-    height: 0px;
-    border: 3px solid #8ED7B0;
-    transform: rotate(180deg);
-}
-#accountline3 {
-    position: absolute;
-    width: 755px;
-    height: 0px;
-    border: 3px solid #8ED7B0;
-    transform: rotate(180deg);
-}
-/* Line 13 */
-#accountline4 {
-    position: absolute;
-    width: 188px;
-    height: 0px;
-    border: 7px solid #8ED7B0;
-    transform: rotate(180deg);
-}
-
-
-
-/* Line 12 */
-#line2 {
-    margin-top: 68px;
-    margin-bottom: 60px;
-    position: absolute;
-    width: 755px;
-    height: 0px;
-    border: 3px solid #8ED7B0;
-    transform: rotate(180deg);
-}
-#line4 {
-    position: absolute;
-    width: 755px;
-    height: 0px;
-    border: 3px solid #8ED7B0;
-    transform: rotate(180deg);
-}
-/* Line 13 */
-#line3 {
-    position: absolute;
-    width: 377px;
-    height: 0px;
-    border: 7px solid #8ED7B0;
-    transform: rotate(180deg);
-}
-/* Line 14 */
-
-
-
-#signupContainer{
-    margin-top: 40px;
-    margin-left: 180px;
-    height: 80px;
-}
-
-
-#accountInfoContainer{
-    height: 400px;
-}
-
-#signupForm{
-    width: 65% !important;
-    margin-left: 195px;
-}
-
-#signup{
-    padding-top: 15px;
-    padding-left: 130px;
-}
-
-#payment{
-    padding-top: 25px;
-    padding-left: 230px;
-}
-
-
-
-
-.productCard{
-    width: 200px;
-    height: 200px;
-}
-
-.infoImg{
-    width: 400px;
-    height: 200px;
-    margin-left: 0;
-    border-style: solid;
-
-}
-
-.description{
-    width: 400px;
-    height: 200px;
-    margin-left: 700px;
-    font-size: large;
-    border-style: solid;
-
-}
-
-#addTo{
-    background-color: #8ED7B0;
-    margin-right: 30%;
 }
 
 

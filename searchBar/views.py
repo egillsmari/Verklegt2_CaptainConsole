@@ -8,7 +8,7 @@ from context.contextBuilder import manufacturerContext
 
 # Create your views here.
 def index(request):
-    context = manufacturerContext()
+    context = manufacturerContext(request)
     query = request.GET.get('q')
     context['products'] = Product.objects.filter(name__icontains=query)
     if context['products'].exists():

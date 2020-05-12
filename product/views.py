@@ -1,7 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from product.models import Product
 from product.models import Platform
 from context.contextBuilder import allContext, narrowContext, manufacturerContext
+from django.contrib.sessions.backends.db import SessionStore
 
 import logging
 logger = logging.getLogger(__name__)
@@ -27,6 +28,10 @@ def productFilter(request, category, manufacturer, platform):
         context = narrowContext(category, manufacturer)
     context['products'] = Product.objects.filter(category_id=category, platform_id=platform).order_by('name')
     return render(request, 'product/index.html', context)
+
+def productPlatform():
+    pass
+
 
 def productSort(request, category, manufacturer, filter, sort):
     if manufacturer == 0:
@@ -83,8 +88,20 @@ def productRange(request, category, manufacturer, filter):
 
 
 def productInfo(request, productid):
-    context = manufacturerContext()
+    context = manufacturerContext(request)
     context['products'] = Product.objects.filter(id=productid)
     return render(request, 'productInfo/index.html', context)
+
+
+def addToCart(request, productid):
+    request.session[productid] = 'item'
+    return redirect('homepage-index')
+
+def emptyCart(request):
+    request.session.flush()
+    for key, val in request.session.items():
+        if val == 'item':
+            del request.session[key]
+    return redirect('homepage-index')
 
 
