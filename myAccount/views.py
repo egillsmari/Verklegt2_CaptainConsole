@@ -7,7 +7,9 @@ from myAccount.models import Zip
 from context.contextBuilder import manufacturerContext
 from django.contrib.auth.models import User
 
+
 def locationRegister(request):
+    context = manufacturerContext(request)
     formLocation = locationForm(data=request.POST)
     if request.method == 'POST':
         if formLocation.is_valid():
@@ -16,10 +18,14 @@ def locationRegister(request):
             userCity = formLocation.cleaned_data.get('city')
             Zip.objects.create(zip=userZip, country=userCountry, city=userCity)
             return redirect('myAccount-register')
-    return render(request, 'myAccount/locationInfo.html', {'form': formLocation})
+    else:
+        formLocation = locationForm()
+    context['form'] = formLocation
+    return render(request, 'myAccount/locationInfo.html',  context)
 
 
 def register(request):
+    context = manufacturerContext(request)
     form = SignUpForm(data=request.POST)
     if request.method == 'POST':
         if form.is_valid():
@@ -39,9 +45,13 @@ def register(request):
             user = authenticate(username=username, password=password)
             login(request, user)
             return redirect('myAccount-paymentRegister')
-    return render(request, 'myAccount/register.html', {'form': form})
+    else:
+        form = SignUpForm()
+    context['form'] = form
+    return render(request, 'myAccount/register.html', context)
 
 def paymentRegister(request):
+    context = manufacturerContext(request)
     form = PaymentForm(data=request.POST)
     if request.method == 'POST':
         if form.is_valid():
@@ -53,7 +63,10 @@ def paymentRegister(request):
             savePayment = PaymentInfo(currentUser, nameOnCard, cardNumber, expirationDate, CVV)
             savePayment.save()
             return redirect('homepage-index')
-    return render(request, 'myAccount/paymentRegister.html', {'form': form})
+    else:
+        form = PaymentForm()
+    context['form'] = form
+    return render(request, 'myAccount/paymentRegister.html', context)
 
 @login_required
 def seePurchasehistory(request):

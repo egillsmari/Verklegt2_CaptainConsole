@@ -71,10 +71,12 @@
             </a>
                 <div style="margin-left: 1280px" class="dropdown-menu" aria-labelledby="navbarDropdown">
                     {% for item in cartItems %}
-                        <a class="dropdown-item">{{ item }}</a>
+                        <a class="dropdown-item">{{ item.name }}</a>
                     {% endfor %}
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" role="button" id="cart-btn" href="{% url 'checkout-index' %}">Checkout</a>
+
+                    <a class="dropdown-item" role="button" id="cart-btn" href="{% url 'checkout-cart' %}">Checkout</a>
+
                     <a class="dropdown-item" role="button" id="cart-btn" href="{% url 'checkout-emptyCart' %}">Empty Cart</a>
 
             </div>

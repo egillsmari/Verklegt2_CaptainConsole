@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from context.contextBuilder import manufacturerContext
+from checkout.models import Order, Sold
 
 # Create your views here.
 def index(request):
@@ -7,13 +8,13 @@ def index(request):
 
 def showCart(request):
     context = manufacturerContext(request)
-    context['test'] = request.session
     return render(request, 'checkout/showCart.html', context)
 
-def emptyCart(request):
-    request.session.flush()
-    for key, val in request.session.items():
-        if val == 'item':
-            del request.session[key]
-    return redirect('homepage-index')
+def shippingMethod(request):
+    context = manufacturerContext(request)
+    return render(request, 'checkout/shipping.html', context)
+
+def paymentMethod(request):
+    context = manufacturerContext(request)
+    return render(request, '')
 

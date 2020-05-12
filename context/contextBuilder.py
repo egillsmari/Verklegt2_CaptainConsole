@@ -9,10 +9,11 @@ def platformsContext():
 
 def manufacturerContext(request):
     context = []
-    for item in request.session.keys():
-        for product in Product.objects.all():
-            if int(product.id) == int(item):
-                context.append(product.name)
+    for item, val in request.session.items():
+        if val == 'item':
+            for product in Product.objects.all():
+                if int(product.id) == int(item):
+                    context.append(product)
     return {'manufacturers': Manufacturer.objects.all(), 'cartItems': context}
 
 def allContext(category, manufacturer):

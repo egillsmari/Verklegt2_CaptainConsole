@@ -3,11 +3,25 @@
 
     <h2 class="fpCategory">Products</h2>
     <div class="content">
-        {% for value in request.session.values %}
-            <h5>Value: {{ value }}</h5>
+    <div class="cartContainer">
 
-    {% endfor %}
+        {% for item in cartItems %}
+            <div class="item">
+            <h5 class="name">Name</h5>
+            <h5>{{ item.name }}</h5>
+            <h5 class="price">Price</h5>
+            <h5 class="price">${{ item.price }}</h5>
+            <h5 class="image"></h5>
+            <img class="productImg" src="{{ item.image }}" alt="{{ item.name }}">
+            </div>
+        {% endfor %}
     </div>
-
+    </div>
+    <p>Note. You must be logged in to complete the checkout</p>
+    {% if user.is_authenticated %}
+        <a href="{% url 'checkout-shipping'%}"><button type="button" id="checkout" class="btn btn-secondary">Next</button></a>
+    {% else %}
+        <a href="{% url 'login' %}"><button type="button" id="checkout" class="btn btn-secondary">Next</button></a>
+    {% endif %}
 
 {% endblock %}

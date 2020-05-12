@@ -25,54 +25,32 @@ img{
 }
 
 
-.productCard{
-    width: 200px;
-    height: 200px;
-}
-
-.infoImg{
-    width: 400px;
-    height: 200px;
-    margin-left: 0;
-    border-style: solid;
-
-}
-
-.description{
-    width: 400px;
-    height: 200px;
-    margin-left: 700px;
-    font-size: large;
-    border-style: solid;
-
-}
-
-#addTo {
-    background-color: #8ED7B0;
-    margin-right: 30%;
-}
-
 .cardLink{
     text-decoration: none !important;
+
 }
 
 .productCard{
-    width: 400px;
-    height: 400px;
+    width: 600px;
+    height: 450px;
+
 }
+
 
 .infoImg{
     width: 400px;
     height: 200px;
-    margin-left: 0;
 }
 
-.description{
+.description {
     width: 400px;
     height: 200px;
-    margin-left: 700px;
-    font-size: large;
+    font-size: larger;
+    margin-left: 63%;
+    position: relative;
+    bottom: 200px;
 }
+
 
 .info{
     display: flex;
@@ -80,5 +58,11 @@ img{
 
 #addTo{
     background-color: #8ED7B0;
-    margin-right: 30%;
+    margin-left: 90%;
+}
+
+#price{
+    margin-left: 90%;
+    position: relative;
+    bottom: 100px;
 }
