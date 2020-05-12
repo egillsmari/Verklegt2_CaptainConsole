@@ -6,23 +6,22 @@
 @import './myAccount/myAccount.css';
 
 body{
-    background-color: #D7D7D7;
+
+    background-color: #D7D7D7 !important;
 }
 .container{
     min-height: 80vh;
+
+    background-color: #D7D7D7 !important;
+
 }
 
-
-img{
-    width: 200px;
-    height: 200px;
+h2{
+    color: #232F3E !important;
 }
 
-footer{
-    background-color: #232F3E;
-    color: #D7D7D7 !important;
-    margin-bottom: 0;
-
+.container{
+    min-height: 80vh;
 }
 
 #accountline1 {
@@ -118,5 +117,34 @@ footer{
     padding-left: 230px;
 }
 
+
+
+
+.productCard{
+    width: 200px;
+    height: 200px;
+}
+
+.infoImg{
+    width: 400px;
+    height: 200px;
+    margin-left: 0;
+    border-style: solid;
+
+}
+
+.description{
+    width: 400px;
+    height: 200px;
+    margin-left: 700px;
+    font-size: large;
+    border-style: solid;
+
+}
+
+#addTo{
+    background-color: #8ED7B0;
+    margin-right: 30%;
+}
 
 

@@ -18,10 +18,12 @@
     <div class="content">
         {% for product in products %}
             {% if product.category_id == 2 %}
+                <a href="{% url 'productInfo-index' product.id %}">
                 <div class="card">
                     <h4>{{ product.name }}</h4>
                     <img src="{{ product.image }}" alt="{{ product.name }}">
                 </div>
+                </a>
             {% endif %}
         {% endfor %}
     </div>
@@ -29,10 +31,12 @@
     <div class="content">
         {% for product in products %}
             {% if product.category_id == 3 %}
+                <a href="{% url 'productInfo-index' product.id %}">
                 <div class="card">
                     <h4>{{ product.name }}</h4>
                     <img src="{{ product.image }}" alt="{{ product.name }}">
                 </div>
+                </a>
             {% endif %}
         {% endfor %}
     </div>

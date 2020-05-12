@@ -28,7 +28,6 @@ def productFilter(request, category, manufacturer, platform):
     context['products'] = Product.objects.filter(category_id=category, platform_id=platform).order_by('name')
     return render(request, 'product/index.html', context)
 
-
 def productSort(request, category, manufacturer, filter, sort):
     if manufacturer == 0:
         context = allContext(category, manufacturer)
@@ -66,7 +65,6 @@ def productSort(request, category, manufacturer, filter, sort):
 
 
 def productRange(request, category, manufacturer, filter):
-
     fromRange = request.GET.get('from')
     toRange = request.GET.get('to')
     if manufacturer == 0:

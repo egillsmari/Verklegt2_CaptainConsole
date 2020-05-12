@@ -1,6 +1,6 @@
 <div class="header">
     <nav class="navbar navbar-expand-lg navbar-light">
-      <a class="navbar-brand" href="{% url 'homepage-index' %}">Captain Console</a>
+      <a class="navbar-brand fpDrop" href="{% url 'homepage-index' %}">Captain Console</a>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto center">
           <li class="nav-item dropdown">
@@ -46,27 +46,27 @@
         </ul>
           <ul class="navbar-nav right">
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle fpDrop" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Account
             </a>
               {% if user.is_authenticated %}
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="{% url 'accountInfo' %}">Account</a>
-                <a class="dropdown-item" href="{% url 'seePurchasehistory' %}">Purchase history</a>
+                <a class="dropdown-item dropElem" href="{% url 'accountInfo' %}">Account</a>
+                <a class="dropdown-item dropElem" href="{% url 'seePurchasehistory' %}">Purchase history</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="{% url 'logout' %}">Log out</a>
+                <a class="dropdown-item dropElem" href="{% url 'logout' %}">Log out</a>
                     </div>
               {% else %}
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="{% url 'login' %}">Login</a>
-                <a class="dropdown-item" href="{% url 'registerLocation' %}">Sign up!</a>
+                <a class="dropdown-item dropElem" href="{% url 'login' %}">Login</a>
+                <a class="dropdown-item dropElem" href="{% url 'registerLocation' %}">Sign up!</a>
                 <div class="dropdown-divider"></div>
                     </div>
               {% endif %}
 
           </li>
             <li class="nav-item">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle fpDrop" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Cart
             </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">

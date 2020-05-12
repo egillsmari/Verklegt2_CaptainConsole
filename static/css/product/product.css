@@ -4,6 +4,7 @@
 
 .card{
     margin: 15px;
+    background-color: #D7D7D7 !important;
 }
 
 .prodSearch{
@@ -19,6 +20,7 @@ img{
     width: 200px;
     height: 200px;
 }
+
 
 .productCard{
     width: 200px;
@@ -42,7 +44,12 @@ img{
 
 }
 
-#addTo{
+#addTo {
     background-color: #8ED7B0;
     margin-right: 30%;
+}
+
+.cardLink{
+    text-decoration: none !important;
+
 }
