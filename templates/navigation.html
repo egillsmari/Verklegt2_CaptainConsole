@@ -70,11 +70,13 @@
               Cart
             </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    {% for x in '01234' %}
-                        <a class="dropdown-item" >Product</a>
+                    {% for item in cartItems %}
+                        <a class="dropdown-item">{{ item }}</a>
                     {% endfor %}
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" role="button" id="cart-btn" href="{% url 'checkout-index' %}">Checkout</a>
+                    <a class="dropdown-item" role="button" id="cart-btn" href="{% url 'checkout-cart' %}">Empty Cart</a>
+
             </div>
           </li>
               </ul>

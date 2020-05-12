@@ -64,7 +64,7 @@ def accountInfo(request):
     return render(request, 'myAccount/accountInfo.html')
 
 def paymentInfo(request):
-    context = manufacturerContext()
+    context = manufacturerContext(request)
     context['users'] = User.objects.all()
     context['payments'] = PaymentInfo.objects.all()
     context['onlineUserId'] = request.user.id
