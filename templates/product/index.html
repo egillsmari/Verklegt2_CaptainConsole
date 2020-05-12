@@ -3,11 +3,15 @@
     {% include 'productToolbar.html' %}
      <div class="content">
         {% for product in products %}
+<<<<<<< HEAD
 
             <a href="{% url 'product-productInfo' product.id %}">
 
             <a class="cardLink dropElem" href="{% url 'product-productInfo' product.id %}">
 
+=======
+            <a class="cardLink dropElem" href="{% url 'product-productInfo' product.id %}">
+>>>>>>> a35f8cc58b0554c184e156901ddab51f71dbe16a
             <div class="card">
                 <h4>{{ product.name }}</h4>
                 <img src="{{ product.image }}" alt="{{ product.name }}">

@@ -31,7 +31,7 @@
     <div class="content">
         {% for product in products %}
             {% if product.category_id == 3 %}
-                <a href="{% url 'productInfo-index' product.id %}">
+                <a href="{% url 'product-productInfo' product.id %}">
                 <div class="card">
                     <h4>{{ product.name }}</h4>
                     <img src="{{ product.image }}" alt="{{ product.name }}">
