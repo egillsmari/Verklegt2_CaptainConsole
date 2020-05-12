@@ -8,12 +8,13 @@
 }
 
 .prodSearch{
-    width: 70px !important;
+    width: 75px !important;
 }
 
 .formFilter{
     display: flex;
-    width: 50px !important;
+    width: 35px !important;
+    align-items: center;
 }
 
 img{
@@ -51,5 +52,35 @@ img{
 
 .cardLink{
     text-decoration: none !important;
+<<<<<<< HEAD
 
+=======
+}
+
+.productCard{
+    width: 200px;
+    height: 200px;
+}
+
+.infoImg{
+    width: 400px;
+    height: 200px;
+    margin-left: 0;
+    border-style: solid;
+
+}
+
+.description{
+    width: 400px;
+    height: 200px;
+    margin-left: 700px;
+    font-size: large;
+    border-style: solid;
+
+}
+
+#addTo{
+    background-color: #8ED7B0;
+    margin-right: 30%;
+>>>>>>> ba0f5fc26a0fae61a0aeedf405cd050550620a8a
 }
