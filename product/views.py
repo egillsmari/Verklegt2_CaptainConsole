@@ -43,8 +43,6 @@ def productSort(request, category, manufacturer, filter, sort):
             elif sort == 1:
                 context['products'] = Product.objects.filter(category_id=category, platform_id=filter).order_by('-price')
             elif sort == 2:
-                pass
-            elif sort == 3:
                 context['products'] = Product.objects.filter(category_id=category, platform_id=filter).order_by('releaseDate')
         else:
             if sort == 0:
@@ -52,8 +50,6 @@ def productSort(request, category, manufacturer, filter, sort):
             elif sort == 1:
                 context['products'] = Product.objects.filter(category_id=category).order_by('-price')
             elif sort == 2:
-                pass
-            elif sort == 3:
                 context['products'] = Product.objects.filter(category_id=category).order_by('releaseDate')
     else:
         context = narrowContext(category, manufacturer)
@@ -63,8 +59,6 @@ def productSort(request, category, manufacturer, filter, sort):
         elif sort == 1:
             context['products'] = Product.objects.filter(category_id=category, platform_id__in=plat).order_by('-price')
         elif sort == 2:
-            pass
-        elif sort == 3:
             context['products'] = Product.objects.filter(category_id=category, platform_id__in=plat).order_by('releaseDate')
     return render(request, 'product/index.html', context)
 

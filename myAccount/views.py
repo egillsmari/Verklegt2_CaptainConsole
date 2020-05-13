@@ -55,7 +55,7 @@ def register(request):
     context['form'] = form
     return render(request, 'myAccount/register.html', context)
 
-def paymentRegister(request):
+def paymentRegister(request, src = 0):
     context = manufacturerContext(request)
     form = PaymentForm(data=request.POST)
     if request.method == 'POST':
@@ -68,7 +68,10 @@ def paymentRegister(request):
                 currentUser = request.user.id
                 savePayment = PaymentInfo(currentUser, nameOnCard, cardNumber, expirationDate, CVV)
                 savePayment.save()
-                return redirect('checkout-payment')
+                if src == 1:
+                    return redirect('checkout-payment')
+                elif src == 2:
+                    return redirect('myAccount-paymentInfo')
             else:
                 currentUser = Account.objects.latest('id')
                 savePayment = PaymentInfo(currentUser.id, nameOnCard, cardNumber, expirationDate, CVV)
@@ -103,8 +106,8 @@ def searchHistory(request):
 def paymentInfo(request):
     context = manufacturerContext(request)
     context['users'] = User.objects.all()
-    context['payments'] = PaymentInfo.objects.all()
-    context['onlineUserId'] = request.user.id
+    userId = request.user.id
+    context['payment'] = PaymentInfo.objects.filter(accountId_id=userId)
     return render(request, 'myAccount/paymentInfo.html', context)
 
 def getAddress(request):
@@ -115,7 +118,6 @@ def getAddress(request):
 def updateAccount(request):
     if request.method == 'POST':
         form = AccountUpdate(request.POST, request.FILES, instance=request.user)
-        #Account.objects.filter(user_id=request.user.id).update(accountImage=newImage)
         if form.is_valid():
             user = form.save()
             account = user.account

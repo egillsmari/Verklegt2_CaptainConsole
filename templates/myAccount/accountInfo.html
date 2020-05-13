@@ -10,17 +10,25 @@
     <h2 id="accountInfo3">Purchase History </h2>
     </div>
     <div class="infoContainer">
-    <div id="info">
-        <h5>Full Name: {{ user.get_full_name }} </h5>
-        <h5 class="userInfo">Username: {{ user.username }} </h5>
-        <h5 class="userInfo">Email: {{ user.email }} </h5>
-        <h5 class="userInfo">Address: {{ user.account.address }} {{ account.addressNumber }} </h5>
-        <h5 class="userInfo">Zip: {{ user.account.zip.zip }}</h5>
-        <h5 class="userInfo">Country: {{ user.account.zip.country }}</h5>
-        <h5 class="userInfo">City: {{ user.account.zip.city }}</h5>
+        <div id="info">
+            <h5>Full Name: {{ user.get_full_name }} </h5>
+            <h5 class="userInfo">Username: {{ user.username }} </h5>
+            <h5 class="userInfo">Email: {{ user.email }} </h5>
+            <h5 class="userInfo">Address: {{ user.account.address }} {{ account.addressNumber }} </h5>
+            <h5 class="userInfo">Zip: {{ user.account.zip.zip }}</h5>
+            <h5 class="userInfo">Country: {{ user.account.zip.country }}</h5>
+            <h5 class="userInfo">City: {{ user.account.zip.city }}</h5>
+        </div>
+        <div>
+            <img class="userImage" src="media/{{ user.account.accountImage }}" alt="profile image">
+        </div>
     </div>
-    <img src="media/{{ user.account.accountImage }}" style="margin-top: -550px; margin-left: 750px" alt="profile image">
+    <div class="accountButtons">
+        <form class="accountForm" action="{% url 'myAccount-updateAccount' %}">
+            <button type="submit" class="btn btn-success">Edit</button>
+        </form>
+        <form class="accountForm" action="{% url 'myAccount-paymentInfo' %}">
+            <button type="submit" class="btn btn-success">Next</button>
+        </form>
     </div>
-    <a href="{% url 'myAccount-updateAccount' %}" ><button class="button">Edit</button></a>
-    <a href="{% url 'myAccount-paymentInfo' %}" ><button class="button">Next</button></a>
 {% endblock content %}

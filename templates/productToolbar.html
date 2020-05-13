@@ -23,10 +23,14 @@
                  </div>
             </form>
             {% else %}
-                <form class="my-2 my-lg-0 formFilter" action="{% url 'product-productRange' cat man filter %}" method="get">
-                  <input class="form-control mr-sm-2 prodSearch" name="from" id="search-box" type="search" placeholder="Price from.." aria-label="Search">
-                     <input class="form-control mr-sm-2 prodSearch" name="to" id="search-box" type="search" placeholder="Price to.." aria-label="Search">
-                  <button class="btn btn-outline-success my-2 my-sm-0"  id="search-btn" type="submit">Filter</button>
+                <form class="my-2 my-lg-0" action="{% url 'product-productRange' cat man filter %}" method="get">
+                  <div class="formFilter">
+                    <input class="form-control mr-sm-2 prodSearch" name="from" id="search-box" type="search" placeholder="$" aria-label="Search">
+                    <input class="form-control mr-sm-2 prodSearch" name="to" id="search-box" type="search" placeholder="$$$" aria-label="Search">
+                </div>
+                 <div class="formFilter">
+                    <button class="btn btn-outline-success my-2 my-sm-0"  id="search-btn" type="submit">Filter</button>
+                 </div>
                 </form>
             {% endif %}
             {% for platform in platforms %}
@@ -44,13 +48,11 @@
               {% if filter is None %}
                   <a class="dropdown-item" href="{% url 'product-productSort' cat man 0 0 %}">Price: Ascending</a>
                   <a class="dropdown-item" href="{% url 'product-productSort' cat man 0 1 %}">Price: Descending</a>
-                  <a class="dropdown-item" href="{% url 'product-productSort' cat man 0 2 %}">Popularity</a>
-                  <a class="dropdown-item" href="{% url 'product-productSort' cat man 0 3 %}">Release date</a>
+                  <a class="dropdown-item" href="{% url 'product-productSort' cat man 0 2 %}">Release date</a>
               {% else %}
                   <a class="dropdown-item" href="{% url 'product-productSort' cat man filter 0 %}">Price: Ascending</a>
                   <a class="dropdown-item" href="{% url 'product-productSort' cat man filter 1 %}">Price: Descending</a>
-                  <a class="dropdown-item" href="{% url 'product-productSort' cat man filter 2 %}">Popularity</a>
-                  <a class="dropdown-item" href="{% url 'product-productSort' cat man filter 3 %}">Release date</a>
+                  <a class="dropdown-item" href="{% url 'product-productSort' cat man filter 2 %}">Release date</a>
               {% endif %}
           </div>
         </div>

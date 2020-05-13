@@ -17,7 +17,7 @@
         {% endfor %}
     </div>
     <h5 id="addcardText">Would you like to add a card?</h5>
-    <a href={% url 'myAccount-paymentRegister' %}><button type="button" id="addcard" class="btn btn-secondary">Add Card</button></a>
+    <a href={% url 'myAccount-paymentRegister' 1 %}><button type="button" id="addcard" class="btn btn-secondary">Add Card</button></a>
     </div>
     </div>
         <a href={% url 'checkout-shipping' %}><button type="button" id="nextCheck" class="btn btn-secondary">Next</button></a>
