@@ -10,3 +10,7 @@ def index(request):
     context['products'] = Product.objects.all().order_by('category_id')
     return render(request, 'homepage/index.html', context)
 
+def contacUs(request, sentQ):
+    context = manufacturerContext(request)
+    context['sentQ'] = sentQ
+    return render(request, 'contactUs/intex.html', context)
