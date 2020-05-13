@@ -1,8 +1,6 @@
 from django.shortcuts import render, redirect
 from context.contextBuilder import manufacturerContext
 from checkout.models import Order, Sold
-from myAccount.models import PaymentInfo
-from django.contrib.auth.models import User
 from context.contextBuilder import cardContext
 from product.models import Product
 
@@ -16,15 +14,20 @@ def showCart(request):
     return render(request, 'checkout/showCart.html', context)
 
 def shippingMethod(request):
+    sessionCopy = {k: v for k, v in request.session.items()}
     context = manufacturerContext(request)
     currentUser = request.user.id
-    shippMethod = request.GET.get('method')
-    for item, val in request.session.items():
+    if 'shipping' in request.GET:
+        shippMethod = 'shipping'
+    else:
+        shippMethod = 'pickUp'
+    for item, val in sessionCopy.items():
         if val == 'item':
             for product in Product.objects.all():
                 if int(product.id) == int(item):
                     order = Order(accountId_id=currentUser, productId_id=product.id, shippingMethod=shippMethod)
                     order.save()
+                    del request.session[item]
     return render(request, 'checkout/shipping.html', context)
 
 def paymentMethod(request):
@@ -33,9 +36,5 @@ def paymentMethod(request):
     return render(request, 'checkout/paymentMethod.html', context)
 
 def confirmation(request):
-    for key, val in request.session.items():
-        if val == 'item':
-            del request.session[key]
     context = manufacturerContext(request)
     return render(request, 'checkout/confirmation.html', context)
-
