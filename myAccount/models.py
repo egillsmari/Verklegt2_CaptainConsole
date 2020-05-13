@@ -24,7 +24,7 @@ class PaymentInfo(models.Model):
     nameOnCard = models.CharField(max_length=255)
     cardNumber = models.CharField(max_length=255)
     expirationDate = models.CharField(max_length=25)
-    CVV = models.FloatField()
+    CVV = models.IntegerField()
 
 
 class SearchHistory(models.Model):

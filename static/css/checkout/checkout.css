@@ -5,9 +5,9 @@
 
 .item{
     float: left;
-    margin-left: 150px;
+    margin-left: 200px;
     margin-top: 40px;
-    width: 755px;
+    width: 855px;
     height: 100px;
     border-bottom: 4px solid #8ED7B0;
     display: inline-block;
@@ -37,5 +37,34 @@
     left: 820px;
     bottom: 30px;
     width: 80px;
+}
+
+.userCards{
+    position: relative;
+
+}
+
+.totalPrice{
+    width: 200px;
+    margin-bottom: 20px;
+    margin-left: 910px;
+}
+
+#addcard, #addcardText{
+    margin-bottom: 20px;
+    position: relative;
+    left: 900px;
+    width: 150px;
+}
+
+
+#singleCard{
+    float: left;
+    margin-left: 0px;
+    margin-top: 20px;
+    width: 200px;
+    height: 100px;
+    border-bottom: 4px solid #8ED7B0;
+    display: inline-block;
 }
 
