@@ -28,5 +28,5 @@ urlpatterns = [
     path('checkout', include('checkout.urls')),
     path('myAccount',  include('myAccount.urls')),
     path('search', include('searchBar.urls')),
-    path('product', include('product.urls')),
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    path('product', include('product.urls'))
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
