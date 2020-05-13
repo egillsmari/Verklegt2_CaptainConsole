@@ -102,3 +102,9 @@
     left: 100px;
     bottom: -140px;
 }
+
+#shippingInfo{
+    position: relative;
+    margin-left: 30%;
+    top: -45px;
+}
