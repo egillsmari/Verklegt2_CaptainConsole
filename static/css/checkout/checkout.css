@@ -109,3 +109,13 @@
     top: -45px;
 }
 
+
+.separator{
+    width: 200px;
+    margin-top: 30px;
+    border-bottom: 4px solid #8ED7B0;
+}
+
+#product{
+    margin-left: 400px;
+}
