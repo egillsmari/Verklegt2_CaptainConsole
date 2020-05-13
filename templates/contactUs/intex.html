@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+    {% if sentQ == 0 %}
+    <h2 class="fpCategory">Contact Us</h2>
+    <form>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Email address</label>
+        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">Example textarea</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      </div>
+    </form>
+    <a href="{% url 'contactUs-index' sentQ=1 %}"><button id="addTo" class="btn btn-secondary" type="button">Submit</button></a>
+    {% endif %}
+    {% if sentQ == 1 %}
+        <h2 class="fpCategory">Your message was sent successfully. Thanks !</h2>
+        <a href="{% url 'homepage-index' %}"><button id="addTo" class="btn btn-secondary" type="button">Go Home</button></a>
+    {% endif %}
+{% endblock %}
