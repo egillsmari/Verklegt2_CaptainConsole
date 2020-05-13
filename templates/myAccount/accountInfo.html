@@ -9,6 +9,7 @@
     <h2 id="accountInfo2">Payment Info </h2>
     <h2 id="accountInfo3">Purchase History </h2>
     </div>
+    <div class="infoContainer">
     <div id="info">
         <h5>Full Name: {{ user.get_full_name }} </h5>
         <h5 class="userInfo">Username: {{ user.username }} </h5>
@@ -18,7 +19,8 @@
         <h5 class="userInfo">Country: {{ user.account.zip.country }}</h5>
         <h5 class="userInfo">City: {{ user.account.zip.city }}</h5>
     </div>
-    <img src="{{ user.account.accountImage }}" style="margin-top: -400px; margin-left: 750px" alt="profile image">
+    <img src="media/{{ user.account.accountImage }}" style="margin-top: -550px; margin-left: 750px" alt="profile image">
+    </div>
     <a href="{% url 'myAccount-updateAccount' %}" ><button class="button">Edit</button></a>
     <a href="{% url 'myAccount-paymentInfo' %}" ><button class="button">Next</button></a>
 {% endblock content %}

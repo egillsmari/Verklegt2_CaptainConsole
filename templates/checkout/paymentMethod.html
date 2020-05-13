@@ -11,8 +11,8 @@
                 <h3> No card</h3>
             {% endif %}
             <div id="singleCard">
-            <h5> Name on card              {{ card.nameOnCard }}</h5>
-            <h5> Card number      {{ card.cardNumber }}</h5>
+            <h5> Name on card:<br>{{ card.nameOnCard }}</h5>
+            <h5> Card number:<br> ************{{ card.cardNumber|slice:"-4:"}}</h5>
             </div>
         {% endfor %}
     </div>
@@ -20,6 +20,6 @@
     <a href={% url 'myAccount-paymentRegister' %}><button type="button" id="addcard" class="btn btn-secondary">Add Card</button></a>
     </div>
     </div>
-        <a href={% url 'checkout-shipping' %}><button type="button" id="checkout" class="btn btn-secondary">Next</button></a>
+        <a href={% url 'checkout-shipping' %}><button type="button" id="nextCheck" class="btn btn-secondary">Next</button></a>
 
 {% endblock %}

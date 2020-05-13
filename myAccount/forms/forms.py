@@ -18,7 +18,7 @@ class locationForm(forms.Form):
 class SignUpForm(UserCreationForm):
     address = forms.CharField(max_length=255)
     addressNumber = forms.CharField(max_length=255)
-    image = forms.ImageField()
+    image = forms.CharField()
 
     class Meta:
         model = User
@@ -35,8 +35,10 @@ class PaymentForm(forms.Form):
         fields = ('nameOnCard', 'cardNumber', 'expirationDate', 'CVV')
 
 class AccountUpdate(UserChangeForm):
+    image = forms.ImageField()
+
     class Meta:
         model = User
-        fields = ('first_name', 'last_name', 'email')
+        fields = ('first_name', 'last_name', 'email', 'image')
 
 
