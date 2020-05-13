@@ -18,7 +18,7 @@ class locationForm(forms.Form):
 class SignUpForm(UserCreationForm):
     address = forms.CharField(max_length=255)
     addressNumber = forms.CharField(max_length=255)
-    image = forms.CharField(max_length=255)
+    image = forms.ImageField()
 
     class Meta:
         model = User
