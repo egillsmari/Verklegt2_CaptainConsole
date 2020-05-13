@@ -98,7 +98,10 @@ def addToCart(request, productid):
     return redirect('homepage-index')
 
 def emptyCart(request):
-    request.session.flush()
+    sessionCopy = { k : v for k,v in request.session.items()}
+    for key, val in sessionCopy.items():
+        if val == 'item':
+            del request.session[key]
     return redirect('homepage-index')
 
 

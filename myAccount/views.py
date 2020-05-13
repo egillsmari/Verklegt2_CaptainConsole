@@ -7,6 +7,11 @@ from myAccount.models import Zip
 from context.contextBuilder import manufacturerContext
 from django.contrib.auth.models import User
 
+username = ''
+password = ''
+
+from myAccount.models import SearchHistory
+from product.models import Product
 
 def locationRegister(request):
     context = manufacturerContext(request)
@@ -40,10 +45,10 @@ def register(request):
             account.address = address
             account.accountImage = accountImage
             account.save()
+            global username
             username = form.cleaned_data.get('username')
+            global password
             password = form.cleaned_data.get('password1')
-            user = authenticate(username=username, password=password)
-            login(request, user)
             return redirect('myAccount-paymentRegister')
     else:
         form = SignUpForm()
@@ -55,13 +60,21 @@ def paymentRegister(request):
     form = PaymentForm(data=request.POST)
     if request.method == 'POST':
         if form.is_valid():
-            currentUser = request.user.id
             nameOnCard = form.cleaned_data.get('nameOnCard')
             cardNumber = form.cleaned_data.get('cardNumber')
             expirationDate = form.cleaned_data.get('expirationDate')
             CVV = form.cleaned_data.get('CVV')
-            savePayment = PaymentInfo(currentUser, nameOnCard, cardNumber, expirationDate, CVV)
-            savePayment.save()
+            if request.user.is_authenticated:
+                currentUser = request.user.id
+                savePayment = PaymentInfo(currentUser, nameOnCard, cardNumber, expirationDate, CVV)
+                savePayment.save()
+                return redirect('checkout-payment')
+            else:
+                currentUser = Account.objects.latest('id')
+                savePayment = PaymentInfo(currentUser.id, nameOnCard, cardNumber, expirationDate, CVV)
+                savePayment.save()
+                user = authenticate(username=username, password=password)
+                login(request, user)
             return redirect('homepage-index')
     else:
         form = PaymentForm()
@@ -75,6 +88,17 @@ def seePurchasehistory(request):
 @login_required
 def accountInfo(request):
     return render(request, 'myAccount/accountInfo.html')
+
+@login_required
+def searchHistory(request):
+    searchList = []
+    context = manufacturerContext(request)
+    userId = request.user.id
+    searches = SearchHistory.objects.filter(accountId_id=userId).values_list('searchedItem', flat=True)
+    for search in searches:
+        searchList.append({search: Product.objects.filter(name__icontains=search)})
+    context['searched'] = searchList
+    return render(request, 'myAccount/searchHistory.html', context)
 
 def paymentInfo(request):
     context = manufacturerContext(request)
@@ -100,5 +124,3 @@ def updateAccount(request):
         form = AccountUpdate(instance=request.user)
         args = {'form': form}
         return render(request, 'myAccount/updateAccount.html', args)
-
-

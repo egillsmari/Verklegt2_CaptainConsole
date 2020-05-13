@@ -4,12 +4,14 @@
 {% include 'myAccount/singupHeader.html' %}
     <h2 id="payment"> Payment Info </h2>
 {% load crispy_forms_tags %}
-    </div>
-        <div id="signupForm">
-      <form method="post" novalidate>
+</div>
+    <div id="signupForm">
+        <form method="post" novalidate>
         {% csrf_token %}
         {{ form|crispy }}
-        <button type="submit" class="btn btn-success">Save person</button>
+        <button type="submit" class="btn btn-success">Save Card</button>
+            <a href="{% url 'homepage-index'%}"><button type="button"  class="btn btn-secondary">Fill Later</button></a>
+
         </form>
         </div>
 

@@ -12,5 +12,6 @@ urlpatterns = [
     path('paymentRegister', views.paymentRegister, name='myAccount-paymentRegister'),
     path('paymentInfo', views.paymentInfo, name='myAccount-paymentInfo'),
     path('purchaseHistory', views.seePurchasehistory, name='myAccount-purchaseHistory'),
+    path('searchHistory', views.searchHistory, name='myAccount-searchHistory'),
     path('accountEdit', views.updateAccount, name='myAccount-updateAccount')
 ]
