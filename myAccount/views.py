@@ -6,6 +6,8 @@ from myAccount.forms.forms import SignUpForm, PaymentForm, locationForm, Account
 from myAccount.models import Zip
 from context.contextBuilder import manufacturerContext
 from django.contrib.auth.models import User
+from myAccount.models import SearchHistory
+from product.models import Product
 
 
 def locationRegister(request):
@@ -75,6 +77,17 @@ def seePurchasehistory(request):
 @login_required
 def accountInfo(request):
     return render(request, 'myAccount/accountInfo.html')
+
+@login_required
+def searchHistory(request):
+    searchList = []
+    context = manufacturerContext(request)
+    userId = request.user.id
+    searches = SearchHistory.objects.filter(accountId_id=userId).values_list('searchedItem', flat=True)
+    for search in searches:
+        searchList.append({search: Product.objects.filter(name__icontains=search)})
+    context['searched'] = searchList
+    return render(request, 'myAccount/searchHistory.html', context)
 
 def paymentInfo(request):
     context = manufacturerContext(request)

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h2 class="fpCategory">Search history</h2>
+    {% for dict in searched %}
+        {% for key, values in dict.items %}
+            <h3>{{ key }}</h3>
+            <div class="content">
+                {% for product in values %}
+                    <a class="cardLink dropElem" href="{% url 'product-productInfo' product.id %}">
+                        <div class="card">
+                            <h4>{{ product.name }}</h4>
+                            <img src="{{ product.image }}" alt="{{ product.name }}">
+                            <h4>${{ product.price }}</h4>
+                        </div>
+                    </a>
+                {% endfor %}
+            </div>
+        {% endfor %}
+    {% endfor %}
+{% endblock %}
