@@ -3,6 +3,7 @@ from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from myAccount.models import Account, PaymentInfo
 from myAccount.forms.forms import SignUpForm, PaymentForm, locationForm, AccountUpdate
+from checkout.models import Order, Sold
 from myAccount.models import Zip
 from context.contextBuilder import manufacturerContext
 from django.contrib.auth.models import User
@@ -83,7 +84,15 @@ def paymentRegister(request):
 
 @login_required
 def seePurchasehistory(request):
-    return render(request, 'myAccount/pruchaseHistory.html')
+    context = manufacturerContext(request)
+    context['products'] = []
+    userId = request.user.id
+    for order in Order.objects.all():
+        if order.accountId_id == userId:
+            for sold in Sold.objects.all():
+                if sold.orderId_id == order.id:
+                    context['products'].append(sold)
+    return render(request, 'myAccount/pruchaseHistory.html', context)
 
 @login_required
 def accountInfo(request):

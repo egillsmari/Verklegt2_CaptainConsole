@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
-    <div id="accountInfoContainer">
+    <div id="historyContainer">
     <div id="line1"></div>
     <div id="line6" ></div>
     <div id="line7"></div>
@@ -9,14 +9,16 @@
     <h2 id="accountInfo2">Payment Info </h2>
     <h2 id="accountInfo3">Purchase History </h2>
     </div>
-    <div id="info" style="margin-top: -300px;margin-left:190px; padding: 25px">
-    {% for card in payments %}
-        {% if onlineUserId == card.accountId_id%}
-            <h5 class="userInfo">Name on Card: {{ card.nameOnCard }} </h5>
-            <h5 class="userInfo">Card Number: {{ card.cardNumber }} </h5>
-            <h5 class="userInfo">expiration Date: {{ card.expirationDate }} </h5>
-            <h5 class="userInfo">CVV: {{ card.CVV }}</h5>
-        {% endif %}
+    <div id="infoHistory">
+    {% for item in products %}
+         <div class="item-history">
+            <h5 class="name">Name</h5>
+            <h5>{{ item.name }}</h5>
+            <h5 class="price">Price</h5>
+            <h5 class="price">${{ item.price }}</h5>
+            <h5 class="image"></h5>
+            <img class="productImg" src="{{ item.image }}" alt="{{ item.name }}">
+            </div>
     {% endfor %}
     </div>
         <a href="{% url 'myAccount-purchaseHistory' %}" ><button class="button">Next</button></a>
