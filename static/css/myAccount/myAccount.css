@@ -102,6 +102,12 @@
     margin-top: 50px
 }
 
+#historyContainer{
+    height: 200px;
+    margin-left: 200px;
+    margin-top: 50px
+}
+
 #accountInfo1{
     padding-top: 15px;
     padding-left: 15px
@@ -121,7 +127,13 @@
     margin-top: 25px
 }
 
+#infoHistory{
+    margin-bottom: 20px;
+}
 
+#item-history{
+    margin-left:200px;
+}
 
 
 

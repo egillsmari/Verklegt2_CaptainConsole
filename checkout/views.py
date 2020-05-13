@@ -22,13 +22,13 @@ def saveOrder(request):
     context = manufacturerContext(request)
     currentUser = request.user.id
     shippMethod = request.GET.get('methodship')
+    order = Order(accountId_id=currentUser, shippingMethod=shippMethod)
+    order.save()
     for item, val in sessionCopy.items():
         if val == 'item':
             for product in Product.objects.all():
                 if int(product.id) == int(item):
-                    order = Order(accountId_id=currentUser, productId_id=product.id, shippingMethod=shippMethod)
-                    order.save()
-                    sold = Sold(orderId_id=order.id)
+                    sold = Sold(orderId_id=order.id, name=product.name, price=product.price, image=product.image)
                     sold.save()
                     del request.session[item]
                     removeItem = Product.objects.get(pk=product.id)
