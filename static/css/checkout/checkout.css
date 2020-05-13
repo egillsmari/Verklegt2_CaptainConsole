@@ -83,3 +83,22 @@
 
 }
 
+#confirmShip{
+    background-color: #8ED7B0;
+    position: relative;
+    left: 900px;
+}
+
+#shipping{
+    background-color: #8ED7B0;
+    position: relative;
+    left: 50px;
+    bottom: -140px;
+}
+
+#pickup{
+    background-color: #8ED7B0;
+    position: relative;
+    left: 100px;
+    bottom: -140px;
+}

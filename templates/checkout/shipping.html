@@ -5,7 +5,7 @@
     <div class="content">
     <div class="cartContainer">
         <h5>We offer free shipping to your nearest post office. If you would like to take advantage of this amazing service then select the free shipping button below.
-            If you would like store pick up at our store at Ögurhvarf then select the pick up button </h5>
+            If you would like store pick up at our store at Ögurhvarf 4 201 Kópavogur then select the pick up button </h5>
         <form method="get">
             <button type="submit" id="shipping" value="shipping" name="method" class="btn btn-secondary">Free Shipping</button>
             <button type="submit" id="pickup" value="pickUp" name="method" class="btn btn-secondary">Pick up</button>
@@ -13,6 +13,6 @@
     </div>
     </div>
 
-        <a href={% url 'checkout-confirmation' %}><button type="button" id="checkout" class="btn btn-secondary">confirm</button></a>
+        <a href={% url 'checkout-confirmation' %}><button type="button" id="confirmShip" class="btn btn-secondary">Confirm</button></a>
 
 {% endblock %}
