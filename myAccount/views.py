@@ -31,7 +31,7 @@ def locationRegister(request):
 
 def register(request):
     context = manufacturerContext(request)
-    form = SignUpForm(data=request.POST)
+    form = SignUpForm(request.POST, request.FILES)
     if request.method == 'POST':
         if form.is_valid():
             user = form.save()
@@ -113,12 +113,14 @@ def getAddress(request):
             return account.address
 
 def updateAccount(request):
-    newImage = request.GET.get('newImage')
     if request.method == 'POST':
-        form = AccountUpdate(data=request.POST, instance=request.user)
-        Account.objects.filter(user_id=request.user.id).update(accountImage=newImage)
+        form = AccountUpdate(request.POST, request.FILES, instance=request.user)
+        #Account.objects.filter(user_id=request.user.id).update(accountImage=newImage)
         if form.is_valid():
-            form.save()
+            user = form.save()
+            account = user.account
+            account.accountImage = form.cleaned_data.get('image')
+            account.save()
             return render(request, 'myAccount/accountInfo.html')
     else:
         form = AccountUpdate(instance=request.user)

@@ -29,4 +29,4 @@ urlpatterns = [
     path('myAccount',  include('myAccount.urls')),
     path('search', include('searchBar.urls')),
     path('product', include('product.urls'))
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

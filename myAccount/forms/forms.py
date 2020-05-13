@@ -35,8 +35,10 @@ class PaymentForm(forms.Form):
         fields = ('nameOnCard', 'cardNumber', 'expirationDate', 'CVV')
 
 class AccountUpdate(UserChangeForm):
+    image = forms.ImageField()
+
     class Meta:
         model = User
-        fields = ('first_name', 'last_name', 'email')
+        fields = ('first_name', 'last_name', 'email', 'image')
 
 

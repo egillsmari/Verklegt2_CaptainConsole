@@ -16,7 +16,7 @@ class Account(models.Model):
     zip = models.ForeignKey(Zip, on_delete=models.CASCADE, default=101)
     address = models.CharField(max_length=255, null=True, blank=True)
     addressNumber = models.CharField(max_length=20, null=True, blank=True)
-    accountImage = models.ImageField(blank=True, null=True, upload_to='profile_image')
+    accountImage = models.ImageField(blank=True, null=True, upload_to='images/')
 
 
 class PaymentInfo(models.Model):
