@@ -11,6 +11,7 @@ def platformsContext():
 
 def manufacturerContext(request):
     context = []
+    idcontext = []
     totalPrice = 0
     for item, val in request.session.items():
         if val == 'item':
@@ -18,7 +19,8 @@ def manufacturerContext(request):
                 if int(product.id) == int(item):
                     totalPrice += product.price
                     context.append(product)
-    return {'manufacturers': Manufacturer.objects.all(), 'cartItems': context, 'totalPrice':totalPrice}
+                    idcontext.append(int(product.id))
+    return {'manufacturers': Manufacturer.objects.all(), 'cartItems': context, 'totalPrice':totalPrice, 'cartId':idcontext}
 
 def cardContext(request):
     context = []

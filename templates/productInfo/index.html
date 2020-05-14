@@ -1,46 +1,26 @@
 {% extends 'base.html' %}
+{% load cart_tags %}
 {% block content %}
 {% for product in products %}
-
     <h2 class="fpCategory">{{ product.name }}</h2>
         <div class="info">
             <div class="infoImg">
-                <img class="productCard" src="{{ product.image }}" alt="{{ product.name }}">
+                {% for image in images %}
+                    {% if image.product_id == product.id %}
+                        <div class="carousel-image">
+                            <img class="productCard" src="{{ image.productImage }}" alt="{{ product.name }}">
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+            <div class="description">
+                <p>{{ product.description }}</p>
+                <h4>Condition: {{ product.condition }}</h4>
             </div>
         </div>
-                <div class="description"><p>{{ product.description }}</p></div>
-                <h4 id="condition">Condition: {{ product.condition }}</h4>
                 <h3 id="price">${{ product.price }}</h3>
-                {% if cartItems|length_is:"0" %}
-                    <!-- Button trigger modal -->
-                        <button type="button" id="addTo" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModalCenter">
-                          Add to Cart
-                        </button>
-
-                        <!-- Modal -->
-                        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                          <div class="modal-dialog modal-dialog-centered" role="document">
-                            <div class="modal-content">
-                              <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLongTitle">Captain Console</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                  <span aria-hidden="true">&times;</span>
-                                </button>
-                              </div>
-                              <div class="modal-body">
-                                {{ product.name }} has been added to your cart
-                              </div>
-                              <div class="modal-footer">
-                                  <a href="{% url 'product-addToCart' product.id %}" id="addCart"><button type="button" class="btn btn-primary">Okay.</button></a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                {% else %}
-                    {% for item in cartItems %}
-                        {% if item.id == product.id %}
-                        <!-- Button trigger modal -->
-                        <button type="button" id="addTo" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModalCenter">
+                {% if product.id|ifinlist:cartId %}
+                    <button type="button" id="addTo" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModalCenter">
                           Add to Cart
                         </button>
                         <!-- Modal -->
@@ -62,8 +42,10 @@
                             </div>
                           </div>
                         </div>
-                    {% else %}
-                         <button type="button" id="addTo" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModalCenter">
+                    <!-- Button trigger modal -->
+
+                {% else %}
+                    <button type="button" id="addTo" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModalCenter">
                           Add to Cart
                         </button>
                         <!-- Modal -->
@@ -85,8 +67,9 @@
                             </div>
                           </div>
                         </div>
+                        <!-- Button trigger modal -->
+
                     {% endif %}
+
                 {% endfor %}
-            {% endif %}
-    {% endfor %}
 {% endblock %}
