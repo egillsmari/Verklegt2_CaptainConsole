@@ -6,3 +6,11 @@
     });
   })
 })(jQuery);
+
+(function($){
+  $(document).ready(function(){
+    $('.infoImg').flickity({
+      pageDots: false
+    });
+  })
+})(jQuery);

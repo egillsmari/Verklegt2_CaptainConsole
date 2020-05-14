@@ -38,22 +38,22 @@ img{
 
 
 .infoImg{
-    width: 400px;
-    height: 200px;
+    min-width: 600px;
+    min-height: 400px;
+    margin-top: 30px;
 }
 
 .description {
     width: 400px;
     height: 200px;
     font-size: larger;
-    margin-left: 63%;
-    position: relative;
-    bottom: 200px;
+    margin-top: 30px;
 }
 
 
 .info{
     display: flex;
+    justify-content: space-between;
 }
 
 #addTo{
@@ -65,10 +65,4 @@ img{
     margin-left: 90%;
     position: relative;
     bottom: 100px;
-}
-
-#condition{
-    margin-left: 63%;
-    position: relative;
-    bottom: 150px;
 }
