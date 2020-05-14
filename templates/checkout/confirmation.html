@@ -1,27 +1,43 @@
 {% extends 'base.html' %}
 {% block content %}
-    <div>
-    <h2>Your Order</h2>
-    <h2 class="fpCategory"></h2>
-    {% if shippingMethod == 'shipping' %}
-    <h3> Shipping method: {{ shippingMethod }}</h3>
-        <h5>Shipping Address: {{ user.account.address }} {{ user.account.addressNumber }}</h5>
-        <h5>Zip: {{ user.account.zip.zip }}</h5>
-        <h5>Country: {{ user.account.zip.country }}</h5>
-        <h5>City: {{ user.account.zip.city }}</h5>
-        {% else %}
-            <h3> Shipping method: {{ shippingMethod }}</h3>
-    {% endif %}
-    <h3> Price ${{ totalPrice }}</h3>
-        <div class="separator">
-            <h2>Products</h2>
+        <h1>Your Order</h1>
+        <h2 class="fpCategory"></h2>
+    <div class="confirmation">
+        <div class="sentTo">
+        {% if shippingMethod == 'shipping' %}
+            <div class="separator">
+                <h2 id="method"> Shipping To </h2>
+            </div>
+            <div id="infoContainer">
+                <h4 class="shipInfo"><b>Shipping Address:</b> {{ user.account.address }} {{ user.account.addressNumber }}</h4>
+                <h4 class="shipInfo">Zip: {{ user.account.zip.zip }}</h4>
+                <h4 class="shipInfo">Country: {{ user.account.zip.country }}</h4>
+                <h4 class="shipInfo">City: {{ user.account.zip.city }}</h4>
+            </div>
+            {% else %}
+                <h3> Shipping method: {{ shippingMethod }}</h3>
+        {% endif %}
         </div>
-    {% for item in cartItems %}
-    <h3> {{ item.name }}</h3>
-    {% endfor %}
+            <div class="separator">
+                <h2>Products</h2>
+            </div>
+                <h3>Total Price ${{ totalPrice }}</h3>
+        {% for item in cartItems %}
+            <div class="itemReview">
+                <h5 class="name">Name</h5>
+                <h5>{{ item.name }}</h5>
+                <h5 class="price">Price</h5>
+                <h5 class="price">${{ item.price }}</h5>
+                <h5 class="image"></h5>
+                <img class="productImg" src="{{ item.image }}" alt="{{ item.name }}">
+            </div>
+            <a href={% url 'checkout-saveOrder' shippingMethod %}><button type="button" id="confirm" data-toggle="modal" data-target="#exampleModalCenter" class="btn btn-secondary">Confirm</button></a>
+            <a href={% url 'checkout-shipping' %}><button type="button" id="back" class="btn btn-secondary">Previous</button></a>
+
+        {% endfor %}
 
     </div>
-    <a href={% url 'checkout-saveOrder' shippingMethod %}><button type="button" data-toggle="modal" data-target="#exampleModalCenter"class="btn btn-primary">Confirm</button></a>
+
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
