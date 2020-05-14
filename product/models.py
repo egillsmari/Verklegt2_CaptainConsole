@@ -20,6 +20,11 @@ class Product(models.Model):
     condition = models.CharField(max_length=50)
     image = models.CharField(max_length=255)
 
+class ProductImage(models.Model):
+    productImage = models.CharField(max_length=255)
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+
+
 
 
 
