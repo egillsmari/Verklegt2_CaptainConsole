@@ -1,10 +1,10 @@
 {% extends 'base.html' %}
 {% block content %}
-    <div id="historyContainer">
-    <div id="line1"></div>
-    <div id="line6" ></div>
-    <div id="line7"></div>
-    <div id="line2"></div>
+    <div id="accountInfoContainer">
+    <div id="lineP1"></div>
+    <div id="lineP2" ></div>
+    <div id="lineP3"></div>
+    <div id="lineP4"></div>
     <h2 id="accountInfo1">Account Info </h2>
     <h2 id="accountInfo2">Payment Info </h2>
     <h2 id="accountInfo3">Purchase History </h2>
@@ -21,6 +21,10 @@
             </div>
     {% endfor %}
     </div>
-        <a href="{% url 'myAccount-purchaseHistory' %}" ><button class="button">Next</button></a>
+    <div class="historyButtons">
+        <form class="accountForm" action="{% url 'myAccount-paymentInfo' %}">
+            <button type="submit" class="btn btn-success">Previous</button>
+        </form>
+    </div>
 
 {% endblock content %}
