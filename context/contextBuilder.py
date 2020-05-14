@@ -29,6 +29,7 @@ def cardContext(request):
         context.append('NoCard')
     return context
 
+
 def purchaseContext(request):
     context = []
 

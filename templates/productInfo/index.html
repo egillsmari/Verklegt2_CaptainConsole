@@ -1,16 +1,44 @@
 {% extends 'base.html' %}
 {% block content %}
 {% for product in products %}
-
     <h2 class="fpCategory">{{ product.name }}</h2>
         <div class="info">
             <div class="infoImg">
                 <img class="productCard" src="{{ product.image }}" alt="{{ product.name }}">
             </div>
         </div>
-            <div class="description"><p>{{ product.description }}</p></div>
-            <h4 id="condition">Condition: {{ product.condition }}</h4>
-            <a  href="{% url 'product-addToCart' product.id %}" id="addCart"><button type="button" id="addTo" class="btn btn-secondary">Add to cart</button></a>
-            <h3 id="price">${{ product.price }}</h3>
+            {% for item in cartItems %}
+                {% if item.id == product.id %}
+                    <button type="button" id="addTo" class="btn btn-secondary">Add to cart</button>
+                    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Item is already in cart</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            ...
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <a href={% url 'homepage-index' %}><button type="button" class="btn btn-primary">Continue shopping</button></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="description"><p>{{ product.description }}</p></div>
+                    <h4 id="condition">Condition: {{ product.condition }}</h4>
+                    <h3 id="price">${{ product.price }}</h3>
+                    {% else %}
+                    <div class="description"><p>{{ product.description }}</p></div>
+                <h4 id="condition">Condition: {{ product.condition }}</h4>
+                <h3 id="price">${{ product.price }}</h3>
+                    <a  href="{% url 'product-addToCart' product.id %}" id="addCart"><button type="button" id="addTo" class="btn btn-secondary">Add to cart</button></a>
+
+            {% endif %}
+        {% endfor %}
     {% endfor %}
 {% endblock %}
