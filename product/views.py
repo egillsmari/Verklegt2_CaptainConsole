@@ -88,8 +88,12 @@ def productInfo(request, productid):
 
 
 def addToCart(request, productid):
-    request.session[productid] = 'item'
-    return redirect('homepage-index')
+    for key in request.session.keys():
+        if key == productid:
+            return 0
+        else:
+            request.session[productid] = 'item'
+            return redirect('homepage-index')
 
 def emptyCart(request):
     sessionCopy = { k : v for k,v in request.session.items()}

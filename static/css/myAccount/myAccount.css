@@ -112,6 +112,12 @@
     width: 760px;
 }
 
+#historyContainer{
+    height: 200px;
+    margin-left: 200px;
+    margin-top: 50px
+}
+
 #accountInfo1{
     padding-top: 15px;
     padding-left: 15px
@@ -147,13 +153,19 @@
     margin: 0 auto;
 }
 
-.paymentButtons{
+.paymentButtons {
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
     width: 760px;
 }
+#infoHistory{
+    margin-bottom: 20px;
+}
 
+#item-history{
+    margin-left:200px;
+}
 
 
 

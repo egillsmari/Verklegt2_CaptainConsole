@@ -16,6 +16,14 @@
             </div>
         {% endfor %}
     </div>
+    <div id="shippingInfo">
+        <h2>Shipping Information</h2><br>
+        <h5>Name: {{ user.get_full_name }}</h5>
+        <h5>Shipping Address: {{ user.account.address }} {{ user.account.addressNumber }}</h5>
+        <h5>Zip: {{ user.account.zip.zip }}</h5>
+        <h5>Country: {{ user.account.zip.country }}</h5>
+        <h5>City: {{ user.account.zip.city }}</h5>
+    </div>
     <h5 id="addcardText">Would you like to add a card?</h5>
     <a href={% url 'myAccount-paymentRegister' 1 %}><button type="button" id="addcard" class="btn btn-secondary">Add Card</button></a>
     </div>
