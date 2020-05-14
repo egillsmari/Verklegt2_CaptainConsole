@@ -18,7 +18,6 @@ class Product(models.Model):
     platform = models.ForeignKey(Platform, on_delete=models.CASCADE)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     condition = models.CharField(max_length=50)
-    image = models.CharField(max_length=255)
 
 class ProductImage(models.Model):
     productImage = models.CharField(max_length=255)

@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from context.contextBuilder import manufacturerContext
 from checkout.models import Order, Sold
 from context.contextBuilder import cardContext
-from product.models import Product
+from product.models import Product, ProductImage
 import time
 
 
@@ -38,17 +38,27 @@ def saveOrder(request, method):
     currentUser = request.user.id
     order = Order(accountId_id=currentUser, shippingMethod=method)
     order.save()
+
     for item, val in sessionCopy.items():
         if val == 'item':
             for product in Product.objects.all():
                 if int(product.id) == int(item):
-                    sold = Sold(orderId_id=order.id, name=product.name, price=product.price, image=product.image)
+                    image = _removePhotos(request, product.id)
+                    sold = Sold(orderId_id=order.id, name=product.name, price=product.price, image=image)
                     sold.save()
                     del request.session[item]
                     removeItem = Product.objects.get(pk=product.id)
                     removeItem.delete()
     time.sleep(2)
     return redirect('homepage-index')
+
+
+def _removePhotos(request, producId):
+    for image in ProductImage.objects.all():
+        if image.product_id == producId:
+            retImage = image.productImage
+            image.delete()
+    return retImage
 
 def paymentMethod(request):
     context = manufacturerContext(request)
