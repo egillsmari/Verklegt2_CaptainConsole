@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.http import Http404
 from product.models import Product
 from product.models import Platform
 from product.models import ProductImage
@@ -10,96 +11,110 @@ logger = logging.getLogger(__name__)
 
 # Create your views here.
 def index(request, category, manufacturer):
-    if manufacturer == 0:
-        context = allContext(category, manufacturer)
-        context['products'] = Product.objects.filter(category_id=category).order_by('name')
-    else:
-        plat = Platform.objects.filter(manufacturer_id=manufacturer).values_list('id', flat=True)
-        context = narrowContext(category, manufacturer)
-        context['products'] = Product.objects.filter(category_id=category, platform_id__in=plat).order_by('name')
-    context['images'] = ProductImage.objects.all()
-    return render(request, 'product/index.html', context)
+    try:
+        if manufacturer == '0':
+            context = allContext(category, manufacturer)
+            context['products'] = Product.objects.filter(category_id=category).order_by('name')
+        else:
+            plat = Platform.objects.filter(manufacturer_id=manufacturer).values_list('id', flat=True)
+            context = narrowContext(category, manufacturer)
+            context['products'] = Product.objects.filter(category_id=category, platform_id__in=plat).order_by('name')
+        context['images'] = ProductImage.objects.all()
+        return render(request, 'product/index.html', context)
+
+    except:
+        return render(request, '404.html', manufacturerContext(request))
 
 
 def productFilter(request, category, manufacturer, platform):
-    if manufacturer == 0:
-        context = allContext(category, manufacturer)
-        context['filter'] = platform
+    try:
+        if manufacturer == '0':
+            context = allContext(category, manufacturer)
+            context['filter'] = platform
 
-    else:
-        context = narrowContext(category, manufacturer)
-    context['products'] = Product.objects.filter(category_id=category, platform_id=platform).order_by('name')
-    context['images'] = ProductImage.objects.all()
+        else:
+            context = narrowContext(category, manufacturer)
+        context['products'] = Product.objects.filter(category_id=category, platform_id=platform).order_by('name')
+        context['images'] = ProductImage.objects.all()
 
-    return render(request, 'product/index.html', context)
+        return render(request, 'product/index.html', context)
+
+    except:
+        return render(request, '404.html', manufacturerContext(request))
 
 
 def productSort(request, category, manufacturer, filter, sort):
-    if manufacturer == 0:
-        context = allContext(category, manufacturer)
-        if filter != 0:
-            context['filter'] = filter
-            if sort == 0:
-                context['products'] = Product.objects.filter(category_id=category, platform_id=filter).order_by('price')
-            elif sort == 1:
-                context['products'] = Product.objects.filter(category_id=category, platform_id=filter).order_by('-price')
-            elif sort == 2:
-                context['products'] = Product.objects.filter(category_id=category, platform_id=filter).order_by('releaseDate')
+    try:
+        if manufacturer == '0':
+            context = allContext(category, manufacturer)
+            if filter != '0':
+                context['filter'] = filter
+                if sort == '0':
+                    context['products'] = Product.objects.filter(category_id=category, platform_id=filter).order_by('price')
+                elif sort == '1':
+                    context['products'] = Product.objects.filter(category_id=category, platform_id=filter).order_by('-price')
+                elif sort == '2':
+                    context['products'] = Product.objects.filter(category_id=category, platform_id=filter).order_by('releaseDate')
+            else:
+                if sort == '0':
+                    context['products'] = Product.objects.filter(category_id=category).order_by('price')
+                elif sort == '1':
+                    context['products'] = Product.objects.filter(category_id=category).order_by('-price')
+                elif sort == '2':
+                    context['products'] = Product.objects.filter(category_id=category).order_by('releaseDate')
         else:
-            if sort == 0:
-                context['products'] = Product.objects.filter(category_id=category).order_by('price')
-            elif sort == 1:
-                context['products'] = Product.objects.filter(category_id=category).order_by('-price')
-            elif sort == 2:
-                context['products'] = Product.objects.filter(category_id=category).order_by('releaseDate')
-    else:
-        context = narrowContext(category, manufacturer)
-        plat = Platform.objects.filter(manufacturer_id=manufacturer).values_list('id', flat=True)
-        if sort == 0:
-            context['products'] = Product.objects.filter(category_id=category, platform_id__in=plat).order_by('price')
-        elif sort == 1:
-            context['products'] = Product.objects.filter(category_id=category, platform_id__in=plat).order_by('-price')
-        elif sort == 2:
-            context['products'] = Product.objects.filter(category_id=category, platform_id__in=plat).order_by('releaseDate')
+            context = narrowContext(category, manufacturer)
+            plat = Platform.objects.filter(manufacturer_id=manufacturer).values_list('id', flat=True)
+            if sort == '0':
+                context['products'] = Product.objects.filter(category_id=category, platform_id__in=plat).order_by('price')
+            elif sort == '1':
+                context['products'] = Product.objects.filter(category_id=category, platform_id__in=plat).order_by('-price')
+            elif sort == '2':
+                context['products'] = Product.objects.filter(category_id=category, platform_id__in=plat).order_by('releaseDate')
 
-    context['images'] = ProductImage.objects.all()
-    return render(request, 'product/index.html', context)
+        context['images'] = ProductImage.objects.all()
+        return render(request, 'product/index.html', context)
+
+    except:
+        return render(request, '404.html', manufacturerContext(request))
 
 
 def productRange(request, category, manufacturer, filter):
-    fromRange = request.GET.get('from')
-    toRange = request.GET.get('to')
-    if manufacturer == 0:
-        context = allContext(category, manufacturer)
-        if filter != 0:
-            context['filter'] = filter
-            context['products'] = Product.objects.filter(category_id=category, platform_id=filter, price__gte=fromRange, price__lte=toRange)
+    try:
+        fromRange = request.GET.get('from')
+        toRange = request.GET.get('to')
+        if manufacturer == '0':
+            context = allContext(category, manufacturer)
+            if filter != '0':
+                context['filter'] = filter
+                context['products'] = Product.objects.filter(category_id=category, platform_id=filter, price__gte=fromRange, price__lte=toRange)
+            else:
+                context['products'] = Product.objects.filter(category_id=category, price__gte=fromRange, price__lte=toRange).order_by('name')
         else:
-            context['products'] = Product.objects.filter(category_id=category, price__gte=fromRange, price__lte=toRange).order_by('name')
-    else:
-        context = narrowContext(category, manufacturer)
-        plat = Platform.objects.filter(manufacturer_id=manufacturer).values_list('id', flat=True)
-        context['products'] = Product.objects.filter(category_id=category, platform_id__in=plat, price__gte=fromRange,
-                                                     price__lte=toRange).order_by('name')
+            context = narrowContext(category, manufacturer)
+            plat = Platform.objects.filter(manufacturer_id=manufacturer).values_list('id', flat=True)
+            context['products'] = Product.objects.filter(category_id=category, platform_id__in=plat, price__gte=fromRange,
+                                                         price__lte=toRange).order_by('name')
 
-    context['images'] = ProductImage.objects.all()
-    return render(request, 'product/index.html', context)
+        context['images'] = ProductImage.objects.all()
+        return render(request, 'product/index.html', context)
+
+    except:
+        return render(request, '404.html', manufacturerContext(request))
 
 
-def productInfo(request, productid):
+def productInfo(request, product_id):
     context = manufacturerContext(request)
-    context['products'] = Product.objects.filter(id=productid)
+    context['products'] = Product.objects.filter(id=product_id)
     context['images'] = ProductImage.objects.all()
     return render(request, 'productInfo/index.html', context)
 
-
-def addToCart(request, productid):
-    for key in request.session.keys():
-        if key == productid:
-            return 0
-        else:
-            request.session[productid] = 'item'
-            return redirect('homepage-index')
+def addToCart(request, product_id):
+    try:
+        request.session[int(product_id)] = 'item'
+        return redirect('homepage-index')
+    except:
+        return render(request, '404.html', manufacturerContext(request))
 
 def emptyCart(request):
     sessionCopy = { k : v for k,v in request.session.items()}

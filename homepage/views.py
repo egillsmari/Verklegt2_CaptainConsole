@@ -13,6 +13,10 @@ def index(request):
     return render(request, 'homepage/index.html', context)
 
 def contacUs(request, sentQ):
-    context = manufacturerContext(request)
-    context['sentQ'] = sentQ
-    return render(request, 'contactUs/intex.html', context)
+    try:
+        context = manufacturerContext(request)
+        context['sentQ'] = sentQ
+        return render(request, 'contactUs/intex.html', context)
+
+    except:
+        return render(request, '404.html', manufacturerContext(request))

@@ -60,33 +60,37 @@ def register(request):
     return render(request, 'myAccount/register.html', context)
 
 def paymentRegister(request, src = 0):
-    context = manufacturerContext(request)
-    form = PaymentForm(data=request.POST)
-    if request.method == 'POST':
-        if form.is_valid():
-            nameOnCard = form.cleaned_data.get('nameOnCard')
-            cardNumber = form.cleaned_data.get('cardNumber')
-            expirationDate = form.cleaned_data.get('expirationDate')
-            CVV = form.cleaned_data.get('CVV')
-            if request.user.is_authenticated:
-                currentUser = request.user.id
-                savePayment = PaymentInfo(currentUser, nameOnCard, cardNumber, expirationDate, CVV)
-                savePayment.save()
-                if src == 1:
-                    return redirect('checkout-payment')
-                elif src == 2:
-                    return redirect('myAccount-paymentInfo')
-            else:
-                currentUser = Account.objects.latest('id')
-                savePayment = PaymentInfo(currentUser.id, nameOnCard, cardNumber, expirationDate, CVV)
-                savePayment.save()
-                user = authenticate(username=username, password=password)
-                login(request, user)
-            return redirect('homepage-index')
-    else:
-        form = PaymentForm()
-    context['form'] = form
-    return render(request, 'myAccount/paymentRegister.html', context)
+    try:
+        context = manufacturerContext(request)
+        form = PaymentForm(data=request.POST)
+        if request.method == 'POST':
+            if form.is_valid():
+                nameOnCard = form.cleaned_data.get('nameOnCard')
+                cardNumber = form.cleaned_data.get('cardNumber')
+                expirationDate = form.cleaned_data.get('expirationDate')
+                CVV = form.cleaned_data.get('CVV')
+                if request.user.is_authenticated:
+                    currentUser = request.user.id
+                    savePayment = PaymentInfo(currentUser, nameOnCard, cardNumber, expirationDate, CVV)
+                    savePayment.save()
+                    if src == 1:
+                        return redirect('checkout-payment')
+                    elif src == 2:
+                        return redirect('myAccount-paymentInfo')
+                else:
+                    currentUser = Account.objects.latest('id')
+                    savePayment = PaymentInfo(currentUser.id, nameOnCard, cardNumber, expirationDate, CVV)
+                    savePayment.save()
+                    user = authenticate(username=username, password=password)
+                    login(request, user)
+                return redirect('homepage-index')
+        else:
+            form = PaymentForm()
+        context['form'] = form
+        return render(request, 'myAccount/paymentRegister.html', context)
+
+    except:
+        return render(request, '404.html', manufacturerContext(request))
 
 @login_required
 def seePurchasehistory(request):
