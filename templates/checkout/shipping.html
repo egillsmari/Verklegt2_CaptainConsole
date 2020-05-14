@@ -7,7 +7,7 @@
         <h4>We offer free shipping to your nearest post office.<br> If you would like to take advantage of this amazing service then<br> select the free shipping button below.
           <br>  If you would like store pick up at our store at Ögurhvarf then select the pick up button </h4>
         <div class="separate"></div>
-        <a href={% url 'checkout-shipping' %}><button type="button" id="backToCart" class="btn btn-secondary">Previous</button></a>
+        <a href={% url 'checkout-payment' %}><button type="button" id="backToCart" class="btn btn-secondary">Previous</button></a>
         <div class="methodbuttons">
             <form action="{% url 'checkout-getMethod' %}" method="get">
                 <button type="submit" id="shipping" value="Shipping" name="methodship" class="btn btn-secondary">Free Shipping BOY</button>
