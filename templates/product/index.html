@@ -2,7 +2,12 @@
 {% block content %}
     {% include 'productToolbar.html' %}
      <div class="content">
-        {% for product in products %}
+     {% if not products %}
+         <div class="content">
+            <h2>No products found</h2>
+        </div>
+     {% else %}
+         {% for product in products %}
             <a class="cardLink dropElem" href="{% url 'product-productInfo' product.id %}">
             <div class="card">
                 <h4>{{ product.name }}</h4>
@@ -11,5 +16,6 @@
             </div>
             </a>
         {% endfor %}
+     {% endif %}
     </div>
 {% endblock %}
