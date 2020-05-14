@@ -10,7 +10,7 @@
                         <div class="card">
                         <h4>{{ product.name }}</h4>
                             {% for image in images %}
-                                {% if image.product_id == product.id and image.product_id|divisibleby:2%}
+                                {% if image.product_id == product.id and image.id|divisibleby:2%}
                                     <img src="{{ image.productImage }}" alt="{{ product.name }}">
                                 {% endif %}
                             {% endfor %}
@@ -30,7 +30,7 @@
                     <div class="card">
                     <h4>{{ product.name }}</h4>
                     {% for image in images %}
-                        {% if image.product_id == product.id and image.product_id|divisibleby:2%}
+                        {% if image.product_id == product.id and image.id|divisibleby:2%}
                             <img src="{{ image.productImage }}" alt="{{ product.name }}">
                         {% endif %}
                     {% endfor %}
@@ -50,7 +50,7 @@
                     <div class="card">
                     <h4>{{ product.name }}</h4>
                     {% for image in images %}
-                        {% if image.product_id == product.id and image.product_id|divisibleby:2%}
+                        {% if image.product_id == product.id and image.id|divisibleby:2%}
                             <img src="{{ image.productImage }}" alt="{{ product.name }}">
                         {% endif %}
                     {% endfor %}

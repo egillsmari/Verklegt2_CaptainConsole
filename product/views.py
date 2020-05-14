@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from product.models import Product
 from product.models import Platform
+from product.models import ProductImage
 from context.contextBuilder import allContext, narrowContext, manufacturerContext
 from django.contrib.sessions.backends.db import SessionStore
 
@@ -16,6 +17,7 @@ def index(request, category, manufacturer):
         plat = Platform.objects.filter(manufacturer_id=manufacturer).values_list('id', flat=True)
         context = narrowContext(category, manufacturer)
         context['products'] = Product.objects.filter(category_id=category, platform_id__in=plat).order_by('name')
+    context['images'] = ProductImage.objects.all()
     return render(request, 'product/index.html', context)
 
 
@@ -27,10 +29,9 @@ def productFilter(request, category, manufacturer, platform):
     else:
         context = narrowContext(category, manufacturer)
     context['products'] = Product.objects.filter(category_id=category, platform_id=platform).order_by('name')
-    return render(request, 'product/index.html', context)
+    context['images'] = ProductImage.objects.all()
 
-def productPlatform():
-    pass
+    return render(request, 'product/index.html', context)
 
 
 def productSort(request, category, manufacturer, filter, sort):
@@ -60,6 +61,8 @@ def productSort(request, category, manufacturer, filter, sort):
             context['products'] = Product.objects.filter(category_id=category, platform_id__in=plat).order_by('-price')
         elif sort == 2:
             context['products'] = Product.objects.filter(category_id=category, platform_id__in=plat).order_by('releaseDate')
+
+    context['images'] = ProductImage.objects.all()
     return render(request, 'product/index.html', context)
 
 
@@ -78,12 +81,15 @@ def productRange(request, category, manufacturer, filter):
         plat = Platform.objects.filter(manufacturer_id=manufacturer).values_list('id', flat=True)
         context['products'] = Product.objects.filter(category_id=category, platform_id__in=plat, price__gte=fromRange,
                                                      price__lte=toRange).order_by('name')
+
+    context['images'] = ProductImage.objects.all()
     return render(request, 'product/index.html', context)
 
 
 def productInfo(request, productid):
     context = manufacturerContext(request)
     context['products'] = Product.objects.filter(id=productid)
+    context['images'] = ProductImage.objects.all()
     return render(request, 'productInfo/index.html', context)
 
 
