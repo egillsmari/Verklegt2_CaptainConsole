@@ -12,10 +12,34 @@
         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
       </div>
     </form>
-    <a href="{% url 'contactUs-index' sentQ=1 %}"><button id="addTo" class="btn btn-secondary" type="button">Submit</button></a>
+        <!-- Button trigger modal -->
+        <button id="addTo" type="button" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModal">
+            Submit
+        </button>
     {% endif %}
-    {% if sentQ == 1 %}
-        <h2 class="fpCategory">Your message was sent successfully. Thanks !</h2>
-        <a href="{% url 'homepage-index' %}"><button id="addTo" class="btn btn-secondary" type="button">Go Home</button></a>
-    {% endif %}
+
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Your message will bee sent successfully. Thanks !
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <a href="{% url 'homepage-index' %}"><button type="button" class="btn btn-primary">Confirm</button></a>
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock %}
