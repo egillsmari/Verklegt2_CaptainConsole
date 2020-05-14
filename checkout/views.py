@@ -14,6 +14,14 @@ def showCart(request):
     context = manufacturerContext(request)
     return render(request, 'checkout/showCart.html', context)
 
+def removeItem(request, item):
+    for key in request.session.keys():
+        if key == item:
+            del request.session[key]
+    context = manufacturerContext(request)
+    return render(request, 'checkout/showCart.html', context)
+
+
 def shippingMethod(request):
     context = manufacturerContext(request)
     return render(request, 'checkout/shipping.html', context)
@@ -26,7 +34,6 @@ def getMethod(request):
 
 def saveOrder(request, method):
     sessionCopy = {k: v for k, v in request.session.items()}
-    context = manufacturerContext(request)
     currentUser = request.user.id
     order = Order(accountId_id=currentUser, shippingMethod=method)
     order.save()
@@ -39,7 +46,7 @@ def saveOrder(request, method):
                     del request.session[item]
                     removeItem = Product.objects.get(pk=product.id)
                     removeItem.delete()
-    time.sleep(1)
+    time.sleep(2)
     return redirect('homepage-index')
 
 def paymentMethod(request):

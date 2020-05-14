@@ -3,6 +3,13 @@
     margin-bottom: 100px;
 }
 
+.infoContainer{
+    width: 1000px;
+    margin-bottom: 100px;
+    margin-left: 200px;
+
+}
+
 .item{
     float: left;
     margin-left: 200px;
@@ -40,7 +47,8 @@
 }
 
 .userCards{
-    position: relative;
+    margin-right: 100px;
+    width: 200px;
 
 }
 
@@ -59,10 +67,19 @@
 #addcard{
     margin-bottom: 20px;
     position: relative;
-    left: 900px;
+    bottom: 40px;
     width: 150px;
     background-color: #8ED7B0;
 
+}
+
+#addinfo{
+    margin-bottom: 20px;
+    position: relative;
+    left:290px;
+    bottom: 40px;
+    width: 175px;
+    background-color: #8ED7B0;
 }
 
 
@@ -75,13 +92,23 @@
     display: inline-block;
 }
 
-#nextCheck{
-    position: relative;
-    left: 900px;
-    bottom: 90px;
-    background-color: #8ED7B0;
 
+#next{
+    width: 75px;
+    position: relative;
+    left: 980px;
+    top: 63px;
+    background-color: #8ED7B0;
 }
+
+#nextconfirm{
+    width: 75px;
+    position: relative;
+    left: 980px;
+    bottom: 88px;
+    background-color: #8ED7B0;
+}
+
 
 #confirmShip{
     background-color: #8ED7B0;
@@ -105,8 +132,8 @@
 
 #shippingInfo{
     position: relative;
-    margin-left: 30%;
-    top: -45px;
+    margin-left: 45%;
+    top: -55px;
 }
 
 
@@ -118,4 +145,49 @@
 
 #product{
     margin-left: 400px;
+}
+.item-history{
+    margin-left: 210px;
+}
+
+#find{
+    width: 80px;
+}
+
+#payment{
+    width: 200px;
+    border-bottom: 4px solid #8ED7B0;
+}
+
+#contactinfo{
+    height: 55px;
+    width: 395px;
+    border-bottom: 4px solid #8ED7B0;
+}
+
+#note{
+    width: 450px;
+    position: relative;
+    top: 110px;
+    left: 530px;
+}
+
+#shippingnote{
+    width: 550px;
+    position: relative;
+    bottom: 44px;
+    left: 430px;
+}
+
+#seperator{
+    position: relative;
+    top: 0px;
+    border-bottom: 4px solid #8ED7B0;
+    height: 10px;
+    width: 855px;
+}
+
+#redx{
+    width: 20px;
+    height: 20px;
 }
