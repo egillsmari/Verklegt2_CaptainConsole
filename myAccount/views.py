@@ -2,7 +2,7 @@ from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from myAccount.models import Account, PaymentInfo
-from myAccount.forms.forms import SignUpForm, PaymentForm, locationForm, AccountUpdate
+from myAccount.forms.forms import SignUpForm, PaymentForm, locationForm, AccountUpdate, ShippingUpdate
 from checkout.models import Order, Sold
 from myAccount.models import Zip
 from context.contextBuilder import manufacturerContext
@@ -23,7 +23,10 @@ def locationRegister(request):
             userCountry = formLocation.cleaned_data.get('country')
             userCity = formLocation.cleaned_data.get('city')
             Zip.objects.create(zip=userZip, country=userCountry, city=userCity)
-            return redirect('myAccount-register')
+            if request.user.is_authenticated:
+                return redirect('myAccount-updateAddress')
+            else:
+                return redirect('myAccount-register')
     else:
         formLocation = locationForm()
     context['form'] = formLocation
@@ -125,6 +128,7 @@ def getAddress(request):
             return account.address
 
 def updateAccount(request):
+    context = manufacturerContext(request)
     if request.method == 'POST':
         form = AccountUpdate(request.POST, request.FILES, instance=request.user)
         if form.is_valid():
@@ -132,8 +136,29 @@ def updateAccount(request):
             account = user.account
             account.accountImage = form.cleaned_data.get('image')
             account.save()
-            return render(request, 'myAccount/accountInfo.html')
+            return render(request, 'myAccount/accountInfo.html', context)
     else:
         form = AccountUpdate(instance=request.user)
-        args = {'form': form}
-        return render(request, 'myAccount/updateAccount.html', args)
+        context['form'] = form
+        return render(request, 'myAccount/updateAccount.html', context)
+
+
+def updateAddress(request):
+    context = manufacturerContext(request)
+    if request.method == 'POST':
+        form = ShippingUpdate(request.POST, instance=request.user)
+        if form.is_valid():
+            user = form.save()
+            account = user.account
+            address = form.cleaned_data.get('address')
+            addressNumber = form.cleaned_data.get('addressNumber')
+            accountZip = Zip.objects.earliest('id')
+            account.zip = accountZip
+            account.addressNumber = addressNumber
+            account.address = address
+            account.save()
+            return redirect('checkout-payment')
+    else:
+        form = ShippingUpdate(instance=request.user)
+    context['form'] = form
+    return render(request, 'myAccount/updateAddress.html', context)
