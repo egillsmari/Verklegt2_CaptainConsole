@@ -1,11 +1,14 @@
 {% extends 'base.html' %}
 {% block content %}
 
-    <h2 class="fpCategory">Payment</h2>
+    <h1 class="fpCategory">Payment</h1>
+
     <div class="content">
-    <div class="cartContainer">
+    <div class="infoContainer">
     <div class="userCards">
-        <h2> Your cards </h2>
+    <div id="payment">
+        <h1> Your card </h1>
+    </div>
         {% for card in cards %}
             {% if card == 'NoCard' %}
                 <h3> No card</h3>
@@ -17,17 +20,22 @@
         {% endfor %}
     </div>
     <div id="shippingInfo">
-        <h2>Shipping Information</h2><br>
+        <div id="contactinfo">
+            <h1>Shipping Information</h1><br>
+        </div>
         <h5>Name: {{ user.get_full_name }}</h5>
         <h5>Shipping Address: {{ user.account.address }} {{ user.account.addressNumber }}</h5>
         <h5>Zip: {{ user.account.zip.zip }}</h5>
         <h5>Country: {{ user.account.zip.country }}</h5>
         <h5>City: {{ user.account.zip.city }}</h5>
     </div>
-    <h5 id="addcardText">Would you like to add a card?</h5>
-    <a href={% url 'myAccount-paymentRegister' 1 %}><button type="button" id="addcard" class="btn btn-secondary">Add Card</button></a>
+
+        <a href={% url 'myAccount-paymentRegister' 1 %}><button type="button" id="addcard" class="btn btn-secondary">Update Card</button></a>
+        <a href={% url 'myAccount-register' %}><button type="button" id="addinfo" class="btn btn-secondary">Update Shipping Info</button></a>
+    <div id="seperator"></div>
     </div>
     </div>
-        <a href={% url 'checkout-shipping' %}><button type="button" id="nextCheck" class="btn btn-secondary">Next</button></a>
+    <p id="shippingnote">If you choose shipping make sure your shipping information is correct</p>
+        <a href={% url 'checkout-shipping' %}><button type="button" id="nextconfirm" class="btn btn-secondary">Next</button></a>
 
 {% endblock %}

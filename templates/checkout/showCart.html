@@ -4,6 +4,9 @@
     <h2 class="fpCategory">Products</h2>
     <div class="content">
     <div class="cartContainer">
+    {% if totalPrice == 0 %}
+            <h4> There are No items in your cart.</h4>
+     {% else %}
         {% for item in cartItems %}
             <div class="item">
             <h5 class="name">Name</h5>
@@ -12,16 +15,26 @@
             <h5 class="price">${{ item.price }}</h5>
             <h5 class="image"></h5>
             <img class="productImg" src="{{ item.image }}" alt="{{ item.name }}">
+            <div class="remove">
+                <a href="{% url 'checkout-remove' item.id%}">
+            <input type="image" src="https://pluspng.com/img-png/red-cross-png-red-cross-png-file-2000.png" name="saveForm" class="btTxt submit" id="redx" />
+                </a>
+            </div>
             </div>
         {% endfor %}
-    <h4 class="totalPrice"> Total:  ${{ totalPrice }} </h4>
+        <h4 class="totalPrice"> Total:  ${{ totalPrice }} </h4>
+    {% endif %}
     </div>
     </div>
-    <p>Note. You must be logged in to complete the checkout</p>
-    {% if user.is_authenticated %}
-        <a href="{% url 'checkout-payment'%}"><button type="button" id="checkout" class="btn btn-secondary">Next</button></a>
+    <p id="note">Note. You must be logged in to complete the checkout</p>
+    {% if totalPrice == 0 %}
+    <a href="{% url 'homepage-index'%}"><button type="button" id="find" class="btn btn-secondary">Find Products</button></a>
     {% else %}
-        <a href="{% url 'login' %}"><button type="button" id="checkout" class="btn btn-secondary">Next</button></a>
+    {% if user.is_authenticated %}
+        <a href="{% url 'checkout-payment'%}"><button type="button" id="next" class="btn btn-secondary">Next</button></a>
+    {% else %}
+        <a href="{% url 'login' %}"><button type="button" id="next" class="btn btn-secondary">Next</button></a>
+    {% endif %}
     {% endif %}
 
 {% endblock %}

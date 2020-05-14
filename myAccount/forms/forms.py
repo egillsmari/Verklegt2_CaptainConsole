@@ -41,4 +41,7 @@ class AccountUpdate(UserChangeForm):
         model = User
         fields = ('first_name', 'last_name', 'email', 'image')
 
+class PaymentUpdate(UserChangeForm):
+    pass
+
 
