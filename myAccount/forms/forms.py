@@ -45,3 +45,13 @@ class PaymentUpdate(UserChangeForm):
     pass
 
 
+class ShippingUpdate(UserChangeForm):
+    address = forms.CharField(max_length=255)
+    addressNumber = forms.CharField(max_length=255)
+
+    class Meta:
+        model = User
+        exclude = ['username', 'first_name', 'last_name', 'email', 'password1', 'password2', 'image']
+        fields = ('address', 'addressNumber')
+
+

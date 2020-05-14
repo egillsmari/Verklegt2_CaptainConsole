@@ -31,11 +31,14 @@
     </div>
 
         <a href={% url 'myAccount-paymentRegister' 1 %}><button type="button" id="addcard" class="btn btn-secondary">Update Card</button></a>
-        <a href={% url 'myAccount-register' %}><button type="button" id="addinfo" class="btn btn-secondary">Update Shipping Info</button></a>
+        <a href={% url 'registerLocation' %}><button type="button" id="addinfo" class="btn btn-secondary">Update Shipping Info</button></a>
     <div id="seperator"></div>
     </div>
     </div>
     <p id="shippingnote">If you choose shipping make sure your shipping information is correct</p>
         <a href={% url 'checkout-shipping' %}><button type="button" id="nextconfirm" class="btn btn-secondary">Next</button></a>
+        <a href={% url 'checkout-cart' %}><button type="button" id="previous" class="btn btn-secondary">Previous</button></a>
+
+
 
 {% endblock %}
