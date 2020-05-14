@@ -111,6 +111,14 @@
     background-color: #8ED7B0;
 }
 
+#previous{
+    width: 95px;
+    position: relative;
+    left: 125px;
+    top: 30px;
+    background-color: #8ED7B0;
+}
+
 
 #confirmShip{
     background-color: #8ED7B0;
@@ -121,7 +129,7 @@
 #shipping{
     background-color: #8ED7B0;
     position: relative;
-    left: 50px;
+    right: 500px;
     bottom: -140px;
 }
 

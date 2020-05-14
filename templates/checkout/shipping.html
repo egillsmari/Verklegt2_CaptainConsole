@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
 {% block content %}
 
-    <h2 class="fpCategory">Products</h2>
+    <h2 class="fpCategory">Receiving method</h2>
     <div class="content">
-    <div class="cartContainer">
-        <h5>We offer free shipping to your nearest post office. If you would like to take advantage of this amazing service then select the free shipping button below.
+    <div class="info">
+        <h4>We offer free shipping to your nearest post office. If you would like to take advantage of this amazing service then select the free shipping button below.
 
-            If you would like store pick up at our store at Ögurhvarf then select the pick up button </h5>
+            If you would like store pick up at our store at Ögurhvarf then select the pick up button </h4>
         <form action="{% url 'checkout-getMethod' %}" method="get">
             <button type="submit" id="shipping" value="shipping" name="methodship" class="btn btn-secondary">Free Shipping BOY</button>
             <button type="submit" id="pickup" value="Pick up at Store" name="methodship" class="btn btn-secondary">Pick up</button>
