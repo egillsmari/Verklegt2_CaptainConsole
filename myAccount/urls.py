@@ -9,7 +9,7 @@ urlpatterns = [
     path('seePurchasehistory', views.seePurchasehistory, name='seePurchasehistory'),
     path('login', LoginView.as_view(template_name='myAccount/login.html'), name='login'),
     path('logout', LogoutView.as_view(next_page='homepage-index'), name='logout'),
-    path('paymentRegister', views.paymentRegister, name='myAccount-paymentRegister'),
+    path('paymentRegister/<int:src>', views.paymentRegister, name='myAccount-paymentRegister'),
     path('paymentInfo', views.paymentInfo, name='myAccount-paymentInfo'),
     path('purchaseHistory', views.seePurchasehistory, name='myAccount-purchaseHistory'),
     path('searchHistory', views.searchHistory, name='myAccount-searchHistory'),

@@ -15,9 +15,11 @@
             <h5 class="price">${{ item.price }}</h5>
             <h5 class="image"></h5>
             <img class="productImg" src="{{ item.image }}" alt="{{ item.name }}">
+            <div class="remove">
                 <a href="{% url 'checkout-remove' item.id%}">
-            <input type="image" src="https://toppng.com/uploads/preview/red-x-red-x-11563060665ltfumg5kvi.png" name="saveForm" class="btTxt submit" id="redx" />
+            <input type="image" src="https://pluspng.com/img-png/red-cross-png-red-cross-png-file-2000.png" name="saveForm" class="btTxt submit" id="redx" />
                 </a>
+            </div>
             </div>
         {% endfor %}
         <h4 class="totalPrice"> Total:  ${{ totalPrice }} </h4>

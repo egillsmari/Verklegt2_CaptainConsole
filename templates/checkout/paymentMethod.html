@@ -29,7 +29,8 @@
         <h5>Country: {{ user.account.zip.country }}</h5>
         <h5>City: {{ user.account.zip.city }}</h5>
     </div>
-        <a href={% url 'myAccount-paymentRegister' %}><button type="button" id="addcard" class="btn btn-secondary">Update Card</button></a>
+
+        <a href={% url 'myAccount-paymentRegister' 1 %}><button type="button" id="addcard" class="btn btn-secondary">Update Card</button></a>
         <a href={% url 'myAccount-register' %}><button type="button" id="addinfo" class="btn btn-secondary">Update Shipping Info</button></a>
     <div id="seperator"></div>
     </div>

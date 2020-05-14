@@ -15,8 +15,9 @@ def showCart(request):
     return render(request, 'checkout/showCart.html', context)
 
 def removeItem(request, item):
-    for key in request.session.keys():
-        if key == item:
+    sessionCopy = {k: v for k, v in request.session.items()}
+    for key, val in sessionCopy.items():
+        if val == 'item' and int(key) == int(item):
             del request.session[key]
     context = manufacturerContext(request)
     return render(request, 'checkout/showCart.html', context)

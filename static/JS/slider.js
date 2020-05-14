@@ -1,7 +1,8 @@
 (function($){
   $(document).ready(function(){
     $('.productContainer').flickity({
-      cellAlign: 'left'
+      cellAlign: 'left',
+      pageDots: false
     });
   })
 })(jQuery);

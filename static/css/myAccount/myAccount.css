@@ -91,15 +91,25 @@
 }
 
 #info{
-    margin-top: -300px;
-    margin-left:190px;
-    padding: 25px
+    width: 500px;
+}
+
+.userImage{
+    width: 200px;
+    height: 200px;
 }
 
 #accountInfoContainer{
-    height: 400px;
-    margin-left: 200px;
-    margin-top: 50px
+    margin: 0 auto;
+    height: 150px;
+    width: 760px;
+}
+
+.infoContainer{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 760px;
 }
 
 #historyContainer{
@@ -127,6 +137,28 @@
     margin-top: 25px
 }
 
+.accountButtons{
+    display: flex;
+    justify-content: right;
+    margin: 0 auto;
+    width: 760px;
+}
+
+.accountForm{
+    margin: 10px;
+}
+
+#infoCard{
+    width: 760px;
+    margin: 0 auto;
+}
+
+.paymentButtons {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 760px;
+}
 #infoHistory{
     margin-bottom: 20px;
 }
