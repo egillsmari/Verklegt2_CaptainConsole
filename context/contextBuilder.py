@@ -1,9 +1,8 @@
-from product.models import Category
 from product.models import Platform
 from product.models import Manufacturer
 from product.models import Product
 from myAccount.models import PaymentInfo
-from checkout.models import Order
+
 
 
 def platformsContext():
@@ -29,8 +28,6 @@ def cardContext(request):
         context.append('NoCard')
     return context
 
-def purchaseContext(request):
-    context = []
 
 
 def allContext(category, manufacturer):

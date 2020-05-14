@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from product.models import Product
 from product.models import Platform
 from context.contextBuilder import allContext, narrowContext, manufacturerContext
-from django.contrib.sessions.backends.db import SessionStore
+
 
 import logging
 logger = logging.getLogger(__name__)
