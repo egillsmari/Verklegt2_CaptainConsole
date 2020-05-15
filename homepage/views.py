@@ -4,7 +4,9 @@ from product.models import ProductImage
 from context.contextBuilder import manufacturerContext
 
 # Create your views here.
-'''Find all products to display on homepage'''
+''' calls helper function that returns all manufacturer objects,
+ adds all product objects and all image objects. Sends context to
+ homepage index and renders'''
 def index(request):
     context = manufacturerContext(request)
     context['products'] = Product.objects.all().order_by('category_id')
@@ -12,7 +14,8 @@ def index(request):
     return render(request, 'homepage/index.html', context)
 
 
-'''Send user to contact us page'''
+''' calls helper function that returns all manufacturer objects, adds sentQ to 
+context and renders contactUs index'''
 def contacUs(request, sentQ):
     try:
         context = manufacturerContext(request)
@@ -22,6 +25,9 @@ def contacUs(request, sentQ):
     except:
         return render(request, '404.html', manufacturerContext(request))
 
+
+''' below functions all handle various errors, each function renders
+appropriate error page'''
 def bad_request(request, exception):
     return render(request, '400.html', manufacturerContext(request))
 
