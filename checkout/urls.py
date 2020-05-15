@@ -6,7 +6,7 @@ urlpatterns = [
     path('cart/', views.showCart, name='checkout-cart'),
     path('payment/', views.paymentMethod, name='checkout-payment'),
     path('shipping/', views.shippingMethod, name='checkout-shipping'),
-    path('confirmation/<str:method>', views.saveOrder, name='checkout-saveOrder'),
+    path('confirmation/<method>', views.saveOrder, name='checkout-saveOrder'),
     path('shipmentMethod/', views.getMethod, name='checkout-getMethod'),
-    path('rem<int:item>', views.removeItem, name='checkout-remove')
+    path('rem<item>', views.removeItem, name='checkout-remove')
 ]

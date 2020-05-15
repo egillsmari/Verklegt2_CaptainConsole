@@ -14,7 +14,11 @@
             <h5 class="price">Price</h5>
             <h5 class="price">${{ item.price }}</h5>
             <h5 class="image"></h5>
-            <img class="productImg" src="{{ item.image }}" alt="{{ item.name }}">
+            {% for image in images %}
+                {% if image.product_id == item.id and image.id|divisibleby:2%}
+                    <img class="productImg" src="{{ image.productImage }}" alt="{{ product.name }}">
+                {% endif %}
+            {% endfor %}
             <div class="remove">
                 <a href="{% url 'checkout-remove' item.id%}">
             <input type="image" src="https://pluspng.com/img-png/red-cross-png-red-cross-png-file-2000.png" name="saveForm" class="btTxt submit" id="redx" />
