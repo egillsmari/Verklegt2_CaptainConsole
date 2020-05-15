@@ -1,10 +1,7 @@
 from django import forms
-from django.contrib.auth.forms import UserCreationForm, UserChangeForm
-from django.contrib.auth.models import User
-from django_countries.data import COUNTRIES
-from checkout.models import Order, Sold
+from checkout.models import Order
 
-
+'''Order form when user has completed his order'''
 class OrderForm(forms.Form):
     account = forms.IntegerField()
     product = forms.IntegerField()
