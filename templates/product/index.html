@@ -1,25 +1,25 @@
 {% extends 'base.html' %}
 {% block content %}
-    {% include 'productToolbar.html' %}
-     <div class="content">
-     {% if not products %}
-         <div class="content">
-            <h2>No products found</h2>
-        </div>
-     {% else %}
-         {% for product in products %}
-            <a class="cardLink dropElem" href="{% url 'product-productInfo' product.id %}">
-            <div class="card">
-                <h4>{{ product.name }}</h4>
-                {% for image in images %}
-                    {% if image.product_id == product.id and image.id|divisibleby:2%}
-                        <img src="{{ image.productImage }}" alt="{{ product.name }}">
-                    {% endif %}
-                {% endfor %}
-                <h4>${{ product.price }}</h4>
-            </div>
-            </a>
-        {% endfor %}
-     {% endif %}
+{% include 'productToolbar.html' %}
+<div class="content">
+    {% if not products %}
+    <div class="content">
+        <h2>No products found</h2>
     </div>
+    {% else %}
+    {% for product in products %}
+    <a class="cardLink dropElem" href="{% url 'product-productInfo' product.id %}">
+        <div class="card">
+            <h4>{{ product.name }}</h4>
+            {% for image in images %}
+            {% if image.product_id == product.id and image.id|divisibleby:2%}
+            <img src="{{ image.productImage }}" alt="{{ product.name }}">
+            {% endif %}
+            {% endfor %}
+            <h4>${{ product.price }}</h4>
+        </div>
+    </a>
+    {% endfor %}
+    {% endif %}
+</div>
 {% endblock %}

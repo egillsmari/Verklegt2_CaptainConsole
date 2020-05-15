@@ -10,6 +10,7 @@ import logging
 logger = logging.getLogger(__name__)
 
 # Create your views here.
+'''VANTAR COMMENT'''
 def index(request, category, manufacturer):
     try:
         if manufacturer == '0':
@@ -26,6 +27,7 @@ def index(request, category, manufacturer):
         return render(request, '404.html', manufacturerContext(request))
 
 
+'''Catch category, manufacturer and platform Id for more detailed search'''
 def productFilter(request, category, manufacturer, platform):
     try:
         if manufacturer == '0':
@@ -43,6 +45,7 @@ def productFilter(request, category, manufacturer, platform):
         return render(request, '404.html', manufacturerContext(request))
 
 
+'''VANTAR COMMENT'''
 def productSort(request, category, manufacturer, filter, sort):
     try:
         if manufacturer == '0':
@@ -79,6 +82,7 @@ def productSort(request, category, manufacturer, filter, sort):
         return render(request, '404.html', manufacturerContext(request))
 
 
+'''VANTAR COMMENT'''
 def productRange(request, category, manufacturer, filter):
     try:
         fromRange = request.GET.get('from')
@@ -103,6 +107,7 @@ def productRange(request, category, manufacturer, filter):
         return render(request, '404.html', manufacturerContext(request))
 
 
+'''Filter product id retun right product object'''
 def productInfo(request, product_id):
     context = manufacturerContext(request)
     context['products'] = Product.objects.filter(id=product_id)
@@ -116,6 +121,7 @@ def addToCart(request, product_id):
     except:
         return render(request, '404.html', manufacturerContext(request))
 
+'''Clears temp list og objects'''
 def emptyCart(request):
     sessionCopy = { k : v for k,v in request.session.items()}
     for key, val in sessionCopy.items():
