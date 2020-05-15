@@ -26,7 +26,6 @@ class SignUpForm(UserCreationForm):
         fields = ('username', 'first_name', 'last_name', 'email',
                   'password1', 'password2', 'address', 'addressNumber', 'image')
 
-widget=forms.TextInput(attrs={'placeholder': '16 of length ex. 1234123412341234'})
 
 class PaymentForm(forms.Form):
     nameOnCard = forms.CharField(max_length=255)
@@ -43,9 +42,6 @@ class AccountUpdate(UserChangeForm):
     class Meta:
         model = User
         fields = ('first_name', 'last_name', 'email', 'image')
-
-class PaymentUpdate(UserChangeForm):
-    pass
 
 
 class ShippingUpdate(UserChangeForm):

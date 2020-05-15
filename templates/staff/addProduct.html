@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% include 'staff/index.html' %}
+{% block content %}
+    <div id="signupContainer">
+    <h2 id="signup"> Add Product</h2>
+{% load crispy_forms_tags %}
+    </div>
+        <div id="signupForm">
+      <form method="post" novalidate enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <button type="submit" class="btn btn-success">Next</button>
+        </form>
+        </div>
+{% endblock content %}

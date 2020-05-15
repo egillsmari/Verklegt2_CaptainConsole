@@ -53,8 +53,8 @@ def register(request):
             username = form.cleaned_data.get('username')
             global password
             password = form.cleaned_data.get('password1')
-
             return redirect('myAccount-paymentRegister', 0)
+
     else:
         form = SignUpForm()
     context['form'] = form

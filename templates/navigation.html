@@ -54,6 +54,9 @@
                 <a class="dropdown-item dropElem" href="{% url 'accountInfo' %}">Account</a>
                 <a class="dropdown-item dropElem" href="{% url 'seePurchasehistory' %}">Purchase history</a>
                       <a class="dropdown-item dropElem" href="{% url 'myAccount-searchHistory' %}">Search history</a>
+                      {% if user.is_staff %}
+                          <a class="dropdown-item dropElem" href="{% url 'staff-index' %}">Staff Page</a>
+                          {% endif %}
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item dropElem" href="{% url 'logout' %}">Log out</a>
                     </div>
