@@ -4,6 +4,8 @@ from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 from django_countries.fields import CountryField
+from myAccount.validation.validate import validateCVV, validateCardNumber
+
 
 
 class Zip(models.Model):
@@ -22,9 +24,9 @@ class Account(models.Model):
 class PaymentInfo(models.Model):
     accountId = models.OneToOneField(settings.AUTH_USER_MODEL, primary_key=True, related_name='payment', on_delete=models.CASCADE)
     nameOnCard = models.CharField(max_length=255)
-    cardNumber = models.CharField(max_length=255)
+    cardNumber = models.CharField(validateCardNumber, max_length=16)
     expirationDate = models.CharField(max_length=25)
-    CVV = models.IntegerField()
+    CVV = models.IntegerField(validateCVV)
 
 
 class SearchHistory(models.Model):

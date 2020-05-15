@@ -43,7 +43,7 @@ def register(request):
             address = form.cleaned_data.get('address')
             addressNumber = form.cleaned_data.get('addressNumber')
             accountImage = form.cleaned_data.get('image')
-            accountZip = Zip.objects.earliest('id')
+            accountZip = Zip.objects.order_by('-id')[0]
             account.zip = accountZip
             account.addressNumber = addressNumber
             account.address = address
@@ -53,7 +53,7 @@ def register(request):
             username = form.cleaned_data.get('username')
             global password
             password = form.cleaned_data.get('password1')
-            return redirect('myAccount-paymentRegister')
+            return redirect('myAccount-paymentRegister', 0)
     else:
         form = SignUpForm()
     context['form'] = form

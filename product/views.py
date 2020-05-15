@@ -98,6 +98,7 @@ def addToCart(request, productid):
         if key == productid:
             return 0
     request.session[productid] = 'item'
+
     return redirect('homepage-index')
 
 def emptyCart(request):

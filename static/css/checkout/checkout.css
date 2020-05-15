@@ -117,7 +117,7 @@
     position: relative;
     left: -85px;
     right: 180px;
-    top: 156px;
+    top: 116px;
     background-color: #8ED7B0;
 }
 
@@ -256,6 +256,7 @@
 
 .confirmation{
     margin-left: 200px;
+    height: 70%;
 }
 
 #method{
@@ -272,4 +273,9 @@
 #infoContainer{
     width: 400px;
     float: left;
+}
+
+#confirmbutton{
+    margin-top: 15%;
+    margin-left: 800px;
 }

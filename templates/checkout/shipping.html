@@ -10,7 +10,7 @@
         <a href={% url 'checkout-payment' %}><button type="button" id="backToCart" class="btn btn-secondary">Previous</button></a>
         <div class="methodbuttons">
             <form action="{% url 'checkout-getMethod' %}" method="get">
-                <button type="submit" id="shipping" value="Shipping" name="methodship" class="btn btn-secondary">Free Shipping BOY</button>
+                <button type="submit" id="shipping" value="shipping" name="methodship" class="btn btn-secondary">Free Shipping</button>
                 <button type="submit" id="pickup" value="Pick up at Store" name="methodship" class="btn btn-secondary">Pick up</button>
             </form>
         </div>

@@ -49,11 +49,12 @@ def saveOrder(request, method):
                     del request.session[item]
                     removeItem = Product.objects.get(pk=product.id)
                     removeItem.delete()
-    time.sleep(2)
+    time.sleep(1)
     return redirect('homepage-index')
 
 
 def _removePhotos(request, producId):
+    retImage = ''
     for image in ProductImage.objects.all():
         if image.product_id == producId:
             retImage = image.productImage

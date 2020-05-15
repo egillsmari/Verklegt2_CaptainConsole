@@ -31,10 +31,12 @@
                 <h5 class="image"></h5>
                 <img class="productImg" src="{{ item.image }}" alt="{{ item.name }}">
             </div>
+    {% endfor %}
+        <div id="confirmbutton">
             <a href={% url 'checkout-saveOrder' shippingMethod %}><button type="button" id="confirm" data-toggle="modal" data-target="#exampleModalCenter" class="btn btn-secondary">Confirm</button></a>
             <a href={% url 'checkout-shipping' %}><button type="button" id="back" class="btn btn-secondary">Previous</button></a>
+        </div>
 
-        {% endfor %}
 
     </div>
 
@@ -44,7 +46,7 @@
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title" id="exampleModalLongTitle">Order Recived! You will be redirected to Homepage.</h4>
+        <h4 class="modal-title" id="exampleModalLongTitle">Order Recived!</h4>
         <h5 class="modal-title" id="exampleModalLongTitle">Thank you for shopping at Captain Console</h5>
 
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -52,7 +54,7 @@
         </button>
       </div>
       <div class="modal-body">
-        ...
+         You will be redirected to Homepage.
       </div>
       <div class="modal-footer">
       </div>
