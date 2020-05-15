@@ -133,8 +133,6 @@
 .userImage{
     width: 200px;
     height: 200px;
-    position: relative;
-    left: 150%;
 }
 
 #accountInfoContainer{
@@ -222,6 +220,10 @@
 
 .paymentRegister{
     text-align: center;
+}
+
+.imageContainer{
+    margin: 0 auto;
 }
 
 
