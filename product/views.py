@@ -1,5 +1,4 @@
 from django.shortcuts import render, redirect
-from django.http import Http404
 from product.models import Product
 from product.models import Platform
 from product.models import ProductImage
@@ -7,16 +6,26 @@ from context.contextBuilder import allContext, narrowContext, manufacturerContex
 
 
 # Create your views here.
-'''VANTAR COMMENT'''
+''' handles product index page, sends context depending on category and manufacturer selection in nav bar '''
 def index(request, category, manufacturer):
+
+    # try/except clause to handle wrong types in url params
     try:
+
+        # See all selected in nav bar, context contains all categories, all manufacturers and all products
         if manufacturer == '0':
             context = allContext(category, manufacturer)
             context['products'] = Product.objects.filter(category_id=category).order_by('name')
+
+        # Some manufacturer selected in nav bar
         else:
+
+            # context contains only platforms and products belonging to selected manufacturer and category
             plat = Platform.objects.filter(manufacturer_id=manufacturer).values_list('id', flat=True)
             context = narrowContext(category, manufacturer)
             context['products'] = Product.objects.filter(category_id=category, platform_id__in=plat).order_by('name')
+
+        # all images sent with context
         context['images'] = ProductImage.objects.all()
         return render(request, 'product/index.html', context)
 
@@ -24,15 +33,19 @@ def index(request, category, manufacturer):
         return render(request, '404.html', manufacturerContext(request))
 
 
-'''Catch category, manufacturer and platform Id for more detailed search'''
+''' handles product filtering, returns context in regard to filter selection '''
 def productFilter(request, category, manufacturer, platform):
     try:
+        # user chose to see all items
         if manufacturer == '0':
             context = allContext(category, manufacturer)
             context['filter'] = platform
 
+        # user has selected manufacturer
         else:
             context = narrowContext(category, manufacturer)
+
+        # products belonging to selected platform filter added to context
         context['products'] = Product.objects.filter(category_id=category, platform_id=platform).order_by('name')
         context['images'] = ProductImage.objects.all()
 
@@ -42,7 +55,9 @@ def productFilter(request, category, manufacturer, platform):
         return render(request, '404.html', manufacturerContext(request))
 
 
-'''VANTAR COMMENT'''
+''' handles product sorting, url parameter indicates sorting type, multiple if/else statements with
+differing contexts are there to guarantee that the user always has correct items in dropdown lists in regard to selected 
+ category and manufacturer and always has correct products'''
 def productSort(request, category, manufacturer, filter, sort):
     try:
         if manufacturer == '0':
@@ -79,7 +94,8 @@ def productSort(request, category, manufacturer, filter, sort):
         return render(request, '404.html', manufacturerContext(request))
 
 
-'''VANTAR COMMENT'''
+''' handles product price range filtering, uses GET request to access input values and filters products
+ manufacturer and filter params are there to indicate which filters the user has already chosen'''
 def productRange(request, category, manufacturer, filter):
     try:
         fromRange = request.GET.get('from')
@@ -104,7 +120,7 @@ def productRange(request, category, manufacturer, filter):
         return render(request, '404.html', manufacturerContext(request))
 
 
-'''Filter product id retun right product object'''
+''' handles context for productInfo page '''
 def productInfo(request, product_id):
     context = manufacturerContext(request)
     context['products'] = Product.objects.filter(id=product_id)
@@ -112,7 +128,7 @@ def productInfo(request, product_id):
     return render(request, 'productInfo/index.html', context)
 
 
-'''Find right object in current user session and adds the object to temp list'''
+''' finds right object in current user session and adds the object to temp list (cart) '''
 def addToCart(request, product_id):
     try:
         request.session[int(product_id)] = 'item'
@@ -121,7 +137,7 @@ def addToCart(request, product_id):
         return render(request, '404.html', manufacturerContext(request))
 
 
-'''Clears temp list og objects'''
+''' clears temp list (cart) and objects '''
 def emptyCart(request):
     sessionCopy = { k : v for k,v in request.session.items()}
     for key, val in sessionCopy.items():

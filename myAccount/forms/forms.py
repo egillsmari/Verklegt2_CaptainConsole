@@ -6,7 +6,7 @@ from django_countries.data import COUNTRIES
 from myAccount.models import Zip
 
 
-
+''' form used in location registration '''
 class locationForm(forms.Form):
     zip = forms.IntegerField()
     country = forms.ChoiceField(choices = sorted(COUNTRIES.items()))
@@ -16,6 +16,7 @@ class locationForm(forms.Form):
         fields = ('zip', 'country', 'city')
 
 
+''' form used in user creation, extends UserCreationForm, adds extra fields '''
 class SignUpForm(UserCreationForm):
     address = forms.CharField(max_length=255)
     addressNumber = forms.CharField(max_length=255)
@@ -26,8 +27,12 @@ class SignUpForm(UserCreationForm):
         fields = ('username', 'first_name', 'last_name', 'email',
                   'password1', 'password2', 'address', 'addressNumber', 'image')
 
+
+''' placeholder for card number input field '''
 widget=forms.TextInput(attrs={'placeholder': '16 of length ex. 1234123412341234'})
 
+
+''' form used in credit card registration '''
 class PaymentForm(forms.Form):
     nameOnCard = forms.CharField(max_length=255)
     cardNumber = forms.CharField(validators=[validateCardNumber], widget=forms.TextInput(attrs={'placeholder': '16 of length ex. 1234123412341234'}))
@@ -37,6 +42,8 @@ class PaymentForm(forms.Form):
         model = User
         fields = ('nameOnCard', 'cardNumber', 'expirationDate', 'CVV')
 
+
+''' form used when updating Account '''
 class AccountUpdate(UserChangeForm):
     image = forms.ImageField()
 
@@ -44,10 +51,8 @@ class AccountUpdate(UserChangeForm):
         model = User
         fields = ('first_name', 'last_name', 'email', 'image')
 
-class PaymentUpdate(UserChangeForm):
-    pass
 
-
+''' form used when updating shipping information '''
 class ShippingUpdate(UserChangeForm):
     address = forms.CharField(max_length=255)
     addressNumber = forms.CharField(max_length=255)
