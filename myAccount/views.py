@@ -63,8 +63,11 @@ def register(request):
             address = form.cleaned_data.get('address')
             addressNumber = form.cleaned_data.get('addressNumber')
             accountImage = form.cleaned_data.get('image')
-            accountZip = Zip.objects.order_by('-id')[0]
-            account.zip = accountZip
+            tempZip = 101
+            for zip in Zip.objects.all():
+                if zip.id > 0:
+                    tempZip = zip
+            account.zip = tempZip
             account.addressNumber = addressNumber
             account.address = address
             account.accountImage = accountImage
@@ -117,8 +120,10 @@ def paymentRegister(request, src = '0'):
 
                 # if not, user is in the sign up process
                 else:
-                    currentUser = Account.objects.latest('id')
-                    savePayment = PaymentInfo(currentUser.id, nameOnCard, cardNumber, expirationDate, CVV)
+                    idlist = []
+                    for account in User.objects.all():
+                        idlist.append(account.id)
+                    savePayment = PaymentInfo(max(idlist), nameOnCard, cardNumber, expirationDate, CVV)
                     savePayment.save()
                     user = authenticate(username=username, password=password)
                     login(request, user)
@@ -191,12 +196,12 @@ def updateAccount(request):
 
     # when the user has submitted the form
     if request.method == 'POST':
-
         # gets data and files via POST request
         form = AccountUpdate(request.POST, request.FILES, instance=request.user)
         if form.is_valid():
             user = form.save()
             account = user.account
+            account.accountImage = request.user.account.accountImage
             account.accountImage = form.cleaned_data.get('image')
             account.save()
             return render(request, 'myAccount/accountInfo.html', context)

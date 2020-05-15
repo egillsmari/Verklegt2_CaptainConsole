@@ -17,7 +17,7 @@ class Zip(models.Model):
 ''' model class for Account table, linked to Zip table with foreign key '''
 class Account(models.Model):
     user = models.OneToOneField(User, related_name='account', on_delete=models.CASCADE)
-    zip = models.ForeignKey(Zip, on_delete=models.CASCADE, default=101)
+    zip = models.ForeignKey(Zip, on_delete=models.CASCADE, default=20)
     address = models.CharField(max_length=255, null=True, blank=True)
     addressNumber = models.CharField(max_length=20, null=True, blank=True)
     accountImage = models.ImageField(blank=True, null=True, upload_to='images/')
