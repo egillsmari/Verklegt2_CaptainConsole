@@ -4,6 +4,7 @@ from myAccount.models import SearchHistory
 from context.contextBuilder import manufacturerContext
 
 # Create your views here.
+'''Gets value from textfield, search through all names in products and returns right products'''
 def index(request):
     context = manufacturerContext(request)
     query = request.GET.get('q')

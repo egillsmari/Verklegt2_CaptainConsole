@@ -1,5 +1,6 @@
 from django.db import models
-''' Endilega finna fleiri attributess'''
+
+'''Create tables for products'''
 class Category(models.Model):
     name = models.CharField(max_length=255)
 

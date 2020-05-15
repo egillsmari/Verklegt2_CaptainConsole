@@ -7,12 +7,12 @@ from checkout.models import Order, Sold
 from myAccount.models import Zip
 from context.contextBuilder import manufacturerContext
 from django.contrib.auth.models import User
+from myAccount.models import SearchHistory
+from product.models import Product
 
 username = ''
 password = ''
 
-from myAccount.models import SearchHistory
-from product.models import Product
 
 def locationRegister(request):
     context = manufacturerContext(request)
