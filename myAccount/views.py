@@ -156,7 +156,8 @@ def seePurchasehistory(request):
 ''' checks if user is authenticated, renders accountInfo '''
 @login_required
 def accountInfo(request):
-    return render(request, 'myAccount/accountInfo.html')
+    context = manufacturerContext(request)
+    return render(request, 'myAccount/accountInfo.html', context)
 
 
 ''' checks if user is authenticated, gets all SearchHistory searches in flat list that match users id,
