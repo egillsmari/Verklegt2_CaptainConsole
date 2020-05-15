@@ -19,6 +19,7 @@
     </div>
 </div>
 <h3 id="price">${{ product.price }}</h3>
+    <!-- ifinlist is a custom filter that checks if product.id is in  -->
 {% if product.id|ifinlist:cartId %}
 <button type="button" id="addTo" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModalCenter">
     Add to Cart

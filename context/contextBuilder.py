@@ -8,7 +8,7 @@ from myAccount.models import PaymentInfo
 def platformsContext():
     return {'platforms': Platform.objects.all()}
 
-def manufacturerContext(request):
+def cartContext(request):
     context = []
     idcontext = []
     totalPrice = 0
@@ -19,6 +19,10 @@ def manufacturerContext(request):
                     totalPrice += product.price
                     context.append(product)
                     idcontext.append(int(product.id))
+    return context, totalPrice, idcontext
+
+def manufacturerContext(request):
+    context, totalPrice, idcontext = cartContext(request)
     return {'manufacturers': Manufacturer.objects.all(), 'cartItems': context, 'totalPrice':totalPrice, 'cartId':idcontext}
 
 def cardContext(request):
