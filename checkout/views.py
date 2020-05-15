@@ -12,6 +12,7 @@ def index(request):
 
 def showCart(request):
     context = manufacturerContext(request)
+    context['images'] = ProductImage.objects.all()
     return render(request, 'checkout/showCart.html', context)
 
 def removeItem(request, item):

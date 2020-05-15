@@ -12,8 +12,10 @@
     </div>
     <div id="infoCard">
         {% if not payment %}
-            <h5 id="addcardText">Would you like to add a card?</h5>
-            <a href={% url 'myAccount-paymentRegister' 2 %}><button type="button" id="addcard" class="btn btn-secondary">Add Card</button></a>
+            <div class="paymentRegister">
+                <h5 id="addCardInfo">Would you like to add a card?</h5>
+                <a href={% url 'myAccount-paymentRegister' 2 %}><button type="button" id="addCardInfo" class="btn btn-secondary">Add Card</button></a>
+            </div>
         {% else %}
             {% for card in payment %}
             <h5 class="userInfo">Name on Card: {{ card.nameOnCard }} </h5>

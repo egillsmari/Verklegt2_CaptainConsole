@@ -141,7 +141,7 @@
     width: 760px;
 }
 
-.infoContainer{
+.accountContainer{
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
@@ -202,7 +202,7 @@
     margin: 0 auto;
 }
 
-.item-history{
+.account-history{
     width: 760px;
     margin: 0 auto;
 }
@@ -212,6 +212,14 @@
     justify-content: left;
     width: 760px;
     margin: 0 auto;
+}
+
+#addCardInfo{
+    margin: 0 auto;
+}
+
+.paymentRegister{
+    text-align: center;
 }
 
 

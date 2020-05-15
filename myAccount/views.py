@@ -53,13 +53,13 @@ def register(request):
             username = form.cleaned_data.get('username')
             global password
             password = form.cleaned_data.get('password1')
-            return redirect('myAccount-paymentRegister')
+            return redirect('myAccount-paymentRegister', '0')
     else:
         form = SignUpForm()
     context['form'] = form
     return render(request, 'myAccount/register.html', context)
 
-def paymentRegister(request, src = 0):
+def paymentRegister(request, src = '0'):
     try:
         context = manufacturerContext(request)
         form = PaymentForm(data=request.POST)
@@ -73,9 +73,9 @@ def paymentRegister(request, src = 0):
                     currentUser = request.user.id
                     savePayment = PaymentInfo(currentUser, nameOnCard, cardNumber, expirationDate, CVV)
                     savePayment.save()
-                    if src == 1:
+                    if src == '1':
                         return redirect('checkout-payment')
-                    elif src == 2:
+                    elif src == '2':
                         return redirect('myAccount-paymentInfo')
                 else:
                     currentUser = Account.objects.latest('id')

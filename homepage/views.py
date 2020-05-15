@@ -1,4 +1,3 @@
-
 from django.shortcuts import render
 from product.models import Product
 from product.models import ProductImage
@@ -20,3 +19,15 @@ def contacUs(request, sentQ):
 
     except:
         return render(request, '404.html', manufacturerContext(request))
+
+def bad_request(request, exception):
+    return render(request, '400.html', manufacturerContext(request))
+
+def permission_denied(request, exception):
+    return render(request, '403.html', manufacturerContext(request))
+
+def page_not_found(request, exception):
+    return render(request, '404.html', manufacturerContext(request))
+
+def server_error(request):
+    return render(request, '500.html', manufacturerContext(request))

@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load cart_tags %}
 {% block content %}
 {% for product in products %}
     <h2 class="fpCategory">{{ product.name }}</h2>
@@ -17,7 +18,58 @@
                 <h4>Condition: {{ product.condition }}</h4>
             </div>
         </div>
-        <a  href="{% url 'product-addToCart' product.id %}" id="addCart"><button type="button" id="addTo" class="btn btn-secondary">Add to cart</button></a>
-        <h3 id="price">${{ product.price }}</h3>
-    {% endfor %}
+                <h3 id="price">${{ product.price }}</h3>
+                {% if product.id|ifinlist:cartId %}
+                    <button type="button" id="addTo" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModalCenter">
+                          Add to Cart
+                        </button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                          <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle">Captain Console</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                              </div>
+                              <div class="modal-body">
+                                Item is already in Cart
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Okay.</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    <!-- Button trigger modal -->
+
+                {% else %}
+                    <button type="button" id="addTo" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModalCenter">
+                          Add to Cart
+                        </button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                          <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle">Captain Console</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                              </div>
+                              <div class="modal-body">
+                                {{ product.name }} has been added to your cart
+                              </div>
+                              <div class="modal-footer">
+                                  <a href="{% url 'product-addToCart' product.id %}" id="addCart"><button type="button" class="btn btn-primary">Okay.</button></a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- Button trigger modal -->
+
+                    {% endif %}
+
+                {% endfor %}
 {% endblock %}

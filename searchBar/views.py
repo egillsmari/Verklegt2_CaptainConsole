@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from product.models import Product
+from product.models import Product, ProductImage
 from myAccount.models import SearchHistory
 from context.contextBuilder import manufacturerContext
 
@@ -8,6 +8,7 @@ def index(request):
     context = manufacturerContext(request)
     query = request.GET.get('q')
     context['products'] = Product.objects.filter(name__icontains=query)
+    context['images'] = ProductImage.objects.all()
     if context['products'].exists():
         if query == ' ' or query == '':
             return redirect('homepage-index')
