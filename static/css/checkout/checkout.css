@@ -77,8 +77,9 @@
 #addcard{
     margin-bottom: 20px;
     position: relative;
-    right: 820px;
-    top: 250px;
+    right: 120px;
+    left: 10px;
+    bottom: 25px;
     width: 150px;
     background-color: #8ED7B0;
 
@@ -87,8 +88,8 @@
 #addinfo{
     margin-bottom: 20px;
     position: relative;
-    right:540px;
-    top: 250px;
+    right:240px;
+    left: 170px;
     width: 175px;
     background-color: #8ED7B0;
 }
@@ -117,7 +118,7 @@
     position: relative;
     left: -85px;
     right: 180px;
-    top: 146px;
+    margin-top: 100px;
     background-color: #8ED7B0;
 }
 
@@ -125,7 +126,7 @@
     width: 85px;
     position: relative;
     right: 853px;
-    top: 115px;
+    margin-top: 100px;
     background-color: #8ED7B0;
 }
 
@@ -176,8 +177,9 @@
 
 #shippingInfo{
     position: relative;
-    margin-left: 35%;
-    top: 5px;
+    margin-left: 90%;
+    bottom: 50px;
+    width: 300px;
 }
 
 
