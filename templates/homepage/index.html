@@ -4,61 +4,61 @@
     <h2 class="fpCategory">Consoles</h2>
     <div class="productContainer">
         {% for product in products %}
-            {% if product.category_id == 1 %}
-                  <div class="carousel-cell">
-                      <a class="cardLink dropElem" href="{% url 'product-productInfo' product.id %}">
-                        <div class="card">
-                        <h4>{{ product.name }}</h4>
-                            {% for image in images %}
-                                {% if image.product_id == product.id and image.id|divisibleby:2%}
-                                    <img src="{{ image.productImage }}" alt="{{ product.name }}">
-                                {% endif %}
-                            {% endfor %}
-                            <h4>${{ product.price }}</h4>
-                        </div>
-                    </a>
-                  </div>
-            {% endif %}
+        {% if product.category_id == 1 %}
+        <div class="carousel-cell">
+            <a class="cardLink dropElem" href="{% url 'product-productInfo' product.id %}">
+                <div class="card">
+                    <h4>{{ product.name }}</h4>
+                    {% for image in images %}
+                    {% if image.product_id == product.id and image.id|divisibleby:2%}
+                    <img src="{{ image.productImage }}" alt="{{ product.name }}">
+                    {% endif %}
+                    {% endfor %}
+                    <h4>${{ product.price }}</h4>
+                </div>
+            </a>
+        </div>
+        {% endif %}
         {% endfor %}
     </div>
     <h2 class="fpCategory">Games</h2>
     <div class="productContainer">
         {% for product in products %}
-            {% if product.category_id == 2 %}
-                <div class="carousel-cell">
-                  <a class="cardLink dropElem" href="{% url 'product-productInfo' product.id %}">
-                    <div class="card">
+        {% if product.category_id == 2 %}
+        <div class="carousel-cell">
+            <a class="cardLink dropElem" href="{% url 'product-productInfo' product.id %}">
+                <div class="card">
                     <h4>{{ product.name }}</h4>
                     {% for image in images %}
-                        {% if image.product_id == product.id and image.id|divisibleby:2%}
-                            <img src="{{ image.productImage }}" alt="{{ product.name }}">
-                        {% endif %}
+                    {% if image.product_id == product.id and image.id|divisibleby:2%}
+                    <img src="{{ image.productImage }}" alt="{{ product.name }}">
+                    {% endif %}
                     {% endfor %}
-                        <h4>${{ product.price }}</h4>
-                    </div>
-                </a>
-              </div>
-            {% endif %}
+                    <h4>${{ product.price }}</h4>
+                </div>
+            </a>
+        </div>
+        {% endif %}
         {% endfor %}
     </div>
     <h2 class="fpCategory">Accessories</h2>
     <div class="productContainer">
         {% for product in products %}
-            {% if product.category_id == 3 %}
-                <div class="carousel-cell">
-                  <a class="cardLink dropElem" href="{% url 'product-productInfo' product.id %}">
-                    <div class="card">
+        {% if product.category_id == 3 %}
+        <div class="carousel-cell">
+            <a class="cardLink dropElem" href="{% url 'product-productInfo' product.id %}">
+                <div class="card">
                     <h4>{{ product.name }}</h4>
                     {% for image in images %}
-                        {% if image.product_id == product.id and image.id|divisibleby:2%}
-                            <img src="{{ image.productImage }}" alt="{{ product.name }}">
-                        {% endif %}
+                    {% if image.product_id == product.id and image.id|divisibleby:2%}
+                    <img src="{{ image.productImage }}" alt="{{ product.name }}">
+                    {% endif %}
                     {% endfor %}
-                        <h4>${{ product.price }}</h4>
-                    </div>
-                </a>
-              </div>
-            {% endif %}
+                    <h4>${{ product.price }}</h4>
+                </div>
+            </a>
+        </div>
+        {% endif %}
         {% endfor %}
     </div>
 </div>
